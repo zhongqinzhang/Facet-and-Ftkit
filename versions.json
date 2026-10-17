@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/zhongqinzhang/Facet-and-Ftkit",
+  "purpose": "Binary distributions and user documentation only; no application source code or development history.",
+  "updatedAt": "2026-10-17",
+  "products": {
+    "facet": {
+      "latest": "0.1.1-alpha-20261016-i18n",
+      "releases": [
+        {
+          "version": "0.1.1-alpha-20261016-i18n",
+          "applicationVersion": "0.1.1",
+          "tag": "facet-v0.1.1-alpha-20261016-i18n",
+          "channel": "alpha",
+          "buildDate": "2026-10-16",
+          "publishedDate": "2026-10-17",
+          "platform": "windows",
+          "architecture": "x64",
+          "languages": [
+            "zh-CN",
+            "en-US"
+          ],
+          "filename": "Facet-Setup-0.1.1-alpha-20261016-x64.exe",
+          "path": "downloads/facet/0.1.1-alpha-20261016-i18n/Facet-Setup-0.1.1-alpha-20261016-x64.exe",
+          "sizeBytes": 10007222,
+          "sha256": "bcfbc9af4d427b29d7b85f5a604d0c164b3e77f428a8f582ed7a31645bbc9e4b",
+          "notes": "downloads/facet/0.1.1-alpha-20261016-i18n/README.md",
+          "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/facet-v0.1.1-alpha-20261016-i18n",
+          "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261016-i18n/Facet-Setup-0.1.1-alpha-20261016-x64.exe"
+        }
+      ]
+    },
+    "ftkit": {
+      "latest": "0.1.3-preview-20261016-r2",
+      "releases": [
+        {
+          "version": "0.1.3-preview-20261016-r2",
+          "applicationVersion": "0.1.3",
+          "tag": "ftkit-v0.1.3-preview-20261016-r2",
+          "channel": "preview",
+          "buildDate": "2026-10-16",
+          "publishedDate": "2026-10-17",
+          "platform": "linux",
+          "architecture": "x86_64",
+          "filename": "ftkit-0.1.3-preview-20261016-r2-linux-x86_64.tar.gz",
+          "path": "downloads/ftkit/0.1.3-preview-20261016-r2/ftkit-0.1.3-preview-20261016-r2-linux-x86_64.tar.gz",
+          "sizeBytes": 3830658,
+          "sha256": "d66f3539c585b5030eca7ff68f3e16e15db4d20ccb734253d7ae41597bc9dadd",
+          "notes": "downloads/ftkit/0.1.3-preview-20261016-r2/README.md",
+          "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/ftkit-v0.1.3-preview-20261016-r2",
+          "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261016-r2/ftkit-0.1.3-preview-20261016-r2-linux-x86_64.tar.gz"
+        }
+      ]
+    }
+  }
+}

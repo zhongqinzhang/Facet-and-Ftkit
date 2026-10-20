@@ -2,11 +2,14 @@
 
 Linux x86_64 · Preview
 
+**[阅读中文用户手册 / Read the Chinese user guide](用户手册.txt)**
+
 ## 目录 / Contents
 
 1. [下载与安装 / Download and installation](#installation)
-2. [本版内容 / Release contents](#contents)
-3. [校验与验证范围 / Checksums and validation](#verification)
+2. [用户手册 / User guide](#user-guide)
+3. [本版内容 / Release contents](#contents)
+4. [校验与验证范围 / Checksums and validation](#verification)
 
 <a id="installation"></a>
 ## 下载与安装 / Download and installation
@@ -31,9 +34,20 @@ verify.sh 验证成功后会将解压目录配置到 Bash PATH。请保留该目
 
 After successful verification, verify.sh adds the extracted directory to Bash PATH. Keep that directory in place and rerun the installer if you move it. Use bash verify.sh --no-install for verification only, or bash install.sh to configure PATH.
 
-进入计算目录后运行 ftkit，按编号菜单选择任务。完整中文手册及更新说明位于包内 docs/zh-CN/。
+进入计算目录后运行 ftkit，按编号菜单选择任务。首次使用可从下方手册中的示例转换开始。
 
-Run ftkit in your calculation directory and choose a task from the numbered menu. The complete Chinese user guide and change log are included under docs/zh-CN/.
+Run ftkit in your calculation directory and choose a task from the numbered menu. For a first run, follow the sample conversion in the guide below.
+
+<a id="user-guide"></a>
+## 用户手册 / User guide
+
+[阅读中文用户手册](用户手册.txt)：包含下载校验、安装与升级、首次转换、全部六个任务、命令参数、Facet 结果查看和常见问题。打开文件后可在线阅读，或选择 **Download raw file** 保存到本地。
+
+[Read the Chinese user guide](用户手册.txt) for installation, a first conversion, all six tasks, command-line options, viewing results in Facet, and troubleshooting. Read it online or choose **Download raw file** to save a local copy.
+
+此处手册按 **0.1.3-preview-20261016-r2** 的功能和限制整理，文档更新日期为 **2026-10-20**。下载包内的 `docs/zh-CN/` 保留原始随包手册和更新说明。
+
+This guide covers **0.1.3-preview-20261016-r2** and was revised on **2026-10-20**. The archive retains its original guide and change log under `docs/zh-CN/`.
 
 <a id="contents"></a>
 ## 本版内容 / Release contents
@@ -59,8 +73,8 @@ d66f3539c585b5030eca7ff68f3e16e15db4d20ccb734253d7ae41597bc9dadd  ftkit-0.1.3-pr
 sha256sum -c SHA256SUMS.txt
 ~~~
 
-本次已核对归档目录、完整包 SHA-256 和包内程序哈希。BUILDINFO.json 记录原有测试范围；Linux 实机运行与旧版内核兼容性仍未验证。任务 101 的 stride 和任务 101 / 103 的统一中断流程仍待完善，详见包内手册。
+本次已核对归档目录、完整包 SHA-256 和包内程序哈希。BUILDINFO.json 记录原有测试范围；Linux 实机运行与旧版内核兼容性仍未验证。任务 101 的 stride 和任务 101 / 103 的统一中断流程仍待完善，详见[用户手册](用户手册.txt)。
 
-This publication verifies archive contents, the archive SHA-256, and the executable hash. BUILDINFO.json records prior tests. Linux execution and compatibility with older kernels remain unverified. Task 101 stride handling and unified interruption handling for tasks 101 and 103 remain incomplete; see the included user guide.
+This publication verifies archive contents, the archive SHA-256, and the executable hash. BUILDINFO.json records prior tests. Linux execution and compatibility with older kernels remain unverified. Task 101 stride handling and unified interruption handling for tasks 101 and 103 remain incomplete; see the [user guide](用户手册.txt).
 
 [返回主页 / Home](../../../README.md) · [更新记录 / Changelog](../../../CHANGELOG.md)

@@ -8,6 +8,11 @@
 | **Facet** | **0.1.1-alpha-20261023-i18n** | Windows x64 · 中文 / English | **[下载 EXE / Installer · 10.57 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261023-i18n/Facet-Setup-0.1.1-alpha-20261023-x64.exe)** | [安装与更新 / Install & changes](downloads/facet/0.1.1-alpha-20261023-i18n/README.md) |
 | **ftkit** | **0.1.3-preview-20261022-phononfix** | Linux x86_64 | **[下载 tar.gz / Archive · 3.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)** | [安装与更新 / Install & changes](downloads/ftkit/0.1.3-preview-20261022-phononfix/README.md) |
 
+**使用手册 / User manuals**
+
+- **Facet：** [中文使用手册](downloads/facet/0.1.1-alpha-20261023-i18n/docs/zh-CN/user-guide.txt) · [English user manual](downloads/facet/0.1.1-alpha-20261023-i18n/docs/en-US/user-guide.txt)
+- **ftkit：** [中文使用手册](downloads/ftkit/0.1.3-preview-20261022-phononfix/用户手册.txt) · [中英文安装说明 / Bilingual setup guide](downloads/ftkit/0.1.3-preview-20261022-phononfix/README.md)
+
 **Facet 已包含安装语言修复：安装时选 English，安装后首次启动即使用英文。** 此后手动切换语言仍会保存。
 
 **Facet includes the installation-language fix: choose English during setup to use English on the next launch.** Later manual preferences remain effective.

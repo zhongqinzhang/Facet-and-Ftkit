@@ -1,0 +1,44 @@
+{
+  "status": "build-complete-tests-stopped",
+  "sourceCommit": "be3f27d9bbc6875d1b5b8e5965496f7f2dec979c",
+  "testsStoppedAtUserRequest": true,
+  "completedBeforeStop": [
+    {
+      "name": "pnpm check",
+      "status": "passed",
+      "details": "Architecture, TypeScript and 3769 paired messages"
+    },
+    {
+      "name": "Targeted frontend regressions",
+      "status": "passed",
+      "tests": 59
+    },
+    {
+      "name": "Cell-frame depth browser regressions",
+      "status": "passed",
+      "tests": 13
+    }
+  ],
+  "stopped": [
+    "native locale test compilation",
+    "vector/bond browser tests",
+    "bilingual workflow browser tests"
+  ],
+  "notRun": [
+    "installer dispatch tests",
+    "MSI transform test suite",
+    "installer-language browser suite"
+  ],
+  "packaging": {
+    "frontendBuild": "complete",
+    "nativeReleaseBuild": "complete",
+    "msiAndNsisBuild": "complete",
+    "singleCorePayload": "verified",
+    "bundledManuals": 4,
+    "frontendAssetIdentity": 16,
+    "sourceInputFiles": 2132,
+    "archiveAndDownloadChecksums": "verified locally; remote publication recorded separately"
+  },
+  "systemInstallationPerformed": false,
+  "targetLinuxExecutionPerformed": false
+}

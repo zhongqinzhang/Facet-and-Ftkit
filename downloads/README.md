@@ -1,27 +1,34 @@
-# 下载目录 / Downloads
+# 最新安装包 / Latest downloads · 2026-10-23
 
-此目录按产品和版本保存发行文件。优先使用 Release 下载链接，也可打开目录中的包文件并选择 **Download raw file**。
+| 软件 / Product | 最新发行 / Current release | 平台 / Platform | 下载 / Download | 文档 / Docs |
+| --- | --- | --- | --- | --- |
+| **Facet** | **0.1.1-alpha-20261023-i18n** | Windows x64 · 中文 / English | **[下载 EXE / Installer · 10.57 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261023-i18n/Facet-Setup-0.1.1-alpha-20261023-x64.exe)** | [安装与更新 / Install & changes](facet/0.1.1-alpha-20261023-i18n/README.md) |
+| **ftkit** | **0.1.3-preview-20261022-phononfix** | Linux x86_64 | **[下载 tar.gz / Archive · 3.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)** | [安装与更新 / Install & changes](ftkit/0.1.3-preview-20261022-phononfix/README.md) |
 
-Packages are organized by product and version. Use the Release download links, or open a package in its directory and choose **Download raw file**.
+**Facet：安装选英文后首次打开即为英文。 / English selected during setup applies on the next launch.**
 
 ## 目录 / Contents
 
-1. [当前版本 / Current versions](#current)
-2. [归档规则 / Archive policy](#archive)
+1. [版本说明 / Release details](#details)
+2. [历史版本 / Previous versions](#history)
 
-<a id="current"></a>
-## 当前版本 / Current versions
+<a id="details"></a>
+## 版本说明 / Release details
 
-| 产品 / Product | 版本 / Version | 平台 / Platform | 下载 / Download | 目录 / Directory |
-| --- | --- | --- | --- | --- |
-| Facet | 0.1.1-alpha-20261016-i18n | Windows x64 | [安装包 / Installer](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261016-i18n/Facet-Setup-0.1.1-alpha-20261016-x64.exe) | [说明与校验 / Notes and checksum](facet/0.1.1-alpha-20261016-i18n/README.md) |
-| ftkit | 0.1.3-preview-20261016-r2 | Linux x86_64 | [发行包 / Archive](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261016-r2/ftkit-0.1.3-preview-20261016-r2-linux-x86_64.tar.gz) | [说明与校验 / Notes and checksum](ftkit/0.1.3-preview-20261016-r2/README.md) |
+Facet 构建于 **2026-10-23**，基于 **be3f27d9** 加安装语言修复。ftkit 构建于 **2026-10-22**，原样发布声子修正版。上表链接指向 GitHub Release；也可进入版本目录点击文件并选择 **Download raw file**。
 
-<a id="archive"></a>
-## 归档规则 / Archive policy
+Facet was built on **2026-10-23** from **be3f27d9** plus the installation-language fix. ftkit is the unchanged phonon-fix archive built on **2026-10-22**. Use the Release links above, or open a file in its version directory and choose **Download raw file**.
 
-每个版本目录包含一个发行文件、README.md 和 SHA256SUMS.txt。新版本增加新目录，保留旧版文件。应用源码及其归档不纳入本目录。
+<a id="history"></a>
+## 历史版本 / Previous versions
 
-Each version directory contains a package, README.md, and SHA256SUMS.txt. New releases get new directories; previous files are retained. Application source code and source archives are excluded.
+| 软件 / Product | 版本 / Version | 说明 / Notes |
+| --- | --- | --- |
+| Facet | 0.1.1-alpha-20261023-i18n | **[最新 / Current](facet/0.1.1-alpha-20261023-i18n/README.md)** |
+| ftkit | 0.1.3-preview-20261022-phononfix | **[最新 / Current](ftkit/0.1.3-preview-20261022-phononfix/README.md)** |
+| Facet | 0.1.1-alpha-20261016-i18n | [历史归档 / Archived](facet/0.1.1-alpha-20261016-i18n/README.md) |
+| ftkit | 0.1.3-preview-20261016-r2 | [历史归档 / Archived](ftkit/0.1.3-preview-20261016-r2/README.md) |
 
-[返回主页 / Home](../README.md) · [版本清单 / Version manifest](../versions.json) · [更新记录 / Changelog](../CHANGELOG.md)
+每次发行使用独立目录并保留校验值，公开目录不包含应用源码。Each release has its own directory and checksums; application source is excluded.
+
+[返回主页 / Home](../README.md) · [版本清单 / Manifest](../versions.json) · [更新记录 / Changelog](../CHANGELOG.md)

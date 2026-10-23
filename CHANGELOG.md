@@ -1,13 +1,35 @@
 # 更新记录 / Changelog
 
-此处记录公开发行包的版本与变化，分别标明构建日期与发布日期。已发布的包保留原始文件名与 SHA-256。
-
-This log records public distributions and their changes, with separate build and publication dates. Published packages retain their original filenames and SHA-256 checksums.
+**最新发布 / Latest publication: 2026-10-23** · [立即下载 / Download now](README.md#downloads)
 
 ## 目录 / Contents
 
-1. [2026-10-17 · 首次发布 / Initial publication](#release-2026-10-17)
-2. [后续版本 / Future releases](#future-releases)
+1. [2026-10-23 · 最新发行 / Latest publication](#release-2026-10-23)
+2. [2026-10-17 · 首次发布 / Initial publication](#release-2026-10-17)
+3. [后续版本 / Future releases](#future-releases)
+
+<a id="release-2026-10-23"></a>
+## 2026-10-23 · 最新发行 / Latest publication
+
+### Facet 0.1.1-alpha-20261023-i18n
+
+- 基于 **be3f27d9**，叠加安装语言修复；2026-10-23 重新构建。Rebuilt on **2026-10-23** from **be3f27d9** plus the installation-language fix.
+- 安装选英文后首次启动即为英文，后续手动语言设置仍保留。English selected during setup takes effect on the next launch; later manual preferences remain effective.
+- 纳入晶胞边框局部深度、矢量/键状态、弹出控件、主题与侧栏修正。Includes local cell-frame depth, vector/bond state, popup, theme and sidebar fixes.
+- 已完成构建与文件校验；其余测试按要求停止。Builds and file checks completed; remaining tests were stopped as requested.
+- [中英版本说明 / Bilingual release notes](downloads/facet/0.1.1-alpha-20261023-i18n/README.md) · [下载 / Download](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261023-i18n/Facet-Setup-0.1.1-alpha-20261023-x64.exe)
+
+### ftkit 0.1.3-preview-20261022-phononfix
+
+- 修复 VASP 质量修正段复合标题识别，并将晶胞/POMASS 一致性检查延续到文件末尾。Fixes compound VASP mass-corrected headings and checks lattice/POMASS consistency through the end of the file.
+- 原样发布 2026-10-22 归档，保留原文件名与 SHA-256；本次不重新编译。Publishes the October 22 archive unchanged, preserving its filename and SHA-256; no rebuild for this publication.
+- [中英版本说明 / Bilingual release notes](downloads/ftkit/0.1.3-preview-20261022-phononfix/README.md) · [下载 / Download](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)
+
+### 文档与版本管理 / Documentation and version management
+
+首页和下载页置顶最新包；补充中英安装说明、手册入口、来源信息和校验值。保留 10 月 16 日的历史文件与标签。公开仓库不加入应用源码。
+
+The home and downloads pages put current packages first, with bilingual installation instructions, manuals, provenance and checksums. Previous files and tags are preserved. Application source code is excluded.
 
 <a id="release-2026-10-17"></a>
 ## 2026-10-17 · 首次发布 / Initial publication

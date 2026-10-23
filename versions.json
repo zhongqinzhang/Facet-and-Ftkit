@@ -2,11 +2,35 @@
   "schemaVersion": 1,
   "repository": "https://github.com/zhongqinzhang/Facet-and-Ftkit",
   "purpose": "Binary distributions and user documentation only; no application source code or development history.",
-  "updatedAt": "2026-10-17",
+  "updatedAt": "2026-10-23",
   "products": {
     "facet": {
-      "latest": "0.1.1-alpha-20261016-i18n",
+      "latest": "0.1.1-alpha-20261023-i18n",
       "releases": [
+        {
+          "version": "0.1.1-alpha-20261023-i18n",
+          "applicationVersion": "0.1.1-alpha",
+          "tag": "facet-v0.1.1-alpha-20261023-i18n",
+          "channel": "alpha",
+          "buildDate": "2026-10-23",
+          "publishedDate": "2026-10-23",
+          "platform": "windows",
+          "architecture": "x64",
+          "filename": "Facet-Setup-0.1.1-alpha-20261023-x64.exe",
+          "path": "downloads/facet/0.1.1-alpha-20261023-i18n/Facet-Setup-0.1.1-alpha-20261023-x64.exe",
+          "sizeBytes": 10573197,
+          "sha256": "5c580fc700864d17fb341301d26b880673d0db0fa087ac992b3927f4a513051f",
+          "notes": "downloads/facet/0.1.1-alpha-20261023-i18n/README.md",
+          "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/facet-v0.1.1-alpha-20261023-i18n",
+          "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.1-alpha-20261023-i18n/Facet-Setup-0.1.1-alpha-20261023-x64.exe",
+          "languages": [
+            "zh-CN",
+            "en-US"
+          ],
+          "sourceCommit": "be3f27d9bbc6875d1b5b8e5965496f7f2dec979c",
+          "sourceOverlay": "Approved installation-language fix",
+          "validation": "Build and artifact checks completed; remaining test runs stopped at user request."
+        },
         {
           "version": "0.1.1-alpha-20261016-i18n",
           "applicationVersion": "0.1.1",
@@ -31,8 +55,27 @@
       ]
     },
     "ftkit": {
-      "latest": "0.1.3-preview-20261016-r2",
+      "latest": "0.1.3-preview-20261022-phononfix",
       "releases": [
+        {
+          "version": "0.1.3-preview-20261022-phononfix",
+          "applicationVersion": "0.1.3",
+          "tag": "ftkit-v0.1.3-preview-20261022-phononfix",
+          "channel": "preview",
+          "buildDate": "2026-10-22",
+          "publishedDate": "2026-10-23",
+          "platform": "linux",
+          "architecture": "x86_64",
+          "filename": "ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz",
+          "path": "downloads/ftkit/0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz",
+          "sizeBytes": 3831737,
+          "sha256": "c338878c3531b64daff35f0ca27ce89ee75ba4a55979a26ae571224b91b5f666",
+          "notes": "downloads/ftkit/0.1.3-preview-20261022-phononfix/README.md",
+          "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/ftkit-v0.1.3-preview-20261022-phononfix",
+          "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz",
+          "archiveUnchanged": true,
+          "linuxExecutionPerformed": false
+        },
         {
           "version": "0.1.3-preview-20261016-r2",
           "applicationVersion": "0.1.3",

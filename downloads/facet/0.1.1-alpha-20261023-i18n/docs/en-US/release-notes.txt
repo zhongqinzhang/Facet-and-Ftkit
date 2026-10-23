@@ -1,0 +1,80 @@
+Facet release notes
+English (United States) | Windows x64
+October 23, 2026 | Single-core bilingual build, installation language fix
+
+Contents
+1. Languages and installation
+2. STM and rendering
+3. Coordination polyhedra and editing
+4. Projects, recovery, and file safety
+5. ftkit companion package
+6. Verification scope
+
+1. Languages and installation
+=============================
+One application core includes Simplified Chinese and US English.
+Based on aa74b4d5, with the installation language fix. Choosing English in
+setup now starts Facet in English even when an earlier preference was Chinese
+or System default. Each installation choice is applied once. Later changes
+to Display language remain effective on subsequent launches; a new installation
+applies its new choice. This includes the baseline sidebar and theme fixes.
+This update reviews 98 new and 7 changed English entries, corrects singular
+polyhedron counts, clarifies source-file notices, and updates both manuals.
+Scientific values, custom names, and file-format tokens are preserved.
+
+Setup updates the original Facet installation. A separate Facet English
+installation and its user data are not automatically merged or removed.
+
+2. STM and rendering
+====================
+Complete CHGCAR, CHG, and PARCHG grids can be used for STM calculations.
+Values reconstructed for visualization remain ineligible. For a physical
+bias-window interpretation, prepare the appropriate partial charge density;
+a total charge density by itself does not define that energy window.
+
+Density smoothing acts on the 3D input before calculation and changes the
+result. Image smoothing acts on the calculated display without changing raw
+data exports. Both are off by default for a new STM. Base structure and
+overlay atoms have separate whole-layer visibility controls.
+New overlays show bonds and use a 0–1 by 0–1 coverage range.
+
+The update includes independent cell-frame visibility, corrected occlusion
+and dashed-line gaps, worker-based display-mesh preparation, and reuse of
+completed display results. GIF export settings can be moved by dragging
+the panel.
+
+3. Coordination polyhedra and editing
+=====================================
+Use Coordination polyhedra in the atoms-and-bonds section to create groups.
+Each group defines central atoms, ligands, and a coordination rule based on
+existing bonds or distance. Face color, edges, opacity, and highlights are
+editable. Source atom positions remain unchanged.
+Save/discard prompts and display-range input handling have been refined.
+
+4. Projects, recovery, and file safety
+======================================
+External densities retain the source information recorded when loaded.
+Changed or unavailable files produce a clear notice; keep the original
+files to reopen the project. Relinking checks their recorded identity.
+Some newer files can be opened in a read-only compatibility preview.
+The notice identifies omitted features and disabled operations.
+
+This build includes the current Project 33, structure package 25,
+sequence package 12, and phonon package 8 contracts. These versions come
+from the integrated application; this language update does not change them.
+Form input history is disabled and cleared by the desktop application.
+
+5. ftkit companion package
+==========================
+The accompanying Linux x86_64 archive is
+ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz.
+Task 301 handles compound headings in VASP mass-corrected phonon sections
+and checks for cell or mass conflicts later in the file.
+This release reuses that archive unchanged. Linux runtime and old-kernel
+compatibility remain subject to the limitations in its BUILDINFO.json.
+
+6. Verification scope
+=====================
+See the release verification record for the checks actually performed.
+Browser, binary-content, and installer-database checks do not substitute
+for installation, upgrade, and uninstallation on an isolated Windows system.

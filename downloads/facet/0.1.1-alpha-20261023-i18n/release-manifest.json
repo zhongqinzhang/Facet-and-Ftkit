@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "20261023-i18n",
+  "buildDate": "2026-10-23",
+  "publicationDate": "2026-10-23",
+  "sourceCodeIncludedInDistribution": false,
+  "facet": {
+    "releaseVersion": "0.1.1-alpha-20261023-i18n",
+    "applicationVersion": "0.1.1-alpha",
+    "msiVersion": "0.1.1",
+    "platform": "windows-x86_64",
+    "sourceCommit": "be3f27d9bbc6875d1b5b8e5965496f7f2dec979c",
+    "localChanges": "Approved installation-language fix: apply each explicit installer selection once, migrate prior preferences, and preserve subsequent manual preferences.",
+    "buildInputsSha256": "70bdfce33427da8e724e5c1a6ba090a293e37d19d03a868929ad4ed4cc0a944a",
+    "singleCore": true,
+    "languages": [
+      "zh-CN",
+      "en-US"
+    ],
+    "catalogKeys": 3769,
+    "projectSchema": 33,
+    "structureSchema": 25,
+    "sequenceSchema": 12,
+    "phononSchema": 8,
+    "installer": {
+      "file": "Facet-Setup-0.1.1-alpha-20261023-x64.exe",
+      "bytes": 10573197,
+      "sha256": "5c580fc700864d17fb341301d26b880673d0db0fa087ac992b3927f4a513051f"
+    },
+    "productCode": "{231C8E12-D788-4C12-B719-F40303A9E1ED}",
+    "upgradeCode": "{8FDC009D-90BA-5804-80C8-EF455C4EAC93}"
+  },
+  "ftkit": {
+    "releaseVersion": "0.1.3-preview-20261022-phononfix",
+    "applicationVersion": "0.1.3",
+    "platform": "linux-x86_64",
+    "file": "../../ftkit/0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz",
+    "bytes": 3831737,
+    "sha256": "c338878c3531b64daff35f0ca27ce89ee75ba4a55979a26ae571224b91b5f666",
+    "originalArchiveUnchanged": true,
+    "rebuiltInThisRelease": false,
+    "buildDate": "2026-10-22",
+    "sharedSourceBaseCommit": "10386144c43a3558b928b2b7e2ce930bfe4dd989",
+    "phononSchema": 5,
+    "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz"
+  },
+  "verification": {
+    "status": "build-complete-tests-stopped",
+    "sourceCommit": "be3f27d9bbc6875d1b5b8e5965496f7f2dec979c",
+    "testsStoppedAtUserRequest": true,
+    "completedBeforeStop": [
+      {
+        "name": "pnpm check",
+        "status": "passed",
+        "details": "Architecture, TypeScript and 3769 paired messages"
+      },
+      {
+        "name": "Targeted frontend regressions",
+        "status": "passed",
+        "tests": 59
+      },
+      {
+        "name": "Cell-frame depth browser regressions",
+        "status": "passed",
+        "tests": 13
+      }
+    ],
+    "stopped": [
+      "native locale test compilation",
+      "vector/bond browser tests",
+      "bilingual workflow browser tests"
+    ],
+    "notRun": [
+      "installer dispatch tests",
+      "MSI transform test suite",
+      "installer-language browser suite"
+    ],
+    "packaging": {
+      "frontendBuild": "complete",
+      "nativeReleaseBuild": "complete",
+      "msiAndNsisBuild": "complete",
+      "singleCorePayload": "verified",
+      "bundledManuals": 4,
+      "frontendAssetIdentity": 16,
+      "sourceInputFiles": 2132,
+      "archiveAndDownloadChecksums": "verified locally; remote publication recorded separately"
+    },
+    "systemInstallationPerformed": false,
+    "targetLinuxExecutionPerformed": false
+  },
+  "limitations": [
+    "Remaining test runs were stopped at the user request; this release does not claim a completed full test run.",
+    "End-to-end Windows installation, upgrade, uninstall and reboot were not performed.",
+    "The unchanged ftkit archive was not rebuilt or executed on Linux during this publication."
+  ]
+}

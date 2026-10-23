@@ -1,0 +1,216 @@
+Facet user guide
+English (United States) | Windows x64
+Facet 0.1.1 Alpha | October 23, 2026 | Installation language fix
+
+Contents
+1. Install and choose a language
+2. Open structures and save a project
+3. Display styles, themes, and the camera
+4. Selection, measurements, and structure tools
+5. Sequences, scalar plots, and phonons
+6. Charge density, sections, and STM
+7. Export figures and scientific data
+8. Recovery and external files
+9. Moving from the separate Facet English application
+10. Coordination polyhedra and current controls
+
+1. Install and choose a language
+================================
+Save your work and close Facet before updating. Run Facet Setup and choose
+Simplified Chinese or English. The installer contains one program with both
+language resources. Facet starts in the selected language after this installation,
+even if an earlier installation used a different language.
+
+In Facet, use the language control in the top bar to select System default,
+Simplified Chinese, or English. The change takes effect the next time you
+start Facet; the current session continues in its original language. Save
+your project before closing the application. Choosing System default
+overrides the installer preference. Unsupported system languages use English.
+
+The installation choice is applied once. Later changes in Facet remain in
+effect until you change them or choose a language during another installation.
+Changing the language does not change scientific data, project contents,
+custom names, themes, or undo history.
+
+Facet requires Microsoft Edge WebView2 145 or later. Setup may need an
+internet connection to install or update WebView2. Facet works offline once
+its runtime is available. Start Facet from the Start menu, desktop shortcut,
+or Facet.exe in the installation directory.
+
+The installation directory contains docs\zh-CN and docs\en-US. Each has a
+user-guide.txt and release-notes.txt. The official theme files are in
+presets\themes. Windows Settings > Installed apps provides uninstallation.
+
+2. Open structures and save a project
+=====================================
+Choose Open on the welcome screen or use the File menu. Files can also be
+dragged into the window. Select the required object in the project tree.
+
+Common structure inputs include VASP POSCAR/CONTCAR, CIF, XYZ/Extended XYZ,
+and ABACUS STRU. Facet also opens its own project and resource packages.
+A file's contents must match a supported format; changing its extension
+does not convert the data.
+
+ABACUS initial magnetic moments and velocities are separate vector groups.
+Velocities are converted to angstroms per femtosecond. Extra imported
+parameters may be retained as provenance without becoming editable Facet
+constraints. Read any import notice and retain the original source files.
+
+Use Ctrl+S to save an editable .facetproj project. Use the File menu to
+export an individual resource as .facet when appropriate. Image files
+cannot restore an editable project.
+
+Some volume resources remain external to a project. Keep their source files
+with the project when moving or sharing your work. A failed import reports
+an error while preserving the current workspace.
+
+3. Display styles, themes, and the camera
+=========================================
+Use the display controls to adjust atoms, bonds, and the unit-cell frame.
+Appearance controls provide materials, lighting, and effects. Choose the
+2D glass theme for the two-dimensional rendering style or a 3D theme for
+three-dimensional rendering.
+
+Right-drag rotates the view, middle-drag pans, and the wheel zooms. Use Fit
+in the top bar, or Space while the normal viewport has focus, to frame the
+structure. The a, b, and c controls provide crystallographic views.
+
+Theme, material, and element-palette controls let you save or import reusable
+appearance presets. Built-in names are translated for display. Names you
+entered yourself are preserved.
+
+Display settings such as atom radius, vector length, color, and transparency
+control the illustration. They do not rescale lattice parameters, fractional
+coordinates, or the underlying vector values.
+
+4. Selection, measurements, and structure tools
+================================================
+Select atoms in the viewport or use the selection controls to work with
+elements and groups. Tooltips identify icon buttons. The measurement tools
+provide distances, angles, dihedral angles, and distance components.
+
+Lengths are in angstroms (1 angstrom = 0.1 nm) unless another unit is shown.
+Angles are in degrees. Magnetic moments use the Bohr magneton, and imported
+velocities may use angstroms per femtosecond.
+
+Structure tools include atom editing, supercells, symmetry operations,
+slabs, and heterostructure construction. Read the operation's preview and
+parameters before applying it. A display range only controls the visible
+periodic images; creating a supercell changes the structure.
+
+Bond search uses the selected distance criterion and element-pair settings.
+If the application reports an incomplete search, the displayed bond list
+must not be treated as a complete periodic bond graph.
+
+5. Sequences, scalar plots, and phonons
+=======================================
+Open a supported XDATCAR or a sequence .facet package. Playback controls
+select a frame, play or pause, and adjust the playback rate. Scalar plots
+show available channels, such as energy. Relative-energy presentation
+changes the displayed reference; it does not overwrite the source channel.
+
+Phonon resources provide q points, modes, frequencies, displacement vectors,
+and animation. Select a mode and choose the desired frequency unit, such as
+cm^-1, THz, or meV. The animated displacement and arrow scale are presentation
+settings. They do not change the stored eigenvectors or frequencies.
+
+Use the available GIF export controls to export an animation. The GIF
+settings panel is draggable. Save the project separately to retain editable
+settings and resources.
+
+6. Charge density, sections, and STM
+====================================
+Load CHGCAR, CHG, or PARCHG charge-density data through the volume controls.
+LOCPOT electrostatic-potential files are not supported by this build.
+Use isosurfaces to inspect a chosen density level and sections to inspect
+a plane through the grid. Scientific color controls determine how the
+display maps scalar values to colors.
+
+When a source contains multiple density blocks, the interface states which
+block is displayed. Spin or magnetization blocks are not silently treated
+as total density. If a small trailing gap was reconstructed for display,
+the warning states this explicitly; that reconstruction is for visualization
+and cannot be used as scientific STM input.
+
+STM calculations accept complete CHGCAR, CHG, and PARCHG charge-density
+grids. Values reconstructed for visualization cannot be used for STM.
+For a bias-dependent interpretation, prepare the appropriate energy-window
+partial charge density; total charge density alone does not define a bias
+window. Choose constant-height or constant-current mode, the scan plane
+and side, and the range. Constant-current mode searches for an isodensity
+surface; its density threshold is not an absolute current in amperes.
+
+Density smoothing processes the 3D input before the calculation. Its width
+is 0–1 angstrom, and 0 turns it off. It changes the calculated STM result.
+Image smoothing processes the calculated display. An enabled width is
+0.01–1 angstrom; 0 turns it off. It does not change raw data exports.
+Both controls are off by default for a new STM. Image interpolation and
+height scaling also affect presentation rather than the raw result.
+
+Base structure and Overlay atoms control separate whole layers. New overlays
+show bonds and cover 0–1 by 0–1 in-plane lattice coordinates. Overlay settings
+control height and coverage; individual overlay atoms are not selectable.
+Lattice controls the unit-cell frame independently of base-structure
+visibility. Hide above surface uses the displayed surface for clipping.
+
+7. Export figures and scientific data
+======================================
+Use File > Export image, choose the available format, and set the output
+size and background. Review the exported file at its final size, especially
+text, labels, and fine bonds. Available export formats depend on the current
+renderer and content.
+
+Application-generated captions use the active interface language. Custom
+labels and scientific values keep their original content. Structure and
+data exports retain their required file-format tokens and numeric syntax.
+
+8. Recovery and external files
+==============================
+Facet creates recovery copies separately from the project you explicitly
+save. If the installation recovery directory is not writable, the application
+uses its per-user application-data recovery directory. The interface reports
+backup status, and a failed automatic backup is retried in the background.
+
+A recovery copy helps restore work after an interruption. Open the recovered
+workspace, inspect it, and save it to a project path you control. Do not treat
+an automatic recovery copy as a replacement for saving your project.
+
+If a project cannot find an external resource, select the original file or
+the matching source through the relinking controls. File size and checksum
+checks verify the recorded identity. A different density must be loaded as
+a new resource. Keep the original scientific input files. If a source file
+changes or becomes unavailable, the saved checksum remains the one recorded
+when the resource was loaded; the current view can remain usable.
+
+Some newer files open in a read-only compatibility preview. The notice
+lists omitted features. Saving, structure export, and adding the preview
+to an editable project are disabled to protect the original file.
+
+9. Moving from the separate Facet English application
+=====================================================
+The unified application follows the original Facet installation and uses
+the same application identity. The older, separately installed Facet English
+application remains independent.
+
+Open its .facetproj and .facet files in the unified application through the
+normal file controls. Use theme/preset export and import to transfer custom
+presets. To transfer unsaved recovered work, recover it in the old application
+and save a project first.
+
+This installer does not automatically uninstall Facet English or merge its
+preferences, recent-file history, recovery copies, or received files.
+10. Coordination polyhedra and current controls
+===============================================
+Expand Coordination polyhedra in the atoms-and-bonds section and create a
+group. Choose central atoms by element or use the current selection.
+Select the ligand elements or the nearest-neighbor element, then choose
+existing bonds or a minimum/maximum distance criterion for coordination.
+Each group has its own visibility, face color, edges, opacity, and highlights.
+Match center color uses each central atom's color. Group controls provide
+rename and delete actions; a selected polyhedron can be removed and restored.
+
+Display-range edits apply only when the upper bound exceeds the lower bound.
+Until then, the last valid range remains visible. Saving a preset can
+overwrite an editable preset or create a copy. Read the save/discard prompt
+before deleting or replacing a preset. The desktop application disables
+and clears form input history.

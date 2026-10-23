@@ -1,0 +1,86 @@
+{
+  "package": "ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64",
+  "applicationVersion": "0.1.3",
+  "purpose": "301 VASP compound mass-corrected headings and full-file reference metadata checks; preserves all previous Ftkit features",
+  "buildDate": "2026-10-22",
+  "buildHost": "x86_64-pc-windows-msvc",
+  "target": "x86_64-unknown-linux-musl",
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)\nbinary: rustc\ncommit-hash: 8bab26f4f68e0e26f0bb7960be334d5b520ea452\ncommit-date: 2026-07-14\nhost: x86_64-pc-windows-msvc\nrelease: 1.97.1\nLLVM version: 22.1.6",
+  "profile": "release",
+  "lockedDependencies": true,
+  "linker": "rust-lld (GNU flavor)",
+  "rustflags": "-C linker-flavor=ld.lld -C link-self-contained=yes -C target-cpu=x86-64 -C target-feature=+crt-static -C relocation-model=static -C strip=symbols",
+  "elfAudit": {
+    "class": "ELF64",
+    "machine": "x86-64",
+    "type": "ET_EXEC",
+    "interpreter": null,
+    "sharedLibraryDependencies": []
+  },
+  "binarySha256": "229ad0575888a832668bdbabbb3df991704e56779b4aff174e58f2e25d72e0af",
+  "fixtureSha256": "7e600eba93b509914223972b50c2dfee8d8e18940d5c64706b483aa332edc15e",
+  "lockSha256": "0b7a4e2f3c01c07c0a27f44f20e2c2780b401fea74dc41196fb3d09fdbc6d50b",
+  "sourcesSha256": "fb600d1f7781a51755f84949960717ae7f39126af5c799d36417dc04330ad609",
+  "buildCommand": "cargo build --release --locked --offline --manifest-path ftkit/Cargo.toml --target x86_64-unknown-linux-musl --target-dir ftkit/target",
+  "testedOnLinux": [],
+  "diracCompatibility": "unverified; kernel 2.6.32 is below Rust's official baseline",
+  "runtimeRequirements": [
+    "Linux x86_64",
+    "no dynamically linked libc",
+    "no Python",
+    "no Facet installation"
+  ],
+  "verificationRequirements": [
+    "Bash 4+",
+    "coreutils",
+    "awk",
+    "grep",
+    "cmp",
+    "unzip optional"
+  ],
+  "localTests": {
+    "rustCliAndPublicInterfaces": 49,
+    "externalVasp651NativeRoundTrip": "pass (1 additional test)",
+    "phononRegressionTestsAdded": 4,
+    "phonon555DenseRoundTrip": "pass",
+    "installationScripts": "unchanged from 20261016-r2; not rerun in this build",
+    "pnpmCheck": "pass (final rerun)",
+    "pnpmBuild": "pass",
+    "pnpmCheckInitialFailure": "existing shared-worktree prepareShaderPrograms.ts type error; resolved before final rerun without changes by this task",
+    "relativeEnergyCliAndNativeReader": 5,
+    "browserFlows": "not rerun; viewer behavior unchanged",
+    "linuxExecution": "not available"
+  },
+  "realOutcarVerification": {
+    "sourceBytes": 184942035,
+    "sourceSha256": "e4f0867f3b614c02d53ba7d34c7581063db3abba30ec53177e54f1485fea8738",
+    "vasp": "6.5.1",
+    "ibrion": 5,
+    "atoms": 28,
+    "qPoints": 1,
+    "modes": 84,
+    "imaginaryModes": 3,
+    "maxCorrectedComponentError": 3.885780586188048e-16,
+    "maxCartesianCoordinateErrorAngstrom": 1.7763568394002505e-15,
+    "nativeSchema": 5,
+    "sourceUnchanged": true
+  },
+  "sharedSourceBaseCommit": "10386144c43a3558b928b2b7e2ce930bfe4dd989",
+  "sharedSourceBase": "20261016-r2 released data-layer snapshot; only Ftkit bug fixes and release records overlaid",
+  "samples": {
+    "vaspPhonon": {
+      "atoms": 80,
+      "qPoints": 1,
+      "modesPerQ": 240
+    },
+    "qePhonon": {
+      "atoms": 3,
+      "qPoints": 121,
+      "modesPerQ": 9
+    },
+    "collinearAtoms": 48,
+    "socAtoms": 4
+  },
+  "sourceSnapshot": "BUILD-SOURCES.sha256 records the exact local build inputs; commit IDs alone do not describe a dirty worktree",
+  "gitHead": "43339a6850db327cef28cbe066a7b0d06fb13fd7"
+}

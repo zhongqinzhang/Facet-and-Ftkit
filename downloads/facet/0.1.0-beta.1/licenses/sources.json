@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+  "npm": {
+    "is-mobile@5.0.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/npm-is-mobile-5.0.0-LICENSE.txt",
+          "source": "https://unpkg.com/is-mobile@5.0.0/README.md#license"
+        }
+      ]
+    },
+    "@ant-design/icons-svg@4.5.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/npm-_ant-design_icons-svg-4.5.0-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/ant-design/ant-design-icons/e6d33f4ba94ebe9f4b8648373342505b88e51a57/LICENSE"
+        }
+      ]
+    },
+    "@tauri-apps/plugin-dialog@2.7.1": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/npm-_tauri-apps_plugin-dialog-2.7.1-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/tauri-apps/plugins-workspace/5c7668b6bb7c9a509f394d584568b3a922161e50/LICENSE_MIT"
+        }
+      ]
+    }
+  },
+  "cargo": {
+    "ts-rs@11.1.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/ts-rs-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/Aleph-Alpha/ts-rs/1dce5297090804082e9639d2b7d851ba815aa359/LICENSE"
+        }
+      ]
+    },
+    "moyo@0.14.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/moyo-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/spglib/moyo/4798a22014e2e45fbe4748b14689f7ed5e2a455a/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/moyo-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/spglib/moyo/4798a22014e2e45fbe4748b14689f7ed5e2a455a/LICENSE-APACHE"
+        }
+      ]
+    },
+    "alloc-stdlib@0.2.4": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-alloc-no-stdlib-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/dropbox/rust-alloc-no-stdlib/ae42d22078b98549e987d2f03d12df7b984fde47/LICENSE"
+        }
+      ]
+    },
+    "unic-char-property@0.9.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-APACHE"
+        },
+        {
+          "file": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+          "source": "https://github.com/open-i18n/rust-unic"
+        }
+      ],
+      "note": "Unmodified library; original UNIC source copyright headers are included in addition to the license texts."
+    },
+    "unic-char-range@0.9.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-APACHE"
+        },
+        {
+          "file": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+          "source": "https://github.com/open-i18n/rust-unic"
+        }
+      ]
+    },
+    "unic-common@0.9.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-APACHE"
+        },
+        {
+          "file": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+          "source": "https://github.com/open-i18n/rust-unic"
+        }
+      ]
+    },
+    "unic-ucd-version@0.9.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/rust-unic-58786053-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/5878605364af97a3358368a6eaef02104af2e016/LICENSE-APACHE"
+        },
+        {
+          "file": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+          "source": "https://github.com/open-i18n/rust-unic"
+        }
+      ]
+    },
+    "unic-ucd-ident@0.9.0": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-unic-8a6ce830-LICENSE-MIT.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/8a6ce83063d90b91ae2ce59eddb803edd393fca9/LICENSE-MIT"
+        },
+        {
+          "file": "licenses/supplemental/rust-unic-8a6ce830-LICENSE-APACHE.txt",
+          "source": "https://raw.githubusercontent.com/open-i18n/rust-unic/8a6ce83063d90b91ae2ce59eddb803edd393fca9/LICENSE-APACHE"
+        },
+        {
+          "file": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+          "source": "https://github.com/open-i18n/rust-unic"
+        }
+      ],
+      "note": "Unmodified library; original UNIC source copyright headers are included in addition to the license texts."
+    },
+    "webview2-com@0.38.2": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/webview2-rs-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/wravery/webview2-rs/b74dc5e2b394044bea5191052868ce7a106c202c/LICENSE"
+        }
+      ]
+    },
+    "webview2-com-sys@0.38.2": {
+      "notices": [
+        {
+          "file": "licenses/supplemental/webview2-rs-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/wravery/webview2-rs/b74dc5e2b394044bea5191052868ce7a106c202c/LICENSE"
+        }
+      ]
+    },
+    "option-ext@0.2.0": {
+      "license": "MPL-2.0",
+      "note": "Listed conservatively because Cargo resolves this dependency. Its only consumer in dirs-sys is Unix-gated; the Windows build does not use its code. Unmodified source: https://static.crates.io/crates/option-ext/option-ext-0.2.0.crate"
+    },
+    "brotli-decompressor@5.0.3": {
+      "license": "BSD-3-Clause",
+      "note": "The legacy package metadata uses BSD-3-Clause/MIT; the packaged LICENSE is the Dropbox BSD-3-Clause text. The original license and source notices are retained."
+    }
+  },
+  "components": [
+    {
+      "id": "assets:facet-ui-sans@2.005",
+      "group": "assets",
+      "name": "Facet UI Sans / Source Han Sans CN",
+      "version": "2.005 (GB2312 subset)",
+      "license": "OFL-1.1",
+      "source": "https://github.com/adobe-fonts/source-han-sans/tree/2.005R",
+      "note": "Renamed and subset for Facet; see the included modification notice. The font binary is unchanged by this license inventory.",
+      "notices": [
+        {
+          "file": "public/fonts/source-han-sans/LICENSE.txt",
+          "source": "https://github.com/adobe-fonts/source-han-sans/blob/2.005R/LICENSE.txt"
+        },
+        {
+          "file": "public/fonts/source-han-sans/NOTICE.txt",
+          "source": "Facet font modification notice"
+        }
+      ],
+      "assets": [
+        {
+          "file": "public/fonts/source-han-sans/FacetUISans-GB2312-VF.woff2",
+          "bytes": 1925304,
+          "sha256": "09af6dad6df468ecce2dd9af41547cde1b5a707df9f8f6dacf3c36e1f7ab70dc"
+        }
+      ]
+    },
+    {
+      "id": "assets:noto-sans@1.04",
+      "group": "assets",
+      "name": "Noto Sans Regular and Bold",
+      "version": "1.04",
+      "license": "OFL-1.1",
+      "source": "https://github.com/google/fonts/tree/3043c22d2f091ead19f47fbcabdd696b8c9b7edd/ofl/notosans",
+      "note": "Both original font binaries exactly match this Google Fonts commit and its OFL 1.1 grant. Older embedded font metadata still names Apache 2.0; the distribution follows the matching upstream OFL grant. Used for PDF export; no font binary changes.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/NotoSans-COPYRIGHT.txt",
+          "source": "Copyright name-table records in NotoSans-Regular.ttf and NotoSans-Bold.ttf, Version 1.04"
+        },
+        {
+          "file": "src/assets/fonts/OFL.txt",
+          "source": "https://raw.githubusercontent.com/google/fonts/3043c22d2f091ead19f47fbcabdd696b8c9b7edd/ofl/notosans/OFL.txt"
+        }
+      ],
+      "assets": [
+        {
+          "file": "src/assets/fonts/NotoSans-Regular.ttf",
+          "bytes": 414820,
+          "sha256": "9e9b4c53bd25cad9c04d370f133a5e32d166d0d54e2a9ad6cba4a31fcd382d5b"
+        },
+        {
+          "file": "src/assets/fonts/NotoSans-Bold.ttf",
+          "bytes": 415132,
+          "sha256": "68bdd57a1e1e62663a0b372c7224204b82a89820b9cf30391337f61f0c5e7123"
+        }
+      ]
+    },
+    {
+      "id": "assets:pretty-lattice",
+      "group": "assets",
+      "name": "Pretty Lattice reference palette and material data",
+      "version": "reference captured 2026-07-03",
+      "license": "MIT",
+      "source": "https://github.com/songfeitong/pretty-lattice/tree/7980a9a2e7c7ed21f4b5ef534ed0cc264a4db3c7",
+      "note": "Facet adapts the vesta-soft palette, modern-matte material and lighting values. The 2026-11-08 provenance review matches the July 3 reference data and original MIT notice to this snapshot; see src/data/prettyLatticeClone.ts in the development repository.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/pretty-lattice-MIT.txt",
+          "source": "https://raw.githubusercontent.com/songfeitong/pretty-lattice/7980a9a2e7c7ed21f4b5ef534ed0cc264a4db3c7/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "system:webview2-loader@1.0.3650.58",
+      "group": "system",
+      "name": "Microsoft WebView2 SDK static loader",
+      "version": "1.0.3650.58",
+      "license": "BSD-3-Clause",
+      "source": "https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3650.58",
+      "note": "The x64 WebView2LoaderStatic.lib exactly matches the Microsoft SDK package. SDK notices are retained in full. The separately installed Evergreen WebView2 Runtime is provided by Microsoft and is not embedded in this installer.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/webview2-sdk-LICENSE.txt",
+          "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.3650.58/microsoft.web.webview2.1.0.3650.58.nupkg#LICENSE.txt"
+        },
+        {
+          "file": "licenses/supplemental/webview2-sdk-NOTICE.txt",
+          "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.3650.58/microsoft.web.webview2.1.0.3650.58.nupkg#NOTICE.txt"
+        }
+      ]
+    },
+    {
+      "id": "system:rust-std@1.97.1",
+      "group": "system",
+      "name": "Rust standard library",
+      "version": "1.97.1",
+      "license": "MIT OR Apache-2.0; additional notices below",
+      "source": "https://github.com/rust-lang/rust/tree/8bab26f4f68e0e26f0bb7960be334d5b520ea452/library",
+      "note": "Unmodified standard library. The complete upstream copyright inventory is retained as a conservative all-platform reference; SGX, WASI, Unix and other target-specific entries are not claims that those components ship on Windows.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/Rust-1.97.1-COPYRIGHT-library.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/COPYRIGHT-library.html (readable text conversion)"
+        },
+        {
+          "file": "licenses/supplemental/Rust-MIT.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/licenses/MIT.txt"
+        },
+        {
+          "file": "licenses/supplemental/Rust-Apache-2.0.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/licenses/Apache-2.0.txt"
+        },
+        {
+          "file": "licenses/supplemental/Rust-BSD-2-Clause.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/licenses/BSD-2-Clause.txt"
+        },
+        {
+          "file": "licenses/supplemental/Rust-ISC.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/licenses/ISC.txt"
+        },
+        {
+          "file": "licenses/supplemental/Rust-Unicode-3.0.txt",
+          "source": "Rust 1.97.1 distribution: share/doc/rust/licenses/Unicode-3.0.txt"
+        }
+      ]
+    },
+    {
+      "id": "system:rust-compiler-builtins@1.97.1",
+      "group": "system",
+      "name": "Rust compiler-builtins runtime",
+      "version": "Rust 1.97.1",
+      "license": "MIT AND Apache-2.0 WITH LLVM-exception",
+      "source": "https://github.com/rust-lang/rust/tree/8bab26f4f68e0e26f0bb7960be334d5b520ea452/library/compiler-builtins",
+      "note": "Runtime routines linked by the Rust toolchain; the LLVM license and exception are included in the original notice.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/rust-compiler-builtins-LICENSE.txt",
+          "source": "https://raw.githubusercontent.com/rust-lang/rust/8bab26f4f68e0e26f0bb7960be334d5b520ea452/library/compiler-builtins/LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "id": "installer:nsis@3.11",
+      "group": "installer",
+      "name": "NSIS installer stub and plugins",
+      "version": "3.11",
+      "license": "Zlib",
+      "source": "https://nsis.sourceforge.io/License",
+      "note": "This wrapper uses zlib compression, System, LangDLL and nsDialogs. The complete upstream COPYING is retained for context; its bzip2/LZMA terms describe modules not used by this installer. Facet-specific installer scripts are separate.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/NSIS-3.11-COPYING.txt",
+          "source": "NSIS 3.11 distribution: COPYING"
+        }
+      ]
+    },
+    {
+      "id": "installer:wix-ui@3.14.1",
+      "group": "installer",
+      "name": "WiX UI custom actions and images",
+      "version": "3.14.1.8722",
+      "license": "MS-RL",
+      "source": "https://github.com/wixtoolset/wix3/tree/wix3141rtm",
+      "note": "The MSI embeds WixUIWixca and six WiX UI images. Corresponding unmodified third-party source is provided in the companion third-party-sources archive beside this installer; upstream source is also available at this versioned URL. Facet-owned application code is not covered by this grant.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/WiX-3.14.1-LICENSE.txt",
+          "source": "https://github.com/wixtoolset/wix3/blob/wix3141rtm/LICENSE.TXT"
+        }
+      ]
+    },
+    {
+      "id": "assets:matplotlib-colormaps@3.10.7",
+      "group": "assets",
+      "name": "Matplotlib scientific colormap data",
+      "version": "3.10.7",
+      "license": "Matplotlib",
+      "source": "https://github.com/matplotlib/matplotlib/tree/v3.10.7",
+      "note": "Facet extracts the magma, inferno, plasma, viridis, cividis and turbo 256-color tables and stores RGB nodes in TypeScript. No Matplotlib Python runtime is included. Copyright (c) 2012- Matplotlib Development Team; All Rights Reserved.",
+      "notices": [
+        {
+          "file": "src/volume/colormap/MATPLOTLIB-LICENSE.txt",
+          "source": "https://github.com/matplotlib/matplotlib/blob/v3.10.7/LICENSE/LICENSE"
+        }
+      ]
+    },
+    {
+      "id": "assets:colorbrewer-brbg",
+      "group": "assets",
+      "name": "ColorBrewer BrBG color specifications",
+      "version": "7d135fc4e19e",
+      "license": "Apache-2.0; original ColorBrewer notices retained",
+      "source": "https://github.com/axismaps/colorbrewer/tree/7d135fc4e19eda73f2eb1bf55fcdf4a04fe4881f",
+      "note": "This product includes color specifications and designs developed by Cynthia Brewer (http://colorbrewer.org/). Facet combines the BrBG 3-color sequence with the two endpoints of its 11-color sequence, then interpolates between the five stops. This is an adaptation, not the original ColorBrewer 5-class palette.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/ColorBrewer-NOTICE.txt",
+          "source": "https://colorbrewer2.org/export/LICENSE.txt"
+        },
+        {
+          "file": "licenses/supplemental/ColorBrewer-Apache-2.0.txt",
+          "source": "https://raw.githubusercontent.com/axismaps/colorbrewer/7d135fc4e19eda73f2eb1bf55fcdf4a04fe4881f/LICENCE.txt"
+        }
+      ]
+    },
+    {
+      "id": "assets:jmol-legacy-colors@r14469",
+      "group": "assets",
+      "name": "Jmol legacy element colors (data only)",
+      "version": "12.1.15 / revision 14469",
+      "license": "LGPL-2.1-or-later",
+      "source": "https://svn.code.sf.net/p/jmol/code/trunk/Jmol/src/org/jmol/viewer/JmolConstants.java?p=14469",
+      "note": "Conservative provenance notice for legacy color values: 30 Jmol-palette entries and 23 of the 25 newVESTA materialStudio entries match the official Jmol color table. Facet stores hexadecimal color values; no Jmol Java or JSmol runtime is included. This notice records upstream terms and does not declare Facet-owned code to be LGPL. Historical acquisition and redistribution requirements remain part of the data-provenance review.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/Jmol-COPYRIGHT.txt",
+          "source": "Original JmolConstants.java copyright and license header, revision 14469"
+        },
+        {
+          "file": "licenses/supplemental/Jmol-LGPL-2.1.txt",
+          "source": "https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt"
+        }
+      ]
+    },
+    {
+      "id": "assets:nist-neutral-configurations",
+      "group": "assets",
+      "name": "NIST neutral-atom reference data (H–Hs)",
+      "version": "reviewed 2026-11-08",
+      "license": "NIST non-SRD data terms",
+      "source": "https://www.nist.gov/pml/periodic-table-elements",
+      "note": "Alexander Kramida, Karen Olsen and Yuri Ralchenko, NIST Periodic Table of the Elements / Elemental Data Index. The periodic table is classified as an information compilation, formerly SRD 145. Facet independently checks the H–Hs occupations; Lr uses 5f14 7s2 7p1. Modification, 2026-11-08: noble-gas cores are omitted, occupations are reordered and filtered by the existing display convention. Reference data are not all experimental measurements. Full NIST non-SRD terms are retained.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/NIST-DATA-NOTICE.txt",
+          "source": "https://www.nist.gov/open/license"
+        }
+      ]
+    },
+    {
+      "id": "assets:smits2023-superheavy-configurations",
+      "group": "assets",
+      "name": "Smits et al. superheavy-atom theoretical configurations",
+      "version": "2023, Table 2",
+      "license": "CC-BY-4.0",
+      "source": "https://doi.org/10.1016/j.physrep.2023.09.004",
+      "note": "Mt–Og dominant theoretical configurations, reduced to ordinary subshell occupations. NIST is used for Lr; the different Lr entry in this paper is not adopted. Attribution and the dated adaptation description accompany the full license.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/Smits-2023-NOTICE.txt",
+          "source": "Published article, pages 1 and 34"
+        },
+        {
+          "file": "licenses/supplemental/CC-BY-4.0.txt",
+          "source": "https://creativecommons.org/licenses/by/4.0/legalcode.txt"
+        }
+      ]
+    },
+    {
+      "id": "assets:bodr-vdw-reference",
+      "group": "assets",
+      "name": "Blue Obelisk compiled van der Waals radii",
+      "version": "c22a20077698",
+      "license": "CC0-1.0",
+      "source": "https://github.com/BlueObelisk/bodr/tree/c22a200776984388564ef90536d8af24ae09d21e",
+      "note": "13 lanthanide values match bo:radiusVDW in elements.xml. These are identified as compiled references, not universally measured radii. Contributors: Geoffrey R. Hutchison, Carsten Niehaus, Egon Willighagen and Bert de Jong. COPYING/README and the 2013-08-02 relicensing commit 9a2e5ea17b1ef4c303ce4eab902740bff5aa0157 specify CC0; elements.xml retains stale MIT metadata. No BODR software runtime is included.",
+      "notices": [
+        {
+          "file": "licenses/supplemental/BODR-CC0-1.0.txt",
+          "source": "https://raw.githubusercontent.com/BlueObelisk/bodr/c22a200776984388564ef90536d8af24ae09d21e/bodr/COPYING"
+        }
+      ]
+    }
+  ]
+}

@@ -2,11 +2,40 @@
   "schemaVersion": 1,
   "repository": "https://github.com/zhongqinzhang/Facet-and-Ftkit",
   "purpose": "Binary distributions and user documentation only; no application source code or development history.",
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-11-08",
   "products": {
     "facet": {
-      "latest": "0.1.1-alpha-20261023-i18n",
+      "latest": "0.1.0-beta.1",
       "releases": [
+        {
+          "version": "0.1.0-beta.1",
+          "applicationVersion": "0.1.0-beta.1",
+          "tag": "facet-v0.1.0-beta.1",
+          "channel": "beta",
+          "buildDate": "2026-11-08",
+          "publishedDate": "2026-11-08",
+          "platform": "windows",
+          "architecture": "x64",
+          "filename": "Facet-Setup-0.1.0-beta.1-x64.exe",
+          "path": "downloads/facet/0.1.0-beta.1/Facet-Setup-0.1.0-beta.1-x64.exe",
+          "sizeBytes": 12828535,
+          "sha256": "d00bb0fcc4c0c9596479344a63962bd8b28b8a02f8e940944eeae13598db28f0",
+          "notes": "downloads/facet/0.1.0-beta.1/README.md",
+          "notesByLanguage": {
+            "en-US": "downloads/facet/0.1.0-beta.1/README.md",
+            "zh-CN": "downloads/facet/0.1.0-beta.1/README.zh-CN.md"
+          },
+          "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/facet-v0.1.0-beta.1",
+          "downloadUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.0-beta.1/Facet-Setup-0.1.0-beta.1-x64.exe",
+          "languages": [
+            "zh-CN",
+            "en-US"
+          ],
+          "sourceCommit": "3205a156a8e7f3f29df06d95268c4ee4fc255703",
+          "sourceOverlay": "Reviewed Beta data, About, licensing, installer-language, font and documentation changes; subsequently recorded in private source commit 4d868d0aee3fbc9882b77e4a81d2aa9468dfe1a7",
+          "recordedSourceCommit": "4d868d0aee3fbc9882b77e4a81d2aa9468dfe1a7",
+          "validation": "Static checks, builds, package/hash verification and manual Chrome/WebView2 sample review completed. No automated tests. Final-package installation and native file-dialog/export checks not repeated."
+        },
         {
           "version": "0.1.1-alpha-20261023-i18n",
           "applicationVersion": "0.1.1-alpha",

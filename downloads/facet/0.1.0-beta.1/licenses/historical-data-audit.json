@@ -1,0 +1,952 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "scope": "Historical data provenance in the current Facet source. No scientific values or application behavior changed.",
+  "newVestaOwnership": {
+    "confirmed": true,
+    "basis": "Explicit user statement in this chat: newVESTA 是我自己写的",
+    "date": "2026-11-08",
+    "boundary": "Confirms predecessor code ownership; does not assign a new license to separately sourced data."
+  },
+  "methods": [
+    "Read source and read-only Git history",
+    "Compare numerical tables and colors without executing application code",
+    "Check Crossref DOI records and original papers",
+    "Retrieve official/version-pinned upstream notices"
+  ],
+  "automatedTestsRun": false,
+  "candidateRebuilt": false,
+  "covalentRadii": {
+    "entries": 84,
+    "rustEntries": 84,
+    "frontendRustEqual": true,
+    "paperCompared": 84,
+    "paperDifferences": {},
+    "fallbackRadius": 1.5,
+    "fallbackElements": [
+      "Pm",
+      "Po",
+      "At",
+      "Rn",
+      "Fr",
+      "Ra",
+      "Ac",
+      "Pa",
+      "Np",
+      "Pu",
+      "Am",
+      "Cm",
+      "Bk",
+      "Cf",
+      "Es",
+      "Fm",
+      "Md",
+      "No",
+      "Lr",
+      "Rf",
+      "Db",
+      "Sg",
+      "Bh",
+      "Hs",
+      "Mt",
+      "Ds",
+      "Rg",
+      "Cn",
+      "Nh",
+      "Fl",
+      "Mc",
+      "Lv",
+      "Ts",
+      "Og"
+    ],
+    "sourcePaperValuesForMissing": {
+      "Pm": 1.99,
+      "Po": 1.4,
+      "At": 1.5,
+      "Rn": 1.5,
+      "Fr": 2.6,
+      "Ra": 2.21,
+      "Ac": 2.15,
+      "Pa": 2,
+      "Np": 1.9,
+      "Pu": 1.87,
+      "Am": 1.8,
+      "Cm": 1.69
+    }
+  },
+  "atomicWeights": {
+    "entries": 83,
+    "standardTable1": 69,
+    "conventionalTable3": 12,
+    "isotopeTable4": {
+      "Tc": 97.90721,
+      "Pm": 144.91276
+    },
+    "differences": {}
+  },
+  "vanDerWaalsRadii": {
+    "entries": 95,
+    "mantinaReferenceEntries": 44,
+    "numericalMatchesOnlyNotProofOfHistoricalExtraction": {
+      "MantinaTable12": {
+        "He": 1.4,
+        "Be": 1.53,
+        "B": 1.92,
+        "C": 1.7,
+        "N": 1.55,
+        "O": 1.52,
+        "F": 1.47,
+        "Ne": 1.54,
+        "Na": 2.27,
+        "Mg": 1.73,
+        "Al": 1.84,
+        "Si": 2.1,
+        "P": 1.8,
+        "S": 1.8,
+        "Cl": 1.75,
+        "Ar": 1.88,
+        "K": 2.75,
+        "Ca": 2.31,
+        "Ga": 1.87,
+        "Ge": 2.11,
+        "As": 1.85,
+        "Se": 1.9,
+        "Kr": 2.02,
+        "Rb": 3.03,
+        "Sr": 2.49,
+        "In": 1.93,
+        "Sn": 2.17,
+        "Sb": 2.06,
+        "Te": 2.06,
+        "I": 1.98,
+        "Xe": 2.16,
+        "Cs": 3.43,
+        "Ba": 2.68,
+        "Tl": 1.96,
+        "Pb": 2.02,
+        "Bi": 2.07,
+        "Po": 1.97,
+        "At": 2.02,
+        "Rn": 2.2,
+        "Fr": 3.48,
+        "Ra": 2.83
+      },
+      "BatsanovColumnOfAlvarezTable1": {
+        "Sc": 2.3,
+        "Ti": 2.15,
+        "V": 2.05,
+        "Cr": 2.05,
+        "Mn": 2.05,
+        "Co": 2.0,
+        "Y": 2.4,
+        "Zr": 2.3,
+        "Nb": 2.15,
+        "Mo": 2.1,
+        "Tc": 2.05,
+        "Ru": 2.05,
+        "Rh": 2.0,
+        "Pd": 2.05,
+        "La": 2.5,
+        "Hf": 2.25,
+        "Ta": 2.2,
+        "W": 2.1,
+        "Re": 2.05,
+        "Os": 2.0,
+        "Ir": 2.0,
+        "Pt": 2.05,
+        "Au": 2.1,
+        "Hg": 2.05,
+        "Th": 2.4,
+        "U": 2.3
+      },
+      "BondiColumnOfAlvarezTable1": {
+        "H": 1.2,
+        "Ni": 1.63,
+        "Cu": 1.4,
+        "Zn": 1.39
+      }
+    },
+    "unresolvedEntries": {
+      "Li": 1.82,
+      "Fe": 2.0,
+      "Br": 1.85,
+      "Ag": 2.03,
+      "Cd": 2.18,
+      "Ce": 2.48,
+      "Pr": 2.47,
+      "Nd": 2.45,
+      "Sm": 2.42,
+      "Eu": 2.4,
+      "Gd": 2.38,
+      "Tb": 2.37,
+      "Dy": 2.35,
+      "Ho": 2.33,
+      "Er": 2.32,
+      "Tm": 2.3,
+      "Yb": 2.28,
+      "Lu": 2.27,
+      "Ac": 2.0,
+      "Pa": 2.0,
+      "Np": 2.0,
+      "Pu": 2.0,
+      "Am": 2.0,
+      "Cm": 2.0
+    },
+    "alvarezOwnColumnCompared": 90,
+    "alvarezOwnColumnExactMatches": {
+      "H": 1.2
+    },
+    "mainGroupDifferences": {
+      "H": {
+        "facet": 1.2,
+        "Mantina2009": 1.1
+      },
+      "Li": {
+        "facet": 1.82,
+        "Mantina2009": 1.81
+      },
+      "Br": {
+        "facet": 1.85,
+        "Mantina2009": 1.83
+      }
+    },
+    "fallbackRadius": 2.0,
+    "fallbackElements": [
+      "Pm",
+      "Bk",
+      "Cf",
+      "Es",
+      "Fm",
+      "Md",
+      "No",
+      "Lr",
+      "Rf",
+      "Db",
+      "Sg",
+      "Bh",
+      "Hs",
+      "Mt",
+      "Ds",
+      "Rg",
+      "Cn",
+      "Nh",
+      "Fl",
+      "Mc",
+      "Lv",
+      "Ts",
+      "Og"
+    ]
+  },
+  "electronConfigurations": {
+    "orbitalValuesMatchPubChem": 118,
+    "sourceQualifiersOmitted": [
+      "Mt",
+      "Ds",
+      "Rg",
+      "Cn",
+      "Nh",
+      "Fl",
+      "Mc",
+      "Lv",
+      "Ts",
+      "Og"
+    ],
+    "matchingLanlProviderRecords": 117,
+    "providerUnresolved": [
+      "N"
+    ],
+    "lawrencium": {
+      "facetAndPubChem": "[Rn] 5f14 6d1 7s2",
+      "nist": "[Rn] 5f14 7s2 7p1",
+      "url": "https://pml.nist.gov/cgi-bin/Elements/elInfo.pl?context=text&element=103"
+    },
+    "historicalDownloadSnapshotAvailable": false
+  },
+  "newVestaPalettes": {
+    "NV_PUBLICATION": {
+      "entries": 25,
+      "equal": true
+    },
+    "NV_MATERIAL_STUDIO": {
+      "entries": 25,
+      "equal": true
+    },
+    "NV_STUDIO": {
+      "entries": 25,
+      "equal": true
+    },
+    "NV_DIAGRAM": {
+      "entries": 25,
+      "equal": true
+    },
+    "NV_DARK": {
+      "entries": 25,
+      "equal": true
+    }
+  },
+  "legacyPalettes": {
+    "JMOL": {
+      "entries": 30,
+      "reference": "Jmol 12.1.15/revision14469 website table",
+      "exactMatches": 30,
+      "differences": {}
+    },
+    "NV_MATERIAL_STUDIO": {
+      "entries": 25,
+      "reference": "Jmol 12.1.15/revision14469 website table",
+      "exactMatches": 23,
+      "differences": {
+        "Mo": {
+          "facet": "#30A6B0",
+          "reference": "#54B5B5"
+        },
+        "Te": {
+          "facet": "#D88400",
+          "reference": "#D47A00"
+        }
+      }
+    },
+    "VESTA": {
+      "entries": 27,
+      "reference": "VESTA 3.5.8 elements.ini, RGB channels rounded to nearest 8-bit value",
+      "exactMatches": 9,
+      "differences": {
+        "C": {
+          "facet": "#804929",
+          "reference": "#814929"
+        },
+        "N": {
+          "facet": "#304FF8",
+          "reference": "#B0BAE6"
+        },
+        "O": {
+          "facet": "#FE0300",
+          "reference": "#FF0300"
+        },
+        "F": {
+          "facet": "#B0E0A0",
+          "reference": "#B0BAE6"
+        },
+        "Cl": {
+          "facet": "#31FC02",
+          "reference": "#32FC03"
+        },
+        "Br": {
+          "facet": "#7A3103",
+          "reference": "#7F3103"
+        },
+        "I": {
+          "facet": "#8F1F8E",
+          "reference": "#8F1F8B"
+        },
+        "P": {
+          "facet": "#C09CC2",
+          "reference": "#C19CC3"
+        },
+        "B": {
+          "facet": "#31FFED",
+          "reference": "#20A20F"
+        },
+        "Na": {
+          "facet": "#F9DC3C",
+          "reference": "#FADD3D"
+        },
+        "Mg": {
+          "facet": "#FB7B15",
+          "reference": "#FC7C16"
+        },
+        "Ca": {
+          "facet": "#5A96BE",
+          "reference": "#5B96BE"
+        },
+        "Ti": {
+          "facet": "#78CAF7",
+          "reference": "#78CAFF"
+        },
+        "Ni": {
+          "facet": "#AF9091",
+          "reference": "#B8BCBE"
+        },
+        "Zn": {
+          "facet": "#8F8F80",
+          "reference": "#8F9082"
+        },
+        "Au": {
+          "facet": "#FDAC48",
+          "reference": "#FEB338"
+        },
+        "Ag": {
+          "facet": "#B8B8B8",
+          "reference": "#B8BCBE"
+        },
+        "Cr": {
+          "facet": "#009800",
+          "reference": "#00009E"
+        }
+      }
+    },
+    "MATERIAL_STUDIO": {
+      "entries": 118,
+      "reference": "Jmol 12.1.15/revision14469 website table",
+      "exactMatches": 0,
+      "differences": {
+        "H": {
+          "facet": "#E6E6E6",
+          "reference": "#FFFFFF"
+        },
+        "He": {
+          "facet": "#63F0F0",
+          "reference": "#D9FFFF"
+        },
+        "Li": {
+          "facet": "#AB48F0",
+          "reference": "#CC80FF"
+        },
+        "Be": {
+          "facet": "#BBF017",
+          "reference": "#C2FF00"
+        },
+        "B": {
+          "facet": "#F0A0A0",
+          "reference": "#FFB5B5"
+        },
+        "C": {
+          "facet": "#5C5C5C",
+          "reference": "#909090"
+        },
+        "N": {
+          "facet": "#304FF8",
+          "reference": "#3050F8"
+        },
+        "O": {
+          "facet": "#E8442C",
+          "reference": "#FF0D0D"
+        },
+        "F": {
+          "facet": "#7FD23F",
+          "reference": "#90E050"
+        },
+        "Ne": {
+          "facet": "#59C2EA",
+          "reference": "#B3E3F5"
+        },
+        "Na": {
+          "facet": "#9A4FE0",
+          "reference": "#AB5CF2"
+        },
+        "Mg": {
+          "facet": "#54C454",
+          "reference": "#8AFF00"
+        },
+        "Al": {
+          "facet": "#B0A0A0",
+          "reference": "#BFA6A6"
+        },
+        "Si": {
+          "facet": "#D8B088",
+          "reference": "#F0C8A0"
+        },
+        "P": {
+          "facet": "#F08000",
+          "reference": "#FF8000"
+        },
+        "S": {
+          "facet": "#E6C832",
+          "reference": "#FFFF30"
+        },
+        "Cl": {
+          "facet": "#3BD23B",
+          "reference": "#1FF01F"
+        },
+        "Ar": {
+          "facet": "#49C6E1",
+          "reference": "#80D1E3"
+        },
+        "K": {
+          "facet": "#8A40D0",
+          "reference": "#8F40D4"
+        },
+        "Ca": {
+          "facet": "#5F8FB5",
+          "reference": "#3DFF00"
+        },
+        "Sc": {
+          "facet": "#44BBE3",
+          "reference": "#E6E6E6"
+        },
+        "Ti": {
+          "facet": "#2397D8",
+          "reference": "#BFC2C7"
+        },
+        "V": {
+          "facet": "#3476D1",
+          "reference": "#A6A6AB"
+        },
+        "Cr": {
+          "facet": "#215DD1",
+          "reference": "#8A99C7"
+        },
+        "Mn": {
+          "facet": "#7221D1",
+          "reference": "#9C7AC7"
+        },
+        "Fe": {
+          "facet": "#D16721",
+          "reference": "#E06633"
+        },
+        "Co": {
+          "facet": "#214BD1",
+          "reference": "#F090A0"
+        },
+        "Ni": {
+          "facet": "#21D121",
+          "reference": "#50D050"
+        },
+        "Cu": {
+          "facet": "#D17C21",
+          "reference": "#C88033"
+        },
+        "Zn": {
+          "facet": "#212CD1",
+          "reference": "#7D80B0"
+        },
+        "Ga": {
+          "facet": "#CE4F4F",
+          "reference": "#C28F8F"
+        },
+        "Ge": {
+          "facet": "#47BFBF",
+          "reference": "#668F8F"
+        },
+        "As": {
+          "facet": "#A748E1",
+          "reference": "#BD80E3"
+        },
+        "Se": {
+          "facet": "#F09F17",
+          "reference": "#FFA100"
+        },
+        "Br": {
+          "facet": "#A52A2A",
+          "reference": "#A62929"
+        },
+        "Kr": {
+          "facet": "#39B4D6",
+          "reference": "#5CB8D1"
+        },
+        "Rb": {
+          "facet": "#7926C8",
+          "reference": "#702EB0"
+        },
+        "Sr": {
+          "facet": "#16F016",
+          "reference": "#00FF00"
+        },
+        "Y": {
+          "facet": "#26EEEE",
+          "reference": "#94FFFF"
+        },
+        "Zr": {
+          "facet": "#62DF24",
+          "reference": "#94E0E0"
+        },
+        "Nb": {
+          "facet": "#21D188",
+          "reference": "#73C2C9"
+        },
+        "Mo": {
+          "facet": "#9721D1",
+          "reference": "#54B5B5"
+        },
+        "Tc": {
+          "facet": "#D12188",
+          "reference": "#3B9E9E"
+        },
+        "Ru": {
+          "facet": "#D14D21",
+          "reference": "#248F8F"
+        },
+        "Rh": {
+          "facet": "#D1B31C",
+          "reference": "#0A7D8C"
+        },
+        "Pd": {
+          "facet": "#18D128",
+          "reference": "#006985"
+        },
+        "Ag": {
+          "facet": "#88ADD1",
+          "reference": "#C0C0C0"
+        },
+        "Cd": {
+          "facet": "#F026CE",
+          "reference": "#FFD98F"
+        },
+        "In": {
+          "facet": "#C44C48",
+          "reference": "#A67573"
+        },
+        "Sn": {
+          "facet": "#4EBFBF",
+          "reference": "#668080"
+        },
+        "Sb": {
+          "facet": "#A43DCA",
+          "reference": "#9E63B5"
+        },
+        "Te": {
+          "facet": "#D8820E",
+          "reference": "#D47A00"
+        },
+        "I": {
+          "facet": "#8F1F9C",
+          "reference": "#940094"
+        },
+        "Xe": {
+          "facet": "#2DAFC8",
+          "reference": "#429EB0"
+        },
+        "Cs": {
+          "facet": "#741EBF",
+          "reference": "#57178F"
+        },
+        "Ba": {
+          "facet": "#0AD10A",
+          "reference": "#00C900"
+        },
+        "La": {
+          "facet": "#3EB9F0",
+          "reference": "#70D4FF"
+        },
+        "Ce": {
+          "facet": "#F0F061",
+          "reference": "#FFFFC7"
+        },
+        "Pr": {
+          "facet": "#8EF05F",
+          "reference": "#D9FFC7"
+        },
+        "Nd": {
+          "facet": "#5EF05E",
+          "reference": "#C7FFC7"
+        },
+        "Pm": {
+          "facet": "#55F090",
+          "reference": "#A3FFC7"
+        },
+        "Sm": {
+          "facet": "#4AF09B",
+          "reference": "#8FFFC7"
+        },
+        "Eu": {
+          "facet": "#38F0AE",
+          "reference": "#61FFC7"
+        },
+        "Gd": {
+          "facet": "#2FF0B5",
+          "reference": "#45FFC7"
+        },
+        "Tb": {
+          "facet": "#29F0BA",
+          "reference": "#30FFC7"
+        },
+        "Dy": {
+          "facet": "#23F0BC",
+          "reference": "#1FFFC7"
+        },
+        "Ho": {
+          "facet": "#15F09A",
+          "reference": "#00FF9C"
+        },
+        "Er": {
+          "facet": "#0DE37A",
+          "reference": "#00E675"
+        },
+        "Tm": {
+          "facet": "#0DD85B",
+          "reference": "#00D452"
+        },
+        "Yb": {
+          "facet": "#15CD4A",
+          "reference": "#00BF38"
+        },
+        "Lu": {
+          "facet": "#09C731",
+          "reference": "#00AB24"
+        },
+        "Hf": {
+          "facet": "#69F026",
+          "reference": "#4DC2FF"
+        },
+        "Ta": {
+          "facet": "#26F09C",
+          "reference": "#4DA6FF"
+        },
+        "W": {
+          "facet": "#9D22DB",
+          "reference": "#2194D6"
+        },
+        "Re": {
+          "facet": "#D12185",
+          "reference": "#267DAB"
+        },
+        "Os": {
+          "facet": "#D15021",
+          "reference": "#266696"
+        },
+        "Ir": {
+          "facet": "#D1B421",
+          "reference": "#175487"
+        },
+        "Pt": {
+          "facet": "#24DF33",
+          "reference": "#D0D0E0"
+        },
+        "Au": {
+          "facet": "#E8B423",
+          "reference": "#FFD123"
+        },
+        "Hg": {
+          "facet": "#7EABD9",
+          "reference": "#B8B8D0"
+        },
+        "Tl": {
+          "facet": "#C44439",
+          "reference": "#A6544D"
+        },
+        "Pb": {
+          "facet": "#5468BF",
+          "reference": "#575961"
+        },
+        "Bi": {
+          "facet": "#AA33CA",
+          "reference": "#9E4FB5"
+        },
+        "Po": {
+          "facet": "#C76E08",
+          "reference": "#AB5C00"
+        },
+        "At": {
+          "facet": "#BF5B43",
+          "reference": "#754F45"
+        },
+        "Rn": {
+          "facet": "#35A0C0",
+          "reference": "#428296"
+        },
+        "Fr": {
+          "facet": "#8415BF",
+          "reference": "#420066"
+        },
+        "Ra": {
+          "facet": "#14BF14",
+          "reference": "#007D00"
+        },
+        "Ac": {
+          "facet": "#438BEC",
+          "reference": "#70ABFA"
+        },
+        "Th": {
+          "facet": "#14B4F0",
+          "reference": "#00BAFF"
+        },
+        "Pa": {
+          "facet": "#149EF0",
+          "reference": "#00A1FF"
+        },
+        "U": {
+          "facet": "#138EF0",
+          "reference": "#008FFF"
+        },
+        "Np": {
+          "facet": "#1281F0",
+          "reference": "#0080FF"
+        },
+        "Pu": {
+          "facet": "#116EF0",
+          "reference": "#006BFF"
+        },
+        "Am": {
+          "facet": "#323BE6",
+          "reference": "#545CF2"
+        },
+        "Cm": {
+          "facet": "#5836E1",
+          "reference": "#785CE3"
+        },
+        "Bk": {
+          "facet": "#762FE1",
+          "reference": "#8A4FE3"
+        },
+        "Cf": {
+          "facet": "#9F29D8",
+          "reference": "#A136D4"
+        },
+        "Es": {
+          "facet": "#B721D8",
+          "reference": "#B31FD4"
+        },
+        "Fm": {
+          "facet": "#C321CB",
+          "reference": "#B31FBA"
+        },
+        "Md": {
+          "facet": "#C91CBC",
+          "reference": "#B30DA6"
+        },
+        "No": {
+          "facet": "#CC1B95",
+          "reference": "#BD0D87"
+        },
+        "Lr": {
+          "facet": "#D00B70",
+          "reference": "#C70066"
+        },
+        "Rf": {
+          "facet": "#58D21B",
+          "reference": "#CC0059"
+        },
+        "Db": {
+          "facet": "#0FD683",
+          "reference": "#D1004F"
+        },
+        "Sg": {
+          "facet": "#970ADD",
+          "reference": "#D90045"
+        },
+        "Bh": {
+          "facet": "#DF168B",
+          "reference": "#E00038"
+        },
+        "Hs": {
+          "facet": "#E3420D",
+          "reference": "#E6002E"
+        },
+        "Mt": {
+          "facet": "#E5C31B",
+          "reference": "#EB0026"
+        },
+        "Ds": {
+          "facet": "#23D932",
+          "reference": null
+        },
+        "Rg": {
+          "facet": "#E8BF21",
+          "reference": null
+        },
+        "Cn": {
+          "facet": "#73A2D1",
+          "reference": null
+        },
+        "Nh": {
+          "facet": "#C23F35",
+          "reference": null
+        },
+        "Fl": {
+          "facet": "#516BBF",
+          "reference": null
+        },
+        "Mc": {
+          "facet": "#A430C5",
+          "reference": null
+        },
+        "Lv": {
+          "facet": "#C37418",
+          "reference": null
+        },
+        "Ts": {
+          "facet": "#BF5B3F",
+          "reference": null
+        },
+        "Og": {
+          "facet": "#309EBF",
+          "reference": null
+        }
+      }
+    }
+  },
+  "matplotlib": {
+    "magma": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    },
+    "inferno": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    },
+    "plasma": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    },
+    "viridis": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    },
+    "cividis": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    },
+    "turbo": {
+      "samples": 256,
+      "sourceSamples": 256,
+      "differences": []
+    }
+  },
+  "prettyLattice": {
+    "snapshot": "7980a9a2e7c7ed21f4b5ef534ed0cc264a4db3c7",
+    "paletteEntries": 97,
+    "standardElements": 95,
+    "otherKeys": [
+      "D",
+      "XX"
+    ],
+    "exactColorMatches": 97,
+    "missingOrDifferent": {},
+    "material": {
+      "metalness": 0.1,
+      "roughness": 0.6,
+      "ambient": 0.8,
+      "cameraDirectional": 2.2,
+      "offset": [
+        0.3,
+        0.2,
+        0
+      ]
+    },
+    "geometry": {
+      "bondRadius": 0.1,
+      "cellFrameColor": "#444444"
+    },
+    "licenseMatchesRetainedFile": true
+  },
+  "noticeUpdates": {
+    "previousComponents": 315,
+    "currentComponents": 317,
+    "currentUniqueTexts": 211,
+    "added": [
+      "ColorBrewer BrBG color specifications",
+      "Jmol legacy element colors (conservative data-only notice)"
+    ],
+    "prettyLatticeSourcePinned": "7980a9a2e7c7ed21f4b5ef534ed0cc264a4db3c7"
+  },
+  "releaseBoundary": {
+    "installer": "Facet-Setup-0.1.1-alpha-20261108-licenses-x64.exe",
+    "sha256": "b4b144edf90c51a4843133ca34048986b77839abd509767296af41cc96ae7adb",
+    "embeddedNoticeComponents": 315,
+    "followupNotEmbedded": true,
+    "sourceSnapshotUnmodified": true
+  },
+  "openItems": [
+    "24 explicit van der Waals values lack a unique verified original source in the reviewed references",
+    "Covalent radius coverage and fallback labeling require a separate behavior change",
+    "Electron-configuration prediction labels and Lr discrepancy require a separate data/UI decision",
+    "PubChem/LANL reuse policy and nitrogen provider record remain unverified",
+    "Legacy VESTA/Studio historical acquisition and Jmol redistribution treatment remain to be settled before source-clearance claims",
+    "Candidate must be rebuilt to embed the updated notices after outstanding release decisions are resolved"
+  ]
+}

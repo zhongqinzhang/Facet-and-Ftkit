@@ -1,0 +1,7 @@
+O. R. Smits, P. Indelicato, W. Nazarewicz, M. Piibeleht, P. Schwerdtfeger.
+Pushing the limits of the periodic table — A review on atomic relativistic electronic structure theory and calculations for the superheavy elements.
+Physics Reports 1035 (2023), 1–57. DOI: 10.1016/j.physrep.2023.09.004.
+Copyright © 2023 The Author(s). Published by Elsevier B.V.
+Creative Commons Attribution 4.0 International: https://creativecommons.org/licenses/by/4.0/
+Published version: https://mro.massey.ac.nz/bitstreams/b7304620-3229-4c61-ac1b-9ca2df5b4302/download
+Facet adaptation, 2026-11-08: Table 2 dominant theoretical configurations for Mt–Og are reduced from relativistic subshell occupations to ordinary s/p/d/f occupations. Facet then applies its existing orbital-selection rule for display. These are predictions, not measured configurations. Lr is independently taken from NIST, not this table. No paper figures or article text are bundled.

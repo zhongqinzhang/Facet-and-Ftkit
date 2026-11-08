@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "product": "Facet",
+  "version": "0.1.0-beta.1",
+  "releaseDate": "2026-11-08",
+  "createdAt": "2026-11-08T08:39:33.616164+00:00",
+  "channel": "beta",
+  "status": "public-beta-release",
+  "platform": "Windows x64",
+  "languages": [
+    "zh-CN",
+    "en-US"
+  ],
+  "installer": {
+    "path": "Facet-Setup-0.1.0-beta.1-x64.exe",
+    "bytes": 12828535,
+    "sha256": "d00bb0fcc4c0c9596479344a63962bd8b28b8a02f8e940944eeae13598db28f0"
+  },
+  "windowsInstallerProductVersion": "0.1.0",
+  "source": {
+    "baseCommit": "3205a156a8e7f3f29df06d95268c4ee4fc255703",
+    "includesUncommittedWorkingTree": true,
+    "frozenInputCount": 4424,
+    "frozenInputManifestSha256": "3c8558ad57a9c637ce6147f16996ebe78dd4729f561fa9a152ec3fab099dc5a6",
+    "facetOwnedSourceIncludedInDistribution": false,
+    "recordedSourceCommit": "4d868d0aee3fbc9882b77e4a81d2aa9468dfe1a7",
+    "commitNote": "The installer was built before this commit from the recorded base and reviewed working-tree changes. Its embedded build provenance and bytes remain unchanged."
+  },
+  "verification": {
+    "automatedTestsRun": false,
+    "installationPerformed": false,
+    "staticChecks": "passed: architecture, TypeScript and localization",
+    "productionBuild": "passed: frontend, Windows Rust/Tauri, MSI, bilingual transform and NSIS",
+    "packagedResourceCount": 13,
+    "packagedResourcesMatchExpected": true,
+    "manualChaptersPerLanguage": 21,
+    "manualNumberedSubsectionsPerLanguage": 86,
+    "manualUi": "Actual Chrome and MSI-extracted WebView2; final bilingual About/licenses and English Lr inspected. Earlier unchanged data behavior observed in 2D/3D; legacy-cache sample saved and reopened.",
+    "installerFirstLaunchEnglish": "not verified for this final package",
+    "nativeFileDialogsAndActualExports": "not verified",
+    "newProjectSaveAsVersion": "static/build only; actual Save As not verified",
+    "scope": "Build-phase validation; subsequent publication only reorganizes explanatory documentation."
+  },
+  "licenses": {
+    "components": 320,
+    "uniqueTexts": 215,
+    "thirdPartySourceArchives": [
+      "third-party-sources/wix3-b40e9a32c24033e11b77baf2c91a704382f898ed.zip",
+      "third-party-sources/option-ext-0.2.0.crate"
+    ],
+    "historicalPaletteProvenanceComplete": false,
+    "newVestaOwnershipConfirmed": true
+  },
+  "compatibility": {
+    "projectFormatChanged": false,
+    "savedRadiusMultipliersPreserved": true,
+    "affectedSphereAndCovalentBondResultsMayChange": true,
+    "covalentAutoCacheInvalidatedByDataRevision": true,
+    "absoluteDistanceCacheUnchangedByDataRevision": true,
+    "manualBondsAndColorOverridesPreserved": true,
+    "existingProjectOriginVersionRetained": true
+  },
+  "distributionFiles": [
+    {
+      "path": "docs/en-US/release-notes.txt",
+      "bytes": 14797,
+      "sha256": "794145fd8e48f60a83009ce149c797e4cc6936f9a1259324a90a751a31bae870"
+    },
+    {
+      "path": "docs/en-US/user-guide.txt",
+      "bytes": 105790,
+      "sha256": "75177bf120ecb0453f99d3eafca6f498dfc832ac3dd9b0d580d4b49194f47034"
+    },
+    {
+      "path": "docs/zh-CN/release-notes.txt",
+      "bytes": 19301,
+      "sha256": "7d742a8c45492b347f7990c59676b9d9f481066d3ea4de26734206dab01db575"
+    },
+    {
+      "path": "docs/zh-CN/user-guide.txt",
+      "bytes": 98258,
+      "sha256": "dc62be8ddcf8edeb955ab4f3f35e493574284641d8065bdaaedaec7ad0abdf9e"
+    },
+    {
+      "path": "Facet-Setup-0.1.0-beta.1-x64.exe",
+      "bytes": 12828535,
+      "sha256": "d00bb0fcc4c0c9596479344a63962bd8b28b8a02f8e940944eeae13598db28f0"
+    },
+    {
+      "path": "licenses/beta1-data-review.json",
+      "bytes": 12628,
+      "sha256": "a10f7737d332f68cdfd65630d0897661719fd3800b4ef77441028aa293d29eac"
+    },
+    {
+      "path": "licenses/DATA_SOURCES.md",
+      "bytes": 10068,
+      "sha256": "9acbb2c366adc0443ad39d5db3535b42292d053b5b06fea9e165252b22ebbdfb"
+    },
+    {
+      "path": "licenses/DATA_SOURCES.zh-CN.md",
+      "bytes": 8964,
+      "sha256": "235a3c63d42bcb537b8f020a2f4750c73fbf55d77be015e2bbb8b9d2f5502b80"
+    },
+    {
+      "path": "licenses/historical-data-audit.json",
+      "bytes": 22015,
+      "sha256": "163c4751ea86025af5d39d5cede336ad812db8c26b730f8655bd7949b10f072b"
+    },
+    {
+      "path": "licenses/LICENSE.txt",
+      "bytes": 4463,
+      "sha256": "fcac737e761ec63dbfbdce11030a1780161920d80315edba9c8beff1c2bac5a2"
+    },
+    {
+      "path": "licenses/NOTICE.txt",
+      "bytes": 1825,
+      "sha256": "3e6bfa1f668c229892a300258c3186a92a756d80befe9f79a473f62082e99fcf"
+    },
+    {
+      "path": "licenses/README.md",
+      "bytes": 3125,
+      "sha256": "80febacee9b8d8b26e1688004cce3335f12e088128619a5251ef9ad780fbfec8"
+    },
+    {
+      "path": "licenses/README.zh-CN.md",
+      "bytes": 2727,
+      "sha256": "206d4f73064fa3cf05855119e06459a698a8ba505cb6eb6777156c7dbff99feb"
+    },
+    {
+      "path": "licenses/REVIEW.md",
+      "bytes": 3790,
+      "sha256": "d9159cb4548d01f88f08ecdce38d9c3261c79fea1687aecbf8ab051bfac1a2b1"
+    },
+    {
+      "path": "licenses/REVIEW.zh-CN.md",
+      "bytes": 3228,
+      "sha256": "37c76858c4e4d1e1f977dffb3c67b678b6d3cd0d731515019a65baa569947e40"
+    },
+    {
+      "path": "licenses/sources.json",
+      "bytes": 20982,
+      "sha256": "e5d5235bed2a946526daec8f5f5863e22b5a84f78811bbf5cc275a81c450c05e"
+    },
+    {
+      "path": "licenses/supplemental/BODR-CC0-1.0.txt",
+      "bytes": 6828,
+      "sha256": "f11efd5fc375e093bd5fac3c30f168726072865f6047af66a0038a281ee71292"
+    },
+    {
+      "path": "licenses/supplemental/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "licenses/supplemental/ColorBrewer-Apache-2.0.txt",
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "licenses/supplemental/ColorBrewer-NOTICE.txt",
+      "bytes": 1710,
+      "sha256": "aba881933999be3549b2171832a11a9dfad574243019df95c067ccf3d47b9649"
+    },
+    {
+      "path": "licenses/supplemental/Jmol-COPYRIGHT.txt",
+      "bytes": 918,
+      "sha256": "f0febd9c3a558df3c88b17d5531917c53dee13f478f0e4ef229e0853acaf5837"
+    },
+    {
+      "path": "licenses/supplemental/Jmol-LGPL-2.1.txt",
+      "bytes": 26419,
+      "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95"
+    },
+    {
+      "path": "licenses/supplemental/moyo-LICENSE-APACHE.txt",
+      "bytes": 11345,
+      "sha256": "73342e5d908d9a31ee55b240196d88456acf480595e3a7edcb41d3ab535aeca2"
+    },
+    {
+      "path": "licenses/supplemental/moyo-LICENSE-MIT.txt",
+      "bytes": 1072,
+      "sha256": "01602b7eaa471fd55484376bd5ac48cbd0b5ea7972fdc349365ca72967873ea4"
+    },
+    {
+      "path": "licenses/supplemental/NIST-DATA-NOTICE.txt",
+      "bytes": 2279,
+      "sha256": "8dd6787d7ffb5f8608f25d6cb9e860051ec83cde9a4e5d6c220b3e3f498fd465"
+    },
+    {
+      "path": "licenses/supplemental/NotoSans-COPYRIGHT.txt",
+      "bytes": 391,
+      "sha256": "a5c3e129688eae6ec062af82612a0a32e1bab3011e7fa2a8742ee1d05bec37af"
+    },
+    {
+      "path": "licenses/supplemental/npm-_ant-design_icons-svg-4.5.0-LICENSE.txt",
+      "bytes": 1099,
+      "sha256": "5d367fb0a07340571542eb4ee8eb1add62d37b71bad6786a57c2e9a86bf76c70"
+    },
+    {
+      "path": "licenses/supplemental/npm-_tauri-apps_plugin-dialog-2.7.1-LICENSE.txt",
+      "bytes": 1089,
+      "sha256": "89ff9689dcf9dd53968785d05a26f7898bb169dbfcada8d032b3e68cf0d55607"
+    },
+    {
+      "path": "licenses/supplemental/npm-is-mobile-5.0.0-LICENSE.txt",
+      "bytes": 1111,
+      "sha256": "7401d23f39cad911e1e83879987ad7848e9774640dd958e8632b8aac943ba44c"
+    },
+    {
+      "path": "licenses/supplemental/NSIS-3.11-COPYING.txt",
+      "bytes": 15632,
+      "sha256": "e7dd514003ab96cb3ddccbc028fe5c795fccf57dc41f21cfb9d4dd16ead23bf5"
+    },
+    {
+      "path": "licenses/supplemental/pretty-lattice-MIT.txt",
+      "bytes": 1069,
+      "sha256": "b493e456956213427798deee1cebd80a976cff5ffdc5a7d1e93b8aed56805b2e"
+    },
+    {
+      "path": "licenses/supplemental/Rust-1.97.1-COPYRIGHT-library.html",
+      "bytes": 279302,
+      "sha256": "0a65bb747c49c7bb816cbc7188319bd6e4e8d08091c1190b8a3c0971c47968ed"
+    },
+    {
+      "path": "licenses/supplemental/Rust-1.97.1-COPYRIGHT-library.txt",
+      "bytes": 269777,
+      "sha256": "2bb992b5263c4b10bd2eb78ea07baab55ecfa2e10556abb92574d19198001c4b"
+    },
+    {
+      "path": "licenses/supplemental/rust-alloc-no-stdlib-LICENSE.txt",
+      "bytes": 1483,
+      "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae"
+    },
+    {
+      "path": "licenses/supplemental/Rust-Apache-2.0.txt",
+      "bytes": 10280,
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    {
+      "path": "licenses/supplemental/Rust-BSD-2-Clause.txt",
+      "bytes": 1267,
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df"
+    },
+    {
+      "path": "licenses/supplemental/rust-compiler-builtins-LICENSE.txt",
+      "bytes": 15078,
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    {
+      "path": "licenses/supplemental/Rust-ISC.txt",
+      "bytes": 730,
+      "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381"
+    },
+    {
+      "path": "licenses/supplemental/Rust-LLVM-exception.txt",
+      "bytes": 919,
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e"
+    },
+    {
+      "path": "licenses/supplemental/Rust-MIT.txt",
+      "bytes": 1078,
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0"
+    },
+    {
+      "path": "licenses/supplemental/rust-unic-58786053-LICENSE-APACHE.txt",
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "licenses/supplemental/rust-unic-58786053-LICENSE-MIT.txt",
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "licenses/supplemental/rust-unic-8a6ce830-LICENSE-APACHE.txt",
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "path": "licenses/supplemental/rust-unic-8a6ce830-LICENSE-MIT.txt",
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "licenses/supplemental/Rust-Unicode-3.0.txt",
+      "bytes": 1995,
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443"
+    },
+    {
+      "path": "licenses/supplemental/Smits-2023-NOTICE.txt",
+      "bytes": 949,
+      "sha256": "280bdedb13281aeb1997ec55064763bc45b0f565273c281b167b49b666da9db6"
+    },
+    {
+      "path": "licenses/supplemental/ts-rs-LICENSE.txt",
+      "bytes": 1073,
+      "sha256": "db7f7f8e7236a2d0b41b855b2501b7b913caebbcda6ce498637a304ad1706ce1"
+    },
+    {
+      "path": "licenses/supplemental/UNIC-COPYRIGHTS.txt",
+      "bytes": 2577,
+      "sha256": "0193c81fe15cecd94a437f5e145e6fb418b41715f6a6e28cc8c732d46603a83f"
+    },
+    {
+      "path": "licenses/supplemental/webview2-rs-LICENSE.txt",
+      "bytes": 1067,
+      "sha256": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+    },
+    {
+      "path": "licenses/supplemental/webview2-sdk-LICENSE.txt",
+      "bytes": 1487,
+      "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55"
+    },
+    {
+      "path": "licenses/supplemental/webview2-sdk-NOTICE.txt",
+      "bytes": 3894,
+      "sha256": "106423785c5b7eba0a8e61d1837f2132e9c828e20ad530f565d981c1df60dd90"
+    },
+    {
+      "path": "licenses/supplemental/WiX-3.14.1-LICENSE.txt",
+      "bytes": 3369,
+      "sha256": "4004370957cfc16afa52582f0cbd56c98a2f00846d6dadc51c7c7ab0500c0000"
+    },
+    {
+      "path": "licenses/TAURI-LICENSE-MIT.txt",
+      "bytes": 1090,
+      "sha256": "9dd42ea92cff2ede5cd477cbfcce051b2d0115c0ac7f368ee88cb545055dff1d"
+    },
+    {
+      "path": "licenses/third-party-notices.json",
+      "bytes": 1216927,
+      "sha256": "ba638a3ea48cabecccf9c2d0297ed922c590ebded421593f3e674b9f2dc4371e"
+    },
+    {
+      "path": "licenses/THIRD_PARTY_NOTICES.txt",
+      "bytes": 1018045,
+      "sha256": "03914cc390e4099c42ede0d9e4cabee3ab1ce482ac57448f488061f35f73963d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4471,
+      "sha256": "64756997395a71987b0ad9218098bafd4ea439a43c0b0abb9c4ffc150702c3d7"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "bytes": 3955,
+      "sha256": "9d288a4929c2ec0f258a8eace275cc2921169375e728406a5795e204c140a1f7"
+    },
+    {
+      "path": "third-party-sources/option-ext-0.2.0.crate",
+      "bytes": 7345,
+      "sha256": "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
+    },
+    {
+      "path": "third-party-sources/README.md",
+      "bytes": 1482,
+      "sha256": "fc15302ef2bfa77986ae57b4755e34ed767b386f0d77c655ead0c7216380c68b"
+    },
+    {
+      "path": "third-party-sources/README.zh-CN.md",
+      "bytes": 1300,
+      "sha256": "a3eba17ea9983d02f40d3e198a112ac070fcab7270f99e379844ba62590df84e"
+    },
+    {
+      "path": "third-party-sources/SHA256SUMS.txt",
+      "bytes": 207,
+      "sha256": "f45341a2d98401663b28a79e6848ec3217dc9ace1b206ea2f243ceee6475d525"
+    },
+    {
+      "path": "third-party-sources/SOURCE-MANIFEST.json",
+      "bytes": 591,
+      "sha256": "5353435b6ea17f60c2644ac66cecbd9c062566617a5bc75dc327091fac45032a"
+    },
+    {
+      "path": "third-party-sources/wix3-b40e9a32c24033e11b77baf2c91a704382f898ed.zip",
+      "bytes": 13859146,
+      "sha256": "3cc4bdaca8070042a182675b047882211d042f35139efcb0eeac35eeb81bf9d3"
+    }
+  ],
+  "distributionMetadata": [
+    "release-manifest.json",
+    "SHA256SUMS.txt"
+  ],
+  "checksumPolicy": "SHA256SUMS.txt hashes every distribution file and this manifest, but not itself. The manifest does not contain its own hash.",
+  "publishedDate": "2026-11-08",
+  "documentationLanguages": [
+    "en-US",
+    "zh-CN"
+  ],
+  "defaultDocumentationLanguage": "en-US",
+  "publication": {
+    "repository": "https://github.com/zhongqinzhang/Facet-and-Ftkit",
+    "tag": "facet-v0.1.0-beta.1",
+    "releaseUrl": "https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/facet-v0.1.0-beta.1",
+    "installerUnchanged": true,
+    "originalLicenseTextsUnchanged": true,
+    "bundledManualsUnchanged": true,
+    "sourceCodeIncluded": false,
+    "thirdPartyCorrespondingSourceIncluded": true,
+    "documentationChanged": "Separate complete English and Simplified Chinese explanatory pages; English is the default."
+  }
+}

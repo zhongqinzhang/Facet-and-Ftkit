@@ -1,0 +1,2125 @@
+Facet user guide
+English (United States) | Windows x64
+Applies to: Facet 0.1.0-beta.1 (Beta 1)
+Revised: November 8, 2026
+
+This guide follows the current source. A downloaded installer may contain an
+earlier dated build. Read its accompanying release notes to confirm which
+features and changes are included.
+The Chinese and English manuals use the same chapters 00–20 and subsection
+numbers, so you can compare instructions by their section number.
+
+This guide uses interface names to describe where to find controls. Hover over
+an icon for its tooltip. “→” means successive menu choices; “More settings”
+opens secondary controls. In a text editor, use Ctrl+F to find a feature,
+button label, or section number.
+Lengths use angstroms (Å): 1 Å = 0.1 nm. Angles use degrees (°).
+Magnetic moments use the Bohr magneton (μB). In velocities measured in Å/fs,
+fs means femtosecond, or 10⁻¹⁵ seconds.
+
+
+Contents
+--------
+00  Installation and a five-minute start
+01  Feature and control index
+02  File: opening files and managing projects
+03  Atoms, bonds, palettes, and element controls
+04  Appearance: materials, lighting, and effects
+05  Themes: saving, reusing, and sharing appearance settings
+06  Lattice, camera, and view controls
+07  Selection: basic selection, advanced selection, and groups
+08  Local boxes: opacity, color masks, and charge analysis
+09  Measurements: distances, angles, dihedrals, and components
+10  Atom editing, symmetry, and structure modeling
+11  Volume data, isosurfaces, and sections
+12  Creating and displaying vectors
+13  Structure sequences, playback, and GIF export
+14  File: exporting images and structures
+15  Mouse and keyboard reference
+16  Settings storage, recovery, and troubleshooting
+17  Phonons: modes, frequency units, and animation
+18  STM: charge density and scanning tunneling microscopy simulation
+19  Current interaction and file notices
+20  Current bilingual terminology and file versions
+
+
+00  Installation and a five-minute start
+========================================
+
+0.1 Install or update
+
+This guide describes the current Windows x64 source of Facet 0.1.1 Alpha.
+Installation instructions apply to the corresponding bilingual installer;
+check its release notes for the exact build date.
+  1. Save your projects and close any running Facet before updating.
+  2. Run Facet Setup, select Simplified Chinese or English, and choose the
+     installation location. One application core contains both language packs.
+     The first launch after this installation uses the selected language.
+     The top-bar language control offers System default, Simplified Chinese,
+     and English. Changes take effect on the next launch.
+     The installation choice is applied once; later manual preferences remain
+     effective until you change them or complete another installation.
+     System default uses the system language, with English as the fallback for
+     unsupported languages. It overrides the installer preference. Save your
+     work and restart to apply a change; the current session keeps its language.
+     Language changes preserve projects, scientific data, custom names, themes,
+     and undo history. If you choose a drive root such as D:\, the installer
+     uses a Facet subfolder.
+  3. Windows requires Microsoft Edge WebView2 145 or later. Setup needs internet
+     access if it must install or update the runtime. Facet then works offline.
+  4. Start Facet from the Start menu, desktop shortcut, or Facet.exe in the
+     installation directory.
+
+The installation directory's Chinese manual shortcut opens
+docs\zh-CN\user-guide.txt. The English manual is docs\en-US\user-guide.txt.
+Each language directory also contains release-notes.txt. Copies of the official
+themes are in presets\themes. To uninstall, use Windows Settings → Apps →
+Installed apps.
+Projects are stored where you choose. Before upgrading, back up your projects,
+associated volume files, and presets. Recovery locations are in chapter 16.
+
+0.2 From a structure file to your first image
+
+For example, start with an ABACUS STRU_300K or VASP CONTCAR file:
+  1. Choose the file/project opening control on the welcome screen. In the
+     workspace, use File → Open… or drag the file into the window.
+  2. Select the structure in the upper-left project tree. Right-drag to rotate,
+     middle-drag to pan, and use the wheel to zoom. Click Fit in the top bar,
+     or press Space in the normal viewport, to frame the structure.
+  3. Adjust atoms, bonds, and the unit-cell frame under Display; choose a
+     material under Appearance. Use 2D Glass for the 2D rendering
+     style, or another material for 3D rendering.
+  4. If magnetic moments or velocities are available, select their group in
+     the vector list on the right. Adjust Display length or use the eye icon
+     to change visibility. These controls preserve the scientific values.
+  5. Press Ctrl+S to save a .facetproj project for continued editing.
+  6. Use File → Export image → PNG, set the dimensions and background, and save.
+
+A .facetproj is an editable project; a PNG is an image for a report or paper.
+Volume projects may reference external CHGCAR/PARCHG or other files; include
+those files when sharing the project.
+Read import notices. A red error means the file was not imported successfully.
+A notice that additional parameters were retained as import provenance means
+the structure opened, but those parameters did not become editable calculation
+constraints in Facet. See section 2.4 for ABACUS details.
+
+0.3 Moving from the separate Facet English application
+
+The bilingual application retains the original Facet application identity.
+The older standalone Facet English remains a separate application. Setup does
+not uninstall it or merge its preferences, recent files, recovery copies, or
+received files.
+  1. Recover any unsaved work in the old application and save it as .facetproj.
+  2. Open its .facetproj or .facet files normally in the bilingual application.
+  3. Transfer custom themes, palettes, and materials through their export/import
+     controls.
+  4. Keep associated external volume files and relink them when prompted.
+
+
+0.4 About Facet and checking for updates
+
+Open Help (the ? button beside the language control) → About Facet. The Help
+menu contains User manual and About Facet; Check for updates appears only in
+About Facet. You can also open the user manual there.
+
+About shows the full build version, followed by a small Check for updates control.
+The development credit is on one row: Ji Group · Renmin University of China. Ji Group is
+the primary credit; select it to visit the group website.
+The citation section is hidden until a publication has been specified.
+
+Opening About does not contact a server. Select Check for updates to read the
+Facet release list from the public GitHub distribution repository. The check
+uses the Facet entry, independently of ftkit releases in the same repository.
+It can show an available update, the latest public release, or an unpublished
+local build. A failed check offers Retry and Open download page. Closing About
+cancels the request. No project content or account credentials are sent.
+
+When an update is available, read its release notes and select Go to download.
+The release page opens in your default browser. Download the installer, save
+your projects, close Facet, and run the installer yourself. Facet does not
+automatically download or install updates. Previous releases opens the Facet
+version archive, where you may choose an older release.
+
+User manual and Release notes open the documents bundled with your desktop
+installation, in the current interface language. These documents work offline.
+The browser preview instead opens the public documentation index. Third-party
+licenses groups entries into Web interface, Native libraries, Fonts and assets,
+System runtime components, and Installer components. Expand a category and then
+a component to read its version, source, and original license texts. Viewing
+notices works offline. The full list is also installed as
+licenses/THIRD_PARTY_NOTICES.txt.
+The distribution folder includes third-party-sources for the corresponding
+third-party source packages. These contain no Facet-owned source code and do
+not need to be installed to use Facet.
+
+
+01  Feature and control index
+==============================
+
+Facet provides atom and bond styles, element palettes, and material presets.
+Use them directly or adjust them. Palettes, materials, and themes can be saved,
+imported, and exported, allowing you to build a reusable collection or share
+consistent appearance settings within a research group.
+
+Find a control by what you want to do:
+
+  Adjust atoms and bonds:
+    Display → Atoms and bonds.
+    Choose Spheres, Ball and stick, Sticks, Lines, Points, or CPK. Coordination
+    polyhedra have a separate panel and can coexist with an atom style.
+    Adjust size, bond radius, and opacity; compute or manually add bonds.
+    See chapter 3.
+
+  Change element colors and local styles:
+    Elements → Palette / Elements / Selected atoms.
+    Switch palettes; change color, radius, labels, or visibility by element
+    or for selected atoms. Save, import, or export a palette. See chapter 3.
+
+  Adjust materials and overall appearance:
+    Appearance → Material / Lighting; Theme and appearance in the top bar.
+    Choose materials or the 2D glass style, adjust lighting and effects, and
+    save reusable materials or themes. See chapters 4 and 5.
+
+  Adjust periodic display and viewing direction:
+    Display → Lattice; a, b, c, and Fit in the top bar.
+    Set periodic display ranges, atom completion, and the unit-cell frame.
+    See chapter 6.
+
+  Select and organize atoms:
+    Selection → Advanced selection in the top bar; Elements → Selection sets.
+    Filter by element, z layer, coordination number, or spherical neighborhood,
+    and save reusable selections as groups. See chapter 7.
+
+  Highlight or analyze a local region:
+    Selection → Local box in the top bar.
+    Adjust opacity and color inside/outside a box; analyze volume, density
+    integrals, and first moments. See chapter 8.
+
+  Measure:
+    The measurement dropdown in the top bar; Display → Measurements.
+    Create distance, angle, dihedral, and displacement-component measurements.
+    Choose which components to annotate. See chapter 9.
+
+  Edit and build structures:
+    Add atom, translation/rotation controls, and Structure tools in the top bar.
+    Add, remove, replace, move, or copy atoms. Structure tools cover symmetry,
+    lattice parameters, supercells, surfaces, vacuum, interfaces, alignment,
+    and atomic constraints. See chapter 10.
+
+  View volume data and vectors:
+    Display → Isosurface / Vectors; New vector in the top bar.
+    View density or potential isosurfaces and sections; create atom-attached
+    or free vectors. See chapters 11 and 12.
+
+  Play sequences and export GIFs:
+    Open a sequence to show its playback controls, or create a sequence from
+    project items. See chapter 13.
+
+  View phonons and STM:
+    Use phonon playback and the dispersion chart to select modes, choose
+    frequency units, and animate vibrations. See chapter 17.
+    Add STM under Isosurface for constant-height/constant-current calculations
+    from eligible complete density data. See chapter 18.
+
+  Save and export:
+    File → Save project / Save as… / Export image / Export structure.
+    See chapter 2 for projects and chapter 14 for export formats.
+
+
+02  File: opening files and managing projects
+==============================================
+
+2.1 Open files
+
+Entry: File → Open… or the opening control on the welcome screen.
+
+To start without a structure, choose the empty-project option on the welcome
+screen. The new untitled project contains no structures; open or drop files
+into it later. Choose a project filename and location when first saving.
+
+Common inputs:
+  - Facet projects: .facetproj.
+  - Facet static structure, sequence, or phonon packages: .facet.
+  - QE phonons: scf.in, scf.out, and matdyn.modes, or a ZIP containing them.
+  - Structures: CIF, VASP POSCAR/CONTCAR, XYZ/extXYZ, MSI, and supported VESTA
+    structure files.
+  - ABACUS: complete STRU, .stru, or names such as STRU_300K; see section 2.4.
+  - VASP sequences: XDATCAR.
+  - VASP density grids: CHGCAR, CHG, PARCHG.
+  - Text Cube grids: confirm their quantity, units, and boundary interpretation.
+
+Convert an OUTCAR trajectory before opening it. On Linux, run:
+  ftkit -task 101 -i OUTCAR -o trajectory.facet
+Then open trajectory.facet in Facet. Choose a different output name if you need
+to keep an existing file. Current ftkit packages provide the ftkit command;
+the old facet-sequence command is no longer supplied.
+
+Select the desired object in the project tree after import. Multiple ordinary
+structure files can be added to the current project. Opening .facetproj
+switches the whole project. Ordinary XYZ is read as a single structure; use a
+supported sequence format for playback.
+A .facet file declares whether it contains a static structure, sequence, or
+phonon resource. Facet does not infer this from the number of frames: a
+one-frame sequence still has playback controls. Current ftkit task 201 writes
+a static magnetic structure without a trajectory playback bar. Task 202
+writes a project of independent static magnetic structures named after their
+calculation directories.
+
+If validation or reading fails while switching projects, the existing project
+remains open and an error is shown. Choosing not to save permits switching;
+it does not clear the old workspace before the new file can be read.
+If an older application reports “project schema version 20 requires a newer
+application”, use this or a newer Facet version. Do not edit the version number
+inside a file to force it to load.
+
+To drag remote files from MobaXterm:
+  1. Select files in MobaXterm's SFTP file list.
+  2. Drop them onto the Facet welcome screen or workspace and wait for import.
+  3. Facet reads the temporary paths provided by MobaXterm directly.
+
+Single and multiple files are supported; folders are not. Remote files are not
+modified. Further batches are queued in drop order while an earlier batch is
+being processed; there is no separate receiving-progress window.
+Facet no longer makes another copy in imports, and edits are not synchronized
+to the server. Repeated drops may add duplicate project items. Once MobaXterm
+removes its temporary files, loaded ordinary structures can still be viewed
+and saved, but source-location actions or external volumes may need relinking.
+
+2.2 The project tree
+
+The project tree organizes structures, sequences, phonons, and related volumes.
+  - Click an item to make it active.
+  - Ctrl-click selects multiple items; Shift-click selects a continuous range.
+  - Use an item's context menu to rename, group, or remove it.
+  - Drag the divider below the project area to resize it; double-click to
+    restore automatic height.
+
+For a single structure or sequence, the context menu offers source-file actions:
+  - Show in folder opens File Explorer and selects the source file.
+  - Copy file path copies the full path for pasting elsewhere with Ctrl+V.
+For example, for D:\results\Si\CONTCAR, the first action opens Si and selects
+CONTCAR; the second copies that entire path.
+
+With one or no selected items, the context menu targets the item you right-click.
+If A is selected and you right-click B, the action targets B. With multiple
+items selected, it targets that selection; the two file-path actions are omitted.
+Items without a source file cannot use them. If a source has moved or been
+deleted, its recorded path can still be copied, but Show in folder reports that
+it cannot be found. A MobaXterm source path points to its temporary file; a
+normal local import uses the original path.
+
+Project-tree groups organize file items. Elements → Selection sets stores
+atom/bond selections within a structure; see chapter 7.
+
+2.3 Save, save as, and recent projects
+
+File → Save project, or Ctrl+S:
+  Save a .facetproj with project organization, structures, sequences, phonons,
+  views, and related display settings. Choose a location on the first save.
+
+File → Save as…:
+  Save a separate copy to retain an earlier version or explore another option.
+
+File → New project:
+  Start a new project. Follow the prompt for any unsaved changes.
+
+File → Recent projects:
+  Reopen a recent project. Removing an entry from this list does not delete
+  its file from disk.
+
+Ctrl+R:
+  Close the current project and return to the welcome screen. This is not a
+  browser-refresh shortcut.
+
+Save .facetproj to continue editing the whole workspace. Use .facet to exchange
+an individual structure, sequence, or phonon resource; see section 14.2.
+Include external volume files when sharing a project; see section 11.5.
+
+2.4 ABACUS STRU: magnetic moments, velocities, and extra parameters
+
+Facet reads complete STRU files, including .stru, STRU_300K, and STRU_ION_D12.
+The filename need not be exactly STRU; contents are checked and validated.
+ATOMIC_SPECIES, LATTICE_CONSTANT, LATTICE_VECTORS, and ATOMIC_POSITIONS must be
+complete. A fragment that needs an external INPUT to define the cell is not
+sufficient.
+
+Supported coordinate modes are Direct, Cartesian, Cartesian_au,
+Cartesian_angstrom, and Cartesian_angstrom_center_xy/xz/yz/xyz.
+Comments beginning with # or // and E/e/D/d scientific notation are supported.
+For example, 1D-4 and 1e-4 represent the same value.
+
+Optional per-atom properties:
+  - m, or three 0/1 flags without m: atomic mobility constraints.
+  - mag / magmom: one scalar or three magnetic-moment components in μB.
+    A scalar may use angle1 and angle2; a three-component moment cannot also
+    specify those angles. These are imported initial moments, not a new
+    self-consistent magnetic calculation by Facet.
+  - v / vel / velocity: three Cartesian velocity components in ABACUS atomic
+    units, converted to Å/fs. One atomic velocity unit is about 21.8769 Å/fs.
+    This unit is independent of the position coordinate mode or lattice constant.
+
+Recognized properties may appear in different orders, but a property and its
+aliases cannot be repeated. For example:
+  0 0 0 m 1 1 1 v 1D-4 0 0 mag 3
+This atom has fractional position (0, 0, 0), is movable, has x velocity about
+0.00218769 Å/fs, and has an initial moment of 3 μB along z. Moments and velocities
+become separate vector groups. See section 12.4 for arrow scaling.
+
+Parameters not currently editable in Facet, such as sc / constrain spin
+constraints, lambda, and other recognizable extra parameter fragments, are
+retained as import provenance and produce a notice. Species masses and paths
+to pseudopotentials, orbitals, descriptors, and PAW files are also retained as
+source information. Facet does not open these associated files to run a calculation.
+
+Retention means preserving imported text and its provenance through project
+saving, reopening, and recovery. It does not mean those spin constraints have
+been applied or that edits regenerate equivalent ABACUS input. Facet can export
+a new STRU, but it does not write every original field back unchanged; see
+section 14.3 for requirements and companion files. Save .facetproj for your
+Facet work and retain the original STRU separately.
+
+Missing lattice/coordinate data, invalid values, or the wrong component count
+for a known property still prevent import. The welcome screen and both 2D/3D
+workspaces show errors, including a filename and line number when available.
+Clicking × dismisses a workspace error; it does not fix or import the file.
+Correct the source and reopen it. Existing project contents survive a failed import.
+
+2.5 VESTA structures and linked files
+
+Entry: File → Open…, then select a .vesta file.
+  1. The current importer reads a single crystal phase. Check the lattice,
+     elements, sites, and vectors after import.
+  2. Preserve linked structure/volume files and their relative directory layout.
+     For example, share both model.vesta and density.cube if the former refers
+     to the latter in the same directory.
+  3. External structure references must be local paths; remote URLs are not
+     downloadable data sources. Use the path in an error to restore a missing
+     file, then reopen the VESTA file.
+  4. Save .facetproj for continued work. Importing does not write edits back to
+     the original .vesta file.
+
+Multiple phases, non-identity TRANM structure transformations, and IMPORT_ORFFE
+links are currently unsupported. In the source application, select the required
+phase, apply the transformation, and export the expanded structure in a
+supported format. For an external MSI or unsupported vector source, follow the
+error message: use CIF/POSCAR or import the relevant structure directly.
+Not every VESTA appearance setting is guaranteed to be reproduced. Review and
+adjust the display in Facet. Check volume quantities, units, and boundaries
+as described in chapter 11.
+
+
+03  Atoms, bonds, palettes, and element controls
+================================================
+
+3.1 Atom styles and bond appearance
+
+Entry: Display → Atoms and bonds in the left panel.
+
+Choose an Atom style:
+  - Spheres: emphasize atom positions.
+  - Ball and stick: show both atoms and connectivity.
+  - Sticks or Lines: emphasize connectivity with less obstruction by spheres.
+  - Points: compact markers for dense structures.
+  - CPK: a space-filling representation.
+  - None: hide the atom representation.
+
+Coordination polyhedra are not an option in this dropdown. Create them in the
+separate Coordination polyhedra panel; they can coexist with the selected atom
+style. See section 3.6.
+
+Adjust Atom size, Show bonds, and Bond radius. Open More settings for atom and
+bond opacity and bond-search criteria.
+With atoms or bonds selected, relevant controls may act only on that selection.
+For example, atom size becomes a size multiplier, and selected bonds expose a
+whole-bond color control. Clear the selection to change global appearance.
+Mixed means selected objects have different values; entering a value makes the
+corresponding property consistent across the selection.
+
+Size, color, and opacity control the image without changing coordinates.
+Atoms and bonds share material appearance; see chapter 4.
+
+3.2 Choose a palette
+
+Entry: Elements → Palette in the left panel.
+
+Built-in palettes include Soft, Bright balanced, Low saturation, High contrast,
+High saturation, Subdued dark, and Monochrome gray.
+Switch palettes in the dropdown and inspect how well the elements are separated.
+Start with Soft or Low saturation for a subdued image, or High contrast / High
+saturation for stronger differences.
+
+A palette sets element colors; a material controls surface appearance. You can
+keep the palette while switching between Matte and Soft Gloss Resin to compare
+materials without changing element colors.
+
+3.3 Elements and selected atoms: colors, radii, labels, and visibility
+
+Entry: Elements in the left panel.
+
+The element list always contains the elements in the current structure.
+Each row lets you change its color, radius in Å, atom-number labels, and visibility.
+When atoms are selected, a Selected atoms area appears with the selection count.
+Changes there affect the selected atoms of that element and their periodic copies.
+For example, select only the O atoms near an interface and change their color
+there to make them red without recoloring every O atom.
+
+A local color overrides the global element color. Switching palettes may
+therefore leave manually recolored atoms unchanged. To unify them, restore the
+default color in the corresponding control or assign the desired color again.
+
+Reference data in Beta 1:
+The status bar shows covalent and van der Waals radii for selected elements.
+Estimated, compiled, and fallback values are identified; hover over the values
+for references. Predicted configurations carry a separate label.
+Covalent radii use Cordero (2008), Table 2, for H–Cm (96 elements). Bk–Og and
+unknown symbols use a 1.50 Å display/bond-search fallback, not a measured radius.
+C uses the sp3 value; Mn, Fe, and Co use the low-spin reference values.
+Van der Waals radii are fixed visualization references from several identified
+sources. Estimates and compiled values are distinguished; 29 elements use a
+2.00 Å fallback. These values do not adjust to oxidation state or environment.
+Neutral-atom configurations use NIST for H–Hs and Smits et al. (2023), Table 2,
+for Mt–Og. Lr is corrected to [Rn] 5f14 7s2 7p1. The displayed selection of
+orbitals follows the existing valence filter; f-block entries can include
+filled subshells. It is not a unique chemical definition of valence electrons.
+
+Opening an older project:
+Beta 1 adds Cordero radii for Pm, Po, At, Rn, Fr, Ra, Ac, Pa, Np, Pu, Am, and Cm.
+At and Rn remain 1.50 Å; the other ten values change. Saved radius multipliers
+are preserved, so the affected spheres can change size in 2D, 3D, and exports.
+Automatic covalent bonds and dependent polyhedra may change after recalculation.
+The old covalent-bond cache is invalidated by the data revision. Coordinates,
+lattice, colors, manual bonds, deleted-auto-bond overrides, and saved multipliers
+are retained. Absolute-distance bonding is unaffected by the radius revision.
+Save a new copy if you need to retain the older project file.
+
+3.4 Save, import, and export palettes
+
+After adjusting element colors, return to Palette:
+  1. Open the dropdown next to Save and choose to save a new palette.
+  2. Enter a name, such as Interface colors, and save.
+  3. Select it from the palette list next time.
+  4. Save updates an editable custom palette; save a new one to preserve the
+     earlier version.
+
+Changes to built-in palettes are saved as custom copies. Export writes palette
+JSON; Import adds it to another computer's library. On a name conflict, follow
+the prompt to replace an existing custom palette or keep a copy.
+The list supports reordering, renaming custom items, and hiding built-ins.
+Restore the default list to bring built-ins back.
+
+Palettes store element colors. Save radii, styles, and local coloring with the
+project; use a theme for reusable overall appearance, as described in chapter 5.
+This keeps your palette library separate from complete figure settings.
+
+3.5 Calculate bonds, restrict element pairs, and add manual bonds
+
+Entries: Display → Atoms and bonds → More settings; Calculate bonds in the top bar.
+
+Choose a bond criterion:
+  - Covalent-radius ratio: distances are measured relative to the sum of the
+    two covalent radii. Set the accepted From / To ratio range.
+  - Absolute distance: set the minimum and maximum distances in Å.
+  - Per-element-pair distance rules: give a particular pair its own range.
+
+Bonding elements can use all elements or a custom list of pairs. Custom pairs
+must still satisfy the distance criterion. Listing only C–O does not generate
+C–C automatically; C–O and O–C are the same pair.
+An empty custom list generates no automatic bonds but retains manual bonds.
+Switching back to all elements keeps the custom list for later use. Pairs absent
+from a new structure are marked as unmatched. This setting changes actual bond
+search, rather than merely hiding selected bonds.
+
+Click Calculate bonds and inspect connectivity, including periodic boundaries.
+The rules also affect neighbor completion, coordination-number filtering, and
+polyhedra. If a search is reported incomplete, do not treat the displayed
+automatic bonds as a complete periodic bond graph.
+
+For one manual bond, select the two target atoms, open the dropdown beside
+Calculate bonds, and choose Add manual bond from Bond actions. The action is
+unavailable without two eligible endpoints or when the object is not editable.
+Selecting an existing bond shows its endpoints, length, and periodic offset;
+you can change its appearance or delete it. For a bond across a cell boundary,
+choose the correct periodic images of both endpoints.
+
+Manual bonds and edits to automatic bonds can be saved in a project or .facet.
+Automatic bonds follow geometric rules; use chapter 9's tools to measure an
+actual distance.
+
+3.6 Coordination polyhedra
+
+  1. Expand Coordination polyhedra under Atoms and bonds and create a group.
+  2. Choose central atom elements, or use the current selection to record
+     specific atoms/periodic instances as centers.
+  3. Choose ligand elements or Nearest-neighbor element. Use existing bonds
+     or a distance criterion for coordination.
+  4. For distance-based coordination, set the minimum and maximum distance;
+     for existing bonds, ensure bond data are available.
+  5. Each group controls visibility, face color, edges, opacity, and highlights.
+     Match center color uses each central atom's color.
+  6. Group menus provide rename/delete actions; selected polyhedra can be
+     removed, and previously removed ones can be restored.
+
+Polyhedra are a representation and do not move source atoms. If coordination
+looks wrong, review the centers, ligands, and coordination rule.
+
+
+04  Appearance: materials, lighting, and effects
+================================================
+
+4.1 Start with a material preset
+
+Entry: Appearance → Material → Preset.
+
+Built-in choices include:
+  - Matte: a soft surface appearance.
+  - Soft Gloss Resin: rounded highlights and smooth spheres.
+  - Glazed Ceramic: a glazed surface sheen.
+  - Metal: metallic reflections.
+  - Glass: transmission effects.
+  - Publication Illustration: illustrative light and shade.
+  - Soft Color: softly shaded colored spheres.
+  - 2D Glass: the 2D projection style.
+
+Use a preset directly or expand More settings. A preset with recommended
+lighting also applies its lighting. To retain your own lights, choose Apply
+material only from that preset's action menu.
+
+The 2D glass style still lets you rotate a three-dimensional structure; it uses
+a different rendering method. Choose a 3D material to return to 3D. The 3D
+material-preset save action is not used in 2D; save the overall look as a theme.
+
+4.2 Adjust common material parameters
+
+Entry: Appearance → Material → More settings.
+
+Change one parameter at a time and inspect the result:
+  - Roughness: controls sharp versus diffuse highlights.
+  - Metalness and environment reflection: control metallic appearance and
+    environmental reflections.
+  - Specular intensity/color: adjust surface highlights.
+  - Clearcoat and clearcoat roughness: adjust the outer glossy layer.
+  - Sheen intensity/roughness/color: adjust a soft sheen layer.
+  - IOR (index of refraction) and transmission: control glass-like appearance.
+    With transmission enabled, thickness, attenuation color/distance, and
+    dispersion are also available.
+  - Sphere shaping, illustration highlight intensity/size, and hemispherical
+    shading: adjust bright and dark regions on spheres.
+  - Colored rim lighting, rim exponent, translucency, and edge darkening:
+    adjust the appearance near silhouettes.
+
+Available parameters depend on the material and 2D/3D mode. Follow the enabled
+controls. Start with roughness and highlights, then save a version you like.
+
+4.3 Lighting
+
+Entry: Appearance → Lighting.
+
+Enable custom lights or studio reflections. Adjust ambient lighting first,
+then direct lighting or reflections; avoid changing many controls at once.
+
+Custom lights:
+  - Set a name, intensity, and color or color temperature.
+  - Camera-relative lights follow the camera; world-fixed lights keep their
+    orientation in the scene.
+  - Expand a light's settings for directional, point, spot, and related controls.
+
+Studio reflections:
+  - Choose a circular, strip, or polished reflection shape.
+  - Adjust intensity, size, and horizontal/vertical highlight position.
+  - Use neutral fill and studio exposure for darker areas and overall brightness.
+
+To reuse the lights with a material, include current lighting when saving the
+material preset.
+
+4.4 Ambient occlusion, outlines, and atom glow
+
+Entry: the corresponding expandable sections under Appearance.
+
+AO / contact shadows:
+  Ambient occlusion adds shading near neighboring or contacting atoms. Adjust
+  AO strength, radius, and shadow strength.
+
+Outlines:
+  Enable outlines and adjust their width, depth, and color to clarify silhouettes.
+
+Atom glow:
+  Enable glow and adjust intensity and size. Follow the atom color or choose
+  a separate glow color. With a selection, selected-atom glow lets you highlight
+  only part of the structure. Edge blur and its strength are also available.
+
+These are appearance settings. Save reusable combinations in a theme; see
+chapter 5.
+
+4.5 Build your own material library
+
+  1. Adjust a material preset and its lighting.
+  2. Open the dropdown beside Save and choose to save a new material preset.
+  3. Enter a name, choose whether to include current lighting, and save.
+  4. Select it from the list later. Save further edits to an editable custom
+     preset, or create another preset to preserve the previous version.
+  5. Export material JSON and import it on another computer.
+
+Saving a built-in material creates a custom copy. Reorder or rename custom
+items, delete custom items, or hide built-ins. Restore the default list to bring
+built-ins back. If switching prompts about unsaved changes, save, save a copy,
+or discard those edits as appropriate.
+
+A material preset stores its material and optional lighting. Use Theme and
+appearance to include atom styles, palettes, backgrounds, and other general
+settings as well.
+
+
+05  Themes: saving, reusing, and sharing appearance settings
+===========================================================
+
+5.1 Choose a theme and adjust the interface
+
+Entry: Theme and appearance in the top bar.
+
+Built-in themes include Classic, 2D glass spheres, and Soft colors. Selecting one applies
+its settings; then adjust atoms, bonds, palettes, materials, and lights as needed.
+The same panel controls background, text/accent colors, atom/bond highlighting,
+interface font size, and dark appearance. Theme / White / Black beside the
+background offers quick background choices.
+
+Themes combine general display settings with interface appearance. For example,
+save one for white-background figures and another for dark presentations, then
+switch without separately readjusting atom sizes, colors, lights, and backgrounds.
+Sidebar width, active tabs, scrolling, and expanded panels are remembered across
+theme changes, structure changes, and application restarts.
+
+5.2 Create, update, and restore themes
+
+Atom completion is also saved in a theme. Switching, restoring, or importing a
+theme restores its completion mode and uses it initially for newly imported
+structures. For example, one theme can show only atoms in range, while another
+completes all atoms' neighbors. Specific completion centers and atom/group
+references belong to each structure; existing projects restore their saved state.
+
+To save a new configuration:
+  1. Adjust appearance in the relevant panels.
+  2. Open Theme and appearance and choose the new-theme action.
+  3. Enter a recognizable name and confirm.
+
+To update a configuration:
+  Save updates an editable custom theme. Saving a built-in theme asks for a
+  name and creates a custom theme. Create a new theme to preserve both versions.
+
+Understanding the current state:
+  Classic means the general appearance matches that preset.
+  Classic · Modified means it originated there but some settings differ.
+  Modified describes the difference from a preset; it can remain after saving
+  the project. Switching structures shows each one's theme without changing
+  the previous structure. If a theme source is not recognized, Custom is shown;
+  you can save it under a name.
+
+Restore:
+  Restore applies the named theme's preset parameters. For example, restoring
+  Classic · Modified returns it to Classic. Ctrl+Z can undo this restoration.
+  An unrecognized Custom appearance has no preset to restore. When switching
+  prompts about unsaved changes, choose which version you want to keep.
+
+5.3 Organize, import, and export themes
+
+Drag theme entries to reorder them. Use each entry's menu to rename or delete
+custom themes. Hide built-ins and restore them later with the built-in restore
+action.
+Export writes the current appearance to a theme file, including adjustments not
+yet saved into a preset. Use Import… on another computer. Themes are useful for
+sharing consistent colors, sphere/bond proportions, materials, and backgrounds
+within a group, or for maintaining your own figure styles.
+
+Keep palettes, materials, and themes separately: use a palette for colors, a
+material for surface appearance, and a theme for the overall combination.
+
+5.4 Apply to this project versus saving a project
+
+Save in the theme panel stores a personal theme that can be used in other projects.
+
+Apply to this project applies the current complete theme to the project's
+structures and includes it in project state; press Ctrl+S afterward. This unifies
+appearance and clears existing per-element, per-atom, and per-bond local style
+overrides, including individually colored structures. If you want to preserve
+different local colors, simply save the project instead.
+
+File → Save project stores the actual working state: structures, local styles,
+local boxes, measurements, and related data. It does not overwrite the theme
+preset or remove the Modified status. Save the project to continue the work;
+save a theme separately to reuse its general appearance next time.
+
+
+06  Lattice, camera, and view controls
+======================================
+
+6.1 Rotate, pan, zoom, and fit
+
+In the main viewport:
+  - Right-drag rotates the view.
+  - Middle-drag pans.
+  - The wheel zooms.
+  - Fit in the top bar, or Space, frames the structure in the current window.
+
+With no atoms selected, the clockwise/counterclockwise buttons roll the image
+about the viewing direction by the specified rotation angle, preserving its
+screen center and scale. For example, 90° clockwise turns it a quarter turn.
+This works in 2D and 3D, changes no atom coordinates, and adds no atom-edit undo
+step. With one selected atom the buttons are disabled; with multiple atoms they
+rotate the selection instead, as described in section 10.2.
+Holding a button repeats the rotation. Release, window blur, or a change of
+structure, view, or selection stops it.
+
+The a, b, and c buttons give views along the corresponding lattice axes.
+Keyboard a/b/c select lattice-axis views; x/y/z select Cartesian-axis views.
+Use the top-bar button for the recommended/standard crystallographic view;
+there is no dedicated shortcut for it.
+
+Fit only changes framing, not coordinates, moments, or velocities. Inputs,
+menus, and dialogs may consume Space; finish that interaction before using
+viewport shortcuts. The wheel may adjust a numeric input when the pointer is
+over it; move the pointer back over the viewport to zoom.
+
+6.2 Lattice: unit-cell frame and display range
+
+Entry: Display → Lattice.
+
+The unit-cell frame can be hidden, shown for one cell, or shown for all cells.
+Set display ranges along periodic directions. For example, when a is periodic,
+a range of 0 to 2 shows neighboring cells along a. Nonperiodic directions do
+not repeat or clip a finite structure according to that range; see section 6.5.
+
+More settings includes:
+  - Axes: hidden, abc, or xyz. The default font size is 22 px, adjustable from
+    6 to 48 px. Themes or older files without a size use the default; saved
+    sizes are preserved.
+  - Cell-frame line style, color, width, opacity, and depth fading.
+  - Wrapping atoms into the cell and completing boundary atoms.
+
+Ranges use fractional coordinates: moving one whole lattice vector adds 1.
+In an oblique cell, a/b/c need not be perpendicular or aligned with the screen.
+These controls add displayed periodic copies without changing the source atom
+count. To generate a larger cell and actual atom data, use Build supercell;
+see section 10.5.
+
+6.3 Atom completion
+
+Entry: Display → Atoms and bonds → Atom completion.
+
+Available modes:
+  - Show only atoms in range: use the configured a/b/c display range.
+  - Complete direct neighbors of specified atoms: choose centers by element,
+    atom, or group and include their direct neighbors.
+  - Complete direct neighbors of all atoms: include direct neighbors of atoms
+    in the display range.
+  - Complete molecules only: include connected atoms of identified finite
+    molecules.
+  - Complete molecules and full layer thickness: also retain the full thickness
+    of intersecting layers, without adding another in-plane ring of neighbors.
+
+For complete coordination polyhedra near a boundary, try completing the direct
+neighbors of specified atoms. Completion depends on automatic bond rules;
+check element pairs and distances if atoms are missing or added unexpectedly.
+An orange warning triangle identifies an analysis issue; click or hover for
+its explanation. Parts that cannot be classified reliably remain within the
+display range. Automatic molecule detection is not a universal chemical test.
+Completion changes periodic display only; use a supercell to add real atom data.
+
+6.4 Camera and quality
+
+Entry: Appearance → Camera.
+
+Choose Perspective for distance-dependent apparent size or Orthographic for
+comparing directions and proportions. Controls also include field of view,
+rotation step/speed, zoom speed, and front/back fading and its range.
+
+Viewport quality modes include:
+  - Adaptive quality: balances interaction speed and refinement afterward.
+  - Always high precision: continuously uses higher display precision.
+  - Fast: useful for positioning larger structures.
+
+See section 4.1 for 2D/3D switching and section 14.1 for image export formats.
+
+6.5 Periodic boundaries for molecules, chains, and two-dimensional systems
+
+Periodicity comes from the structure or volume's boundary information. It is
+not inferred from vacuum thickness or grid size. Wrapping, periodic copying,
+and range clipping act only along periodic directions.
+For example, if a slab is periodic only along a and b, extending the c display
+range neither generates slabs above and below it nor cuts away atoms outside
+that range in the finite c direction.
+
+For one periodic unit, the cell frame reflects the number of periodic axes:
+  - Three periodic axes: the 12 edges of a complete cell.
+  - Two periodic axes: four edges in the periodic plane.
+  - One periodic axis: markers at the two ends of the periodic interval.
+  - No periodic axes: no periodic cell frame.
+A molecule without a cell frame, or a 2D system without a three-dimensional
+box, is therefore not necessarily a display error. These rules apply to 2D,
+3D, and their corresponding image exports. See section 11.6 to change a Cube's
+boundary settings. Do not declare a finite system periodic merely to draw a box.
+
+
+07  Selection: basic selection, advanced selection, and groups
+==============================================================
+
+7.1 Basic selection
+
+Exit measurement or local-box drawing tools before using normal selection:
+  - Left-click an atom or bond to select it.
+  - Left-drag a rectangle to select enclosed objects.
+  - Shift with selection adds to the existing selection.
+  - Ctrl with selection toggles an object's selected state.
+  - Alt-double-click an atom selects atoms of the same element.
+  - Ctrl-double-click selects by group membership.
+  - Ctrl+A selects all atom instances in the current display range, including
+    periodic copies.
+  - Esc exits the current interaction or clears the selection.
+
+Then change styles/colors, move or delete atoms, or save the selection as a
+group. Editing a selected periodic copy generally acts on its source atom;
+other copies of that atom update too.
+
+7.2 Advanced selection
+
+Entry: the Selection dropdown in the top bar → Advanced selection.
+
+Choose how to combine the result with the current selection:
+  - Replace: replace the existing selection.
+  - Add: add the new result.
+  - Intersect: keep atoms present in both the existing selection and the result.
+
+Use the Select action beside the relevant criterion:
+  - Element: choose one or more elements.
+  - z layer: set lower/upper limits using fractional or Cartesian Å coordinates.
+    Fractional uses the third fractional coordinate; Cartesian uses global z.
+  - Coordination number: set the accepted minimum and maximum neighbor counts.
+  - Within a sphere: first select center atoms, then enter a radius in Å.
+    With multiple centers, atoms inside any of their spheres are included.
+
+Invert switches the selected/unselected range. The same-element expansion
+selects elements represented by the current selection. Coordination-number
+results depend on the current bond rules.
+
+For example, select only O atoms in a particular layer:
+  1. Use Replace, choose O under Element, and select.
+  2. Change the combination mode to Intersect.
+  3. Enter the required z-layer range and select.
+  4. Inspect the highlights, then recolor, constrain, or save the atoms as a group.
+
+7.3 Groups: save atom and bond selections
+
+Create:
+  Select atoms/bonds, open the selection context menu, and save as a new group
+  with a name. Find it under Elements → Selection sets, with atom and bond counts.
+
+Use:
+  Double-click a group to select it. Shift-double-click adds it to the selection.
+
+Change membership:
+  Select the objects in the viewport, then open the target group's menu.
+  Add the current selection to that group or remove it from the group.
+  The selection context menu can also remove selected objects from all groups.
+
+Manage:
+  Rename, delete, or reorder groups. Deleting a group removes its selection
+  record, not its atoms or bonds. Groups are saved with the project and the
+  corresponding .facet structure package.
+
+For example, save Upper layer and Lower layer groups, then double-click one to
+recolor, move, constrain, or further filter an entire layer.
+
+
+08  Local boxes: opacity, color masks, and charge analysis
+==========================================================
+
+8.1 Create a local box
+
+Entry: Selection → Local box in the top bar, or the local-box main button.
+  1. Rotate the structure to make the region easy to outline.
+  2. Activate Local box and left-drag a rectangle in the viewport.
+  3. Release, then select the new box in the local-region list.
+  4. Adjust its inside/outside effects and spatial dimensions in the properties.
+
+A box has width, height, and depth; the screen rectangle is only its projection.
+Rotate to inspect its depth, or enter exact dimensions in More settings.
+Esc cancels an unfinished rectangle.
+
+8.2 Effects inside and outside a box
+
+Local boxes change opacity and overlay colors inside or outside a region.
+Structure and volume appearance can be adjusted together or separately.
+
+Opacity:
+  1 retains existing opacity; 0 makes the affected content fully transparent.
+  Intermediate values further fade it. This multiplies existing opacity, so it
+  cannot make an already transparent object opaque.
+
+Overlay color and strength:
+  Choose a color and adjust its contribution. Zero adds no color; larger values
+  make the overlay stronger.
+
+Separate adjustment:
+  Set structure and volume effects independently, for example keeping atoms
+  visible while fading density isosurfaces.
+
+Synchronized adjustment:
+  Share settings between structure and volume. If their settings differ,
+  follow the prompt to choose which set to use.
+
+To emphasize one region:
+  1. Keep inside opacity at 1.
+  2. Expand outside effects and set outside opacity to 0.15.
+  3. Add a small amount of a contrasting color inside.
+  4. Rotate to inspect the bounds, then export the image.
+
+These operations change display only; they do not delete atoms or alter the
+original density data.
+
+8.3 Center, dimensions, and periodic repetition
+
+Entry: select the box → More settings.
+  - Center: use the coordinates shown by the fields. u/v/w are fractional;
+    x/y/z use the displayed Å units.
+  - Local dimensions: set width, height, and depth in Å. Numeric size changes
+    keep the center fixed.
+  - Periodic repetition: use the a/b/c controls to choose lattice directions
+    along which the box repeats.
+
+Drag the box wireframe to move it or drag a face handle to adjust a boundary.
+If dragging is awkward, change the view or enter values. Right-drag still
+rotates the view.
+
+8.4 Manage local regions
+
+Rename, move up/down, or delete entries in the list. The box control toggles
+the wireframe; the effect control enables/disables the local effect. Hide the
+wireframe while keeping the mask for a clean figure.
+Order affects overlapping boxes. If an effect is unexpected, disable boxes
+one by one and adjust their order. Deleting a box does not delete atoms inside it.
+
+8.5 Analyze a local region
+
+Import charge-density data and select a box:
+  1. Open More settings and choose Analyze this region.
+  2. Set the analysis scope. Display range includes the current periodic display
+     range; Single cell analyzes one cell.
+  3. Choose Balanced (recommended) or High precision sampling.
+  4. Inspect the results. Analyze again refreshes them; stop the analysis when done.
+
+The results include:
+  - Region volume: the box's covered volume within the analysis scope, in Å³.
+  - Mean and range of charge density: the average, minimum, and maximum values.
+  - Positive and negative density integrals (Q+ and Q−): integrals of positive
+    and negative values separately; the negative part retains its sign.
+  - Signed density integral: Q+ plus Q−, in e.
+  - Positive and negative density centroids: the respective weighted centers.
+  - Density first moment about the box center: integrate position relative to
+    the box center multiplied by density, in e·Å. Controls show the centers
+    or the first-moment direction. Only the input grid is used; ionic charges
+    are not added. This is not the total electric dipole moment of the system.
+  - Signed density centroid: shown when the integral is nonzero and the
+    centroid is defined.
+  - Integral and first-moment differences: comparison with coarser sampling.
+    The integral difference is absolute; the first-moment difference is the
+    magnitude of the vector difference. Neither is a statistical confidence
+    interval or guaranteed error bound. Fast or Balanced in parentheses names
+    the reference sampling level.
+
+Analysis uses the imported density values. Their total-density or difference-
+density meaning comes from the source. LOCPOT potential files are unsupported;
+charge integration requires charge-density data.
+For Cube, the current integrator accepts only the Charge density quantity with
+all three a/b/c directions periodic. Other Cube quantities, including difference
+or spin density, potentials, and orbitals, can be displayed as scalar fields,
+but this integration is not currently available for them. Do not relabel a
+quantity or declare a finite boundary periodic just to enable analysis; see 11.6.
+
+After changing the box, dataset, or analysis scope, inspect updated results.
+Use matching scopes and sampling levels for comparisons.
+
+8.6 Save local boxes
+
+Save a project or the corresponding static .facet package to retain boxes and
+their display settings. The original grid is an external resource; include it
+when sharing an analysis project. Export an image if you only need to show the mask.
+
+
+09  Measurements: distances, angles, dihedrals, and components
+=============================================================
+
+9.1 Create a measurement
+
+Entry: the dropdown beside the measurement button in the top bar.
+Choose a mode, then click atoms in the requested order:
+  - Distance: two atoms; the result is in Å.
+  - Angle: three atoms, with the second at the vertex; the result is in degrees.
+  - Dihedral: four atoms defining the angle between two planes, in degrees.
+  - Distance components: two atoms; show the displacement from the first to
+    the second along the available coordinate directions.
+
+For a measurement across cell boundaries, first display the required images
+under Lattice. The chosen periodic images are the actual endpoints; different
+images of a source atom must not be treated as the same endpoint.
+Esc exits the measurement interaction.
+
+9.2 Distance components: choose directions to annotate
+
+Select a completed component measurement to inspect three coordinate groups:
+
+Cartesian (Å):
+  Δx, Δy, and Δz are displacements along global x, y, and z, in Å.
+
+Fractional coordinates:
+  Δa, Δb, and Δc are differences of fractional coordinates and have no length
+  unit. For example, Δa = 0.5 is a change of half a lattice period in the
+  fractional a coordinate.
+
+Plane normals (Å):
+  ΔA*, ΔB*, and ΔC* are displacement components normal to the bc, ca, and ab
+  lattice planes, respectively, in Å. In an oblique cell these normals are
+  generally not parallel to the similarly named lattice axes.
+
+Click a component's name to include or remove its annotation. For example,
+keep only Δz and Δc to emphasize those two components. Scroll horizontally if
+the numeric area is too narrow.
+Components are signed and depend on endpoint order and direction. The total
+distance is nonnegative. Use the appropriate plane-normal component to compare
+heights perpendicular to a crystal plane.
+
+9.3 Colors, font sizes, visibility, and deletion
+
+Under Display → Measurements, adjust default annotation colors and font sizes
+for distances, angles, dihedrals, and components separately.
+For an existing selected measurement, change color/font size in its properties,
+toggle the eye icon, or use the delete action or Delete key.
+Measurements are saved with projects and supported .facet resources. Values
+follow moving endpoints; inspect annotations after deleting endpoints or
+transforming a structure.
+
+9.4 Measurements across sequence frames
+
+With a sequence active, create a measurement in one frame and switch frames
+to observe its value. Within a segment, endpoints follow atom identity. Between
+independent segments, endpoints correspond by atom-list order only when the
+complete atom counts and element order match. This is a correspondence rule,
+not automatic tracking of arbitrarily reordered atoms.
+
+If a segment is incompatible or endpoints are unavailable, the measurement is
+not displayed, but its record is retained. It can reappear in a compatible
+segment. An absent annotation does not mean a zero value.
+For example, a distance created between two H atoms is not reinterpreted as an
+H–O distance when a later segment contains H and O instead.
+Measurements and their styles are saved with the project and do not alter
+sequence coordinates or scientific channels.
+
+
+10  Atom editing, symmetry, and structure modeling
+===================================================
+
+This chapter follows the top-bar editing controls and Structure tools menu.
+These operations require an editable static structure; scientific sequence
+frames do not accept them directly. Save with Ctrl+S first. Undoable structure
+operations can be reversed with Ctrl+Z.
+
+10.1 Add, delete, and replace atoms
+
+Add:
+  Click Add atom, choose an element, enter fractional coordinates, and confirm.
+
+Delete:
+  Select the target atoms and press Delete. Check the selection count first
+  to avoid deleting other selected objects.
+
+Replace an element:
+  With atoms selected, use the editing action in the bottom element information
+  to choose another element. For multiple selections, follow the element groups
+  listed by the interface.
+
+Check positions and bonds after adding or replacing atoms. Use an atoms-too-close
+notice to locate atoms that need inspection.
+
+10.2 Coordinates, translation, rotation, and copy/paste
+
+Exact coordinates:
+  Select one source atom and edit its fractional or Cartesian coordinates in
+  the bottom status bar. Fractional coordinates use lattice axes; Cartesian
+  coordinates use x/y/z in Å.
+
+Translation:
+  The top-bar arrows move selected atoms up/down/left/right in screen directions.
+  The translation step gives the distance per action in Å.
+
+Rotation:
+  Select multiple atoms, set the rotation angle, and use the clockwise or
+  counterclockwise buttons. For exact alignment to an atom, direction, or plane,
+  use Align atoms…; see section 10.9.
+
+Copy/paste:
+  Ctrl+C copies selected atoms; Ctrl+V pastes into the current structure.
+  Inspect overlap at the original positions and move the copies as needed.
+
+These actions edit the structure. Middle-drag panning and right-drag rotation
+only change the view.
+
+10.3 Symmetry
+
+Entry: Structure tools → Symmetry.
+  1. Set the positional tolerance symprec in Å; the default 0.01 Å is a starting
+     point.
+  2. Leave the optional angular tolerance in degrees blank for automatic handling.
+  3. Analyze to view the space group, Hall information, point group, crystal
+     system, Bravais/Pearson information, and number of symmetry operations.
+  4. Expand Wyckoff sites for site labels and site symmetry.
+
+The positional tolerance is the allowed position deviation when identifying
+symmetry. For a slightly distorted structure, compare analyses at appropriate
+tolerances.
+
+The lower controls include:
+  - Primitive Cell: convert to a primitive cell.
+  - Conventional Cell: convert to a conventional cell for standard presentation.
+  - Symmetry correction…: correct the structure according to identified
+    symmetry after reviewing the confirmation.
+
+Analysis alone reports results; conversion/correction changes the structure.
+Check the lattice, atom count, and coordinates before saving. See section 14.3
+for symmetry-aware CIF/MSI export.
+
+10.4 Lattice parameters
+
+Entry: Structure tools → Lattice parameters….
+
+Enter lengths a, b, c and angles α, β, γ, then apply the lattice parameters.
+α is the angle between b and c, β between c and a, and γ between a and b.
+The current operation preserves the periodic equivalence of Cartesian atom
+positions and wraps fractional coordinates into the cell. It does not simply
+retain fractional coordinates and stretch every atom with the new lattice.
+Use Add vacuum… when the purpose is to increase empty space outside a slab.
+
+10.5 Build a supercell
+
+Entry: Structure tools → Build supercell….
+
+Enter an integer transformation matrix, inspect the cell and predicted atom
+count, then click Apply. To repeat twice along a and once along b and c, use:
+  2 0 0
+  0 1 0
+  0 0 1
+
+This doubles the actual source atom count and the a cell length. Exporting the
+result produces a real supercell. Non-diagonal integer combinations are also
+supported, but the matrix must not produce a zero-volume cell.
+
+The operation creates and activates an independent item named
+“Original name · supercell”; the source structure is retained. Switch back to
+it in the project tree to compare. Undo removes the new supercell item; redo
+restores it. Save .facetproj to retain both structures and their working state.
+
+10.6 Cleave a surface
+
+Entry: Structure tools → Cleave surface….
+
+To construct a slab along a crystal-plane orientation:
+  1. Enter Miller indices h, k, l; they cannot all be zero.
+  2. Set slab thickness and, if needed, enable vacuum and set its thickness.
+  3. Inspect actual thickness, atom count, and layer count in the preview.
+  4. To change the exposed atomic layer, adjust the surface position or expand
+     the termination/cutting-position controls and choose another candidate.
+  5. Apply to add a new structure to the project; the original is retained.
+
+Actual thickness depends on atomic layer positions; use the preview result.
+Before exporting a computational slab, rotate it and inspect the termination,
+both surfaces, and the vacuum position.
+
+10.7 Add vacuum
+
+Entry: Structure tools → Add vacuum….
+
+This adjusts the vacuum gap along the normal to the ab plane:
+  1. Enter the target vacuum thickness and enable centering if needed.
+  2. For a different insertion position, expand the vacuum-position controls,
+     enable manual placement, and adjust the fractional c cut position.
+  3. In manual mode, switch between the original structure and result preview
+     to check that the slab stays intact.
+  4. Apply to update the current structure.
+
+The value is the final vacuum gap, not an increment. If the existing gap is
+about 10 Å and you want about 15 Å, enter 15 Å. For an oblique cell, the normal
+distance need not equal the change in the length of c.
+
+10.8 Build an interface
+
+Entry: Structure tools → Build interface….
+
+Import both layers into the same project first:
+  1. Choose the upper and lower structures and select the Lattice reference.
+  2. For Build mode, choose Direct or Lattice matching.
+  3. In matching mode, set Maximum mismatch, Angle tolerance, and Maximum atoms.
+     Search for matches, inspect candidate cell sizes and atom counts, and
+     select a candidate.
+  4. Adjust the interlayer gap, vacuum thickness, and c direction in the preview.
+  5. Apply to create a new structure; the two source layers remain available.
+
+Direct fits the other layer to the reference lattice. Lattice matching searches
+integer supercell combinations; search limits apply only in that mode.
+Mismatch measures the in-plane edge-length mismatch before fitting. Angle
+tolerance is in degrees: 0° accepts zero angle difference only, while the
+mismatch limit independently controls length mismatch.
+Maximum absolute in-plane principal strain reports the non-reference layer's
+principal engineering strain after fitting. It includes stretching, compression,
+and shear, excludes rigid rotation, and is used for results and candidate
+ranking rather than as a search threshold. For principal strains +2% and −3%,
+the reported value is 3%.
+
+The interlayer gap is defined along the interface normal, not as the closest
+atom-to-atom distance between layers. Check layer positions and atoms-too-close
+notices after assembly. This is geometric modeling, not energy minimization.
+
+10.9 Align atoms
+
+Entry: Structure tools → Align atoms….
+
+Select the atoms to move, then choose an alignment type:
+  - Position: align an anchor with target coordinates or a target atom.
+  - Direction: define a direction with two atoms and align it with an axis or
+    another direction.
+  - Plane: define a plane with three noncollinear atoms and align it with a
+    target plane/normal.
+
+Cartesian directions, crystallographic directions, and plane normals are
+available. Inspect the preview and apply. Selected atoms move/rotate as a
+rigid group, preserving their internal distances.
+
+10.10 Set atomic constraints
+
+Entry: Structure tools → Set atom constraints…, also available from the
+selection context menu.
+  1. Select the relevant atoms.
+  2. Adjust Fix X, Fix Y, and Fix Z.
+  3. Apply to the displayed number of atoms.
+
+A dash means that a flag differs within the selection. Change only the flags
+you intend to modify. Constraints are stored as structure data for subsequent
+exchange with supported calculation formats.
+
+Finish a structure preview with Apply or Cancel before saving/exporting.
+Use Ctrl+Z for undo and Ctrl+Y or Ctrl+Shift+Z for redo. Save again to write an
+undone/redone state to disk.
+
+
+11  Volume data, isosurfaces, and sections
+==========================================
+
+11.1 Import and select volume data
+
+Entry: Display → Isosurface.
+
+Use the volume import button there, or File → Open…, to import a supported VASP
+grid or text Cube file.
+CHGCAR, CHG, and PARCHG are read as charge density. Custom-named VASP grids are
+also imported directly as charge density, without a quantity-choice dialog.
+Recognizable LOCPOT files are rejected; do not rename a potential file to make
+it appear to be charge density.
+
+Cube files may hold density or another scalar field; the extension alone does
+not establish the quantity. Confirm the quantity, units, and boundary rules.
+Only the first dataset in a multi-dataset Cube is loaded, with a notice.
+Charge integration requires the appropriate density interpretation. STM also
+requires a complete source grid. For Cube, both integration and STM currently
+require three periodic directions; STM cannot use values reconstructed only
+for visualization. See section 11.6 for the settings and restrictions.
+
+Select a dataset in the list and use its visibility control. Read its quantity
+and units before choosing isovalues. For VASP files with several density blocks,
+read the notice identifying the loaded block; spin/magnetization blocks are
+not interchangeable with total density. A warning identifies small trailing
+gaps reconstructed only for visualization. Such reconstruction is not valid
+STM input.
+
+11.2 Isosurfaces
+
+An isosurface represents positions sharing a chosen scalar value:
+  1. Add an isosurface in the Isosurface section.
+  2. Enter its value and wait for generation.
+  3. Use its eye icon to show/hide it, or delete it with the removal control.
+  4. Set colors and visibility for positive/negative surfaces as appropriate.
+  5. Add more surfaces to compare different values.
+
+Choose solid, wireframe, or point-cloud rendering. A negative surface is visible
+only when the dataset contains the required values and that surface exists.
+The isovalue chooses the surface; color and opacity change its appearance.
+
+11.3 Isosurface materials and Charge Lighting
+
+Isosurfaces have their own material presets, including:
+  - Classic Gloss: surface highlights.
+  - X-Ray: emphasized contours and see-through appearance.
+  - Soft Enamel: soft surface gloss.
+
+Adjust opacity, contours, highlights, and other parameters supported by that
+material. Charge Lighting controls volume lighting: follow scene lighting or
+set separate ambient/direct contributions.
+
+To save an isosurface material:
+  1. Adjust the appearance.
+  2. Open the menu beside Save and choose to save a new material preset.
+  3. Name it and choose whether to include current Charge Lighting.
+  4. Select it from the list later; custom presets can be updated.
+  5. Use Export / Import to exchange isosurface material JSON.
+
+Atom/bond materials and isosurface materials are managed separately; save from
+the corresponding panel.
+
+11.4 Sections
+
+Entry: Isosurface → Sections → Add.
+
+Choose the plane definition:
+  - Simple cell plane: AB, BC, or CA, with an adjustable position.
+  - Advanced hkl plane: enter Miller indices and an offset.
+
+Then adjust:
+  - Retained side: the negative or positive side of the plane normal.
+  - Colormap: blue–white–red, Viridis, Cividis, Magma, Inferno, Plasma, BrBG,
+    or grayscale; reverse it if needed.
+  - Range: robust automatic, full range, symmetric about zero, or manual.
+  - Opacity: the section's transparency.
+
+For difference data, use a diverging colormap symmetric about zero to distinguish
+positive and negative values. Use identical ranges when comparing sections;
+choose Manual and enter limits if necessary. Hide a section with its eye icon
+or remove it with Delete.
+
+11.5 Saving, external files, and local analysis
+
+Saving a project records dataset associations, isosurfaces, and section settings.
+Original grids usually remain external references; include the corresponding
+CHGCAR/PARCHG/Cube files when sharing a project.
+If files have moved, select the original files when asked to relink. A file with
+the same name but different contents may not replace the recorded resource.
+Use Selection → Local box to mask a region or integrate local density; see
+chapter 8.
+
+11.6 Cube: physical quantity, units, and boundary settings
+
+Cube is a grid container. Its extension does not by itself identify total
+charge density, difference/spin density, potential, orbital amplitude, or some
+other scalar quantity.
+  1. Open the file. If prompted, select the quantity and source unit according
+     to the producing software's output description.
+  2. After import, click ⋯ on the dataset row to open Volume data settings.
+  3. Check Physical quantity, Source unit, and periodic directions a/b/c.
+     The panel also shows grid dimensions, data range, and any boundary-source
+     information or warning. Apply commits changes; Cancel discards them.
+  4. Inspect isosurfaces and sections. Existing thresholds may have a different
+     meaning after changing quantity or units; review them before saving.
+     Incompatible STM or surface coloring is removed with a notice. Undo can
+     restore the state before this change.
+
+A recognized ABACUS producer convention can identify periodic boundaries.
+Ordinary Gaussian/PySCF or unidentified Cube files default to a finite grid.
+A large vacuum region or small boundary values do not establish periodicity.
+Check ftkit output as well; do not infer its interpretation from its filename.
+Only the first dataset of a multi-dataset Cube is loaded, with a notice; this
+panel does not switch between datasets.
+
+Density source units include e/Bohr³ and e/Å³; Facet converts density to e/Å³ for
+display. Bohr denotes the Bohr radius. Potentials, orbital amplitudes, and
+dimensionless fields use their respective supported units. Selecting a source
+unit describes the units of the original numbers, rather than arbitrarily
+relabeling them. If uncertain, consult the producing software's output details
+instead of guessing from numerical magnitude.
+
+When opening a Cube creates its own structure, changing its periodic directions
+also updates that structure's boundaries. A Cube attached to an existing
+structure retains independent grid boundaries without rewriting its host.
+Changes can be undone and are saved with project/resource records. The original
+Cube file is not overwritten and must still accompany a shared project.
+
+For Cube, the current local integrator and STM both require Charge density,
+a valid unit interpretation, and three periodic directions. STM additionally
+requires a complete original grid. Finite molecular Cubes, difference/spin
+density, potentials, and orbital amplitudes cannot be used directly for STM.
+These calculation restrictions do not prevent displaying those fields as
+isosurfaces or sections.
+
+
+12  Creating and displaying vectors
+====================================
+
+12.1 Create and select vectors
+
+Entry: New vector in the top bar.
+  1. To follow atoms, select them first and use the atom-attached option.
+     For an independent origin, choose a free vector and enter its fractional
+     starting coordinates.
+  2. Enter a name and choose a color.
+  3. Enter Cartesian x/y/z or lattice u/v/w components. Check the actual length
+     using the units shown, then create the vector.
+  4. Select one vector, several vectors, or a whole group in the viewport or
+     right-hand vector list to adjust them.
+
+A channel groups vectors of one kind, such as moments or forces. A zero vector
+has no visible arrow. Selection adds a thin outline while preserving the arrow's
+color; image/GIF exports omit that selection outline. Clicking empty space
+clears the selection and its details while keeping the list available.
+
+12.2 Length, thickness, and color
+
+Select the target and adjust Display length and Width in the right-hand
+properties:
+  - Display length is a percentage of the object's stored reference. 50% gives
+    half its reference length.
+  - Width changes the shaft/head width independently of length.
+  - Reset returns to that object's own 100%; it does not rescale from the
+    current scene.
+  - Mixed means selected objects differ. Enter a value to set that property
+    consistently across the selection.
+
+Display length, thickness, and color do not change scientific moments, forces,
+or displacements. A 4 μB moment remains 4 μB when Display length changes from
+100% to 50%. μB is the Bohr magneton, not an arrow's geometric length on screen.
+
+Click the color dot on a vector-list row without expanding appearance settings:
+  - If vectors are already selected, the color action targets that selection,
+    even when you click a different row's color dot.
+  - With nothing selected, it targets the vector/group represented by that row.
+The picker identifies its target. For example, select A and then click the
+moment-group color dot to recolor A only. Clear the selection first to recolor
+the entire group. Group recoloring retains individual size settings.
+One continuous color adjustment is one undo step; Esc cancels it. Changing
+structure or selection closes the previous target's picker.
+
+12.3 Placement, occlusion, and other appearance settings
+
+Expand appearance settings to adjust placement, gloss, atom-following visibility,
+and minimum displayed magnitude. At the middle placement, the atom lies about
+40% of the way from the arrow's tail, so the arrow passes through its sphere.
+The sphere occludes the internal part and may leave only a short visible segment;
+the magnetic moment has not been truncated. Choose surface placement for an
+arrow starting outside the sphere, or reduce atom size/change display length.
+Display → Vectors also provides visibility, periodic-copy, filter, and channel
+settings.
+
+12.4 Initial lengths for new vectors and saved appearance
+
+When a group first needs a display reference, Facet uses its largest nonzero
+magnitude to establish a common scale, then draws the other arrows with that
+same scale. Moments, forces, velocities, and other quantities are scaled within
+their own groups; arrow lengths from different physical quantities are not
+directly comparable.
+
+For example, take one-dimensional moments +1, +2, and −4 μB in a single group:
+  - The largest magnitude, 4 μB, establishes the initial reference.
+  - Total arrow lengths are in the ratio 1:2:4; the negative sign reverses
+    direction without changing that ratio.
+  - Setting group Display length to 50% halves every length, retaining 1:2:4.
+This does not change the moments to 1/4, 1/2, and −1 μB. A zero vector is not
+visible. An all-zero group can establish a reference when nonzero data appear.
+
+New ABACUS moment/velocity groups use this rule too. Once established, the
+reference is not repeatedly recalculated on rotation, zoom, view changes, or
+each playback frame. Different per-vector length percentages break the visual
+proportionality; use a consistent percentage within a group for comparisons.
+
+Saved appearance takes precedence:
+  - ftkit 201/202 magnetic structures carry their own references. New moments
+    use 85% of the shared length recipe; task 202 uses a common scale across
+    its batch project for comparisons between structures.
+  - New phonon vectors use 50% of that recipe, retaining phonon color/placement.
+    Their reference is established from the initial displayed amplitude and
+    is not recalculated every frame.
+    These 85% / 50% factors are already included in the stored reference, so
+    the interface initially still shows 100%.
+  - Existing .facet/.facetproj length, thickness, and color settings are
+    preserved. Reopening does not automatically shorten old arrows, and
+    Reset to 100% returns to that file's own reference.
+
+If old arrows are too long, reduce the group's Display length and save the
+project. Reimporting an original STRU can establish a new reference; it creates
+another item and does not transfer edits from the old one. See chapter 17 for
+phonon displacement arrows and their relationship to amplitude.
+
+
+13  Structure sequences, playback, and GIF export
+==================================================
+
+13.1 Open or create a sequence
+
+File → Open…:
+  Open XDATCAR or a sequence .facet package. ftkit task 101 converts OUTCAR
+  structures, forces, and energies into trajectory.facet; task 103 organizes
+  NEB images into neb-path.facet. Relaxation steps and NEB images are not
+  physical-time frames. Current ftkit does not process XDATCAR; Facet itself
+  can still open it directly.
+
+Project tree:
+  Select multiple static structures and choose Create structure sequence from
+  the context menu. Where available, concatenate selected sequences/structures
+  into a new sequence. A project group's menu can also create a sequence from
+  its contents.
+
+Independent structures are included as separate snapshots, without interpolated
+intermediate configurations. Editing a source structure afterward does not
+update the sequence already created from it.
+
+13.2 Sequence playback
+
+Activate a sequence to show its playback bar:
+  - Previous frame, play/pause, and next frame.
+  - Drag the progress control or enter a frame number; numbering starts at 1.
+  - Adjust playback speed and the frame stride.
+  - Open Playback options for the start/end frame and forward/reverse direction.
+  - Choose once, loop, or ping-pong playback.
+
+Playback speed is not the simulation's physical time step. Use time information
+from the source data. Space fits the structure in the normal viewport; use the
+play button for playback.
+
+13.3 Periodic display and bond connectivity
+
+Periodic display:
+  - Wrap into the current cell changes displayed periodic images. It does not
+    convert to a primitive cell.
+  - Continuous motion shows a path across boundaries. A minimum-image-inference
+    notice means the path was inferred from adjacent frames. With widely spaced
+    frames, compare against the original trajectory.
+
+Sequence bond connectivity:
+  - Dynamic recalculates bonds for each frame.
+  - Fixed retains the current segment's connectivity while endpoints follow
+    the moving atoms.
+
+13.4 Scientific channels and plots
+
+Frame atoms, lattices, and scientific channels come from the source. The panel
+identifies scientific data as read-only. Appearance can be adjusted without
+editing the original frames.
+
+Entry: expand Physical quantity in the sequence playback bar.
+  1. Wait for analysis. Source-step and time information appear when available.
+  2. For vectors, select a channel, toggle arrows, set a minimum magnitude,
+     restrict them to selected atoms, or color by magnitude. See chapter 12
+     for the distinction between display length/color and scientific values.
+  3. Under Plot, select one or more scalar channels. Each has its own name,
+     units, and plot.
+  4. Click a plot to seek to that frame and display its value. Label font size
+     controls the readout; Esc dismisses it. The horizontal axis is the frame
+     number starting at 1, not automatically physical time.
+  5. Missing data and independent segments are not joined by a line. Missing
+     in current frame does not mean zero. If reading is slow, keep waiting
+     or cancel; use the offered retry/reanalysis action afterward.
+
+Plots show channel values already present in the file. There is no control
+here to change an energy zero or reference frame. ftkit tasks 101/103 from the
+October 16, 2026 builds onward write Relative energy in eV: conversion subtracts
+the minimum energy among the frames actually written, while missing values
+remain missing. For input energies −10, −9, and −11 eV, this gives 1, 2, and 0 eV.
+Facet reads those values without subtracting another reference. Opening older
+files does not convert them automatically. Different output files can have
+different zeros; their relative values alone cannot establish comparative
+stability across separate calculations. For other sources, document the reference defined by that source.
+Playback does not generate missing energies/forces or overwrite source channels.
+See section 9.4 for measurement correspondence between frames.
+
+13.5 Export GIF
+
+Entry: the playback bar → Export GIF.
+  1. Set the first/last frame and frame stride.
+  2. Set speed, direction, and loop behavior.
+  3. Adjust output width and framing; review the frame count, dimensions, and
+     animation duration.
+  4. Start export and choose a destination.
+  5. Follow progress or cancel if needed.
+
+Save .facetproj or a sequence .facet to retain editable sequence data. GIF is
+for showing the animation.
+
+
+14  File: exporting images and structures
+==========================================
+
+14.1 Export images
+
+Entry: File → Export image → choose a format.
+  1. Set the view, atoms/bonds, colors, material, and background.
+  2. Check local boxes, isosurfaces, measurements, and vectors.
+  3. Set image dimensions, framing, and background options in the export panel.
+  4. Confirm, choose the destination, and wait for export to finish.
+
+Formats:
+  - PNG, JPEG, and WebP are available in 3D and 2D.
+  - SVG and PDF are available in 2D.
+  - PNG, WebP, and SVG support transparent backgrounds; JPEG and PDF use solid
+    backgrounds.
+
+PNG is a useful starting point for reports/slides. Switch to the 2D glass style
+for SVG/PDF. Complex volume content may be embedded as raster images, so these
+files are not necessarily entirely vector graphics.
+
+14.2 Export .facet
+
+Entry: File → Export structure → .facet file.
+
+A static item exports a structure package, a sequence exports a sequence
+package, and a phonon item exports a phonon package. Phonon packages preserve
+all q-points and modes; see chapter 17.
+Use this for exchanging the active resource with the display/editing information
+supported by that format. Save .facetproj for the whole project and its tree
+organization. Include original files for externally referenced volumes.
+
+14.3 Export other structure formats
+
+Entry: File → Export structure.
+
+VASP POSCAR / CONTCAR:
+  Choose Direct (fractional) or Cartesian coordinates. The filename can be
+  <structure name>.vasp or POSCAR without an extension. Check element order,
+  lattice, and constraints after export.
+
+ABACUS STRU:
+  Generate a new STRU using the supported PBE / LCAO / APNS configuration.
+  Only STRU is written. Provide INPUT, pseudopotentials, and numerical orbitals
+  separately as described in the dialog. Current export accepts fully occupied
+  sites and atoms that are either movable in all three directions or fixed in
+  all three. Partial occupancy and mixed per-axis constraints are unsupported.
+  Read the information-loss notice before exporting.
+
+CIF and MSI:
+  Export the full structure in P1 or use detected symmetry. For symmetry export,
+  review the tolerance and space-group result. P1 does not reduce equivalent
+  atoms using additional space-group operations.
+
+XYZ:
+  Ordinary XYZ carries elements and Cartesian coordinates. Extended XYZ can
+  include periodic lattice information supported by the selected export option.
+
+Each format preserves only what it supports. Review information-loss notices
+before continuing. Save a project or .facet first to retain editable Facet state.
+
+
+15  Mouse and keyboard reference
+=================================
+
+15.1 Mouse controls
+
+In the normal viewport:
+  Left-click/rectangle drag   Select atoms, bonds, and other objects
+  Right-drag                 Rotate the view
+  Middle-drag                Pan
+  Wheel                      Zoom
+  Shift + selection          Add to the selection
+  Ctrl + selection           Toggle an object's selected state
+  Alt + double-click atom    Select atoms of the same element
+  Ctrl + double-click atom   Select by group
+
+15.2 Keyboard controls
+
+Outside text editing:
+  Ctrl+S                     Save the project
+  Ctrl+R                     Close the project and return to the welcome screen
+  Ctrl+A                     Select atom instances in the current display range
+  Ctrl+C / Ctrl+V            Copy / paste selected atoms
+  Ctrl+Z                     Undo
+  Ctrl+Y                     Redo
+  Ctrl+Shift+Z               Redo
+  Delete                     Delete the applicable selected objects
+  Backspace                  Delete in ordinary atom/bond selection mode
+  Space                      Fit the view
+  a / b / c                  View along a lattice axis
+  x / y / z                  View along a Cartesian axis
+  Esc                        Exit a tool, cancel an interaction, or clear selection
+
+Inputs, menus, and tool windows may take over shortcuts. Use the top-bar button
+for the recommended/standard crystallographic view.
+
+15.3 Contextual status-bar hints
+
+At the bottom of the normal workspace, hints reflect the current object,
+selection, and tool, such as rotation, measurement, or local-box controls.
+When several hints apply, they rotate about every 30 seconds. Hover to read
+the full text. This is a hint display, not another action menu.
+Hints adapt or temporarily disappear when inputs, the project tree, a chart,
+or a modal window has focus. If a shortcut does not act, finish input or exit
+the tool before returning to the normal viewport.
+
+
+16  Settings storage, recovery, and troubleshooting
+====================================================
+
+16.1 Storage locations and transferring settings
+
+Projects and exports are stored at the destinations selected in their dialogs.
+Personal themes, palettes, and materials are kept in the current Windows user's
+application data. For another computer, use each panel's Export / Import controls
+rather than copying the installation directory.
+
+Paste these paths into File Explorer when you need to locate data:
+  Local interface data:
+    %LOCALAPPDATA%\com.facet.app\EBWebView\Default\Local Storage\leveldb
+  Copies made by older drag-and-drop import versions:
+    %LOCALAPPDATA%\com.facet.app\imports\v1
+    Current local/MobaXterm imports read existing paths without making another
+    copy. Existing projects may still reference old copies; check before deleting.
+  Recent-project history:
+    %APPDATA%\com.facet.app\project-history.json
+  Recovery copies:
+    The recovery directory inside the installation, for example D:\Facet\recovery,
+    is preferred. If it is not writable, Facet uses
+    %LOCALAPPDATA%\com.facet.app\recovery.
+    The separate Facet English application uses
+    %LOCALAPPDATA%\com.facet.english\recovery.
+
+Themes and interface preferences belong to the Windows account; recovery stores
+emergency copies. An automatic-backup failure leaves a concise status-bar notice;
+click it for the reason. Later backup cycles retry, and success clears the notice.
+Manual save failures are still reported immediately. For a backup, copy projects,
+associated volume files, and exported presets.
+
+16.2 Startup and recovery
+
+Start Facet from its desktop or Start-menu entry. The Windows installer may need
+internet access to add a missing WebView2 runtime. Once installed, local viewing,
+editing, and these manuals work offline.
+
+When opening a project with a newer, different recovery copy, choose whether to:
+  - Recover the backup: inspect the restored contents and explicitly save them.
+  - Open the saved version without recovery.
+  - Cancel opening and retain the current workspace.
+
+Startup alone does not automatically show a recovery prompt. For unsaved new
+projects or missing originals, use Recover backup… in File or on the welcome
+screen. Automatic backups are spaced at least five minutes apart. Rotating or
+panning the view alone does not trigger one. Relink external volumes when asked.
+
+Open the manual shortcut in the installation directory to read the manual;
+English text is also available directly at docs\en-US\user-guide.txt.
+
+16.3 Troubleshooting display and operation
+
+The structure is tiny or off-screen:
+  Click Fit or press Space, then check the Lattice display range.
+
+No new structure appears after opening:
+  Read the red error on the welcome screen or lower-right workspace; use its
+  filename/line number where available. × only dismisses it. Fix and reopen
+  the file; see section 2.4 for ABACUS support. If import succeeded but another
+  object is active, select the new project-tree item.
+
+ABACUS reports extra parameters retained as provenance:
+  The structure opened. Parameters such as sc/lambda are retained but are not
+  active editable Facet constraints. Saving a project retains the record;
+  use your original inputs to continue an ABACUS calculation.
+
+Space does not fit the view:
+  Finish the input, menu, or dialog interaction and return focus to the normal
+  viewport, or click Fit directly. Space is not the sequence play key. A view
+  already fitted may change little. The source includes the fix for ordinary
+  3D magnetic-scene redraws canceling a pending Fit.
+
+Atoms are faded, recolored, or missing:
+  Check element visibility, selected-atom local styles, global atom/bond opacity,
+  local-box effects, and camera front/back fading.
+
+Neighbors or polyhedra are incomplete:
+  Check bond distances, element-pair rules, and atom completion.
+
+Editing controls are disabled:
+  Check for a read-only sequence or an unfinished structure-modeling preview.
+
+Local charge analysis is unavailable:
+  Check that density is loaded and associated with the current structure.
+  LOCPOT is unsupported; use CHGCAR, CHG, PARCHG, or eligible Cube data.
+  Cube needs the correct Charge density interpretation and three periodic
+  directions in Volume data settings. Finite boundaries or other quantities
+  currently disable this integration. Do not change the true physical meaning
+  simply to enable a control.
+
+A project loses its density after moving computers:
+  Copy the original associated grid too, then relink it when prompted.
+
+A large structure rotates slowly:
+  Try the Fast quality mode, reduce periodic display ranges, and hide unused
+  isosurfaces or reduce transparent layers before adjusting the view.
+
+An old magnetic file still shows one frame:
+  Early ftkit versions wrote magnetic structures as one-frame sequences.
+  Rerun task 201 with ftkit 0.1.3 to obtain an explicitly static structure.
+  Upgrading Facet does not guess and rewrite the old file's resource type.
+
+Arrows remain too long after upgrading:
+  Saved appearance is retained. Reduce the relevant group's Display length
+  and save. Newly imported raw STRU groups establish an initial reference from
+  their largest magnitude; existing projects are not automatically rescaled.
+  Reset to 100% still uses the file's original reference; see section 12.4.
+
+
+17  Phonons: modes, frequency units, and animation
+==================================================
+
+17.1 Open phonon data
+
+Available routes:
+  - Open a phonon .facet package directly.
+  - Select QE scf.in, scf.out, and matdyn.modes together, or open a QE ZIP
+    containing those files.
+  - On Linux, use ftkit task 301 for a VASP phonon OUTCAR or task 302 for QE
+    results, then copy phonons.facet to this computer. See the ftkit manual
+    for conversion instructions.
+
+matdyn.modes should come from matdyn.x flvec output and contain eigenvectors.
+A frequency table alone cannot animate displacements. VASP task 301 represents
+one Γ point of the calculation cell; QE data may contain several q-points.
+Facet retains the supplied points and modes.
+
+Here q is the wavevector describing the phase change of a vibration between
+cells; Γ means q = (0, 0, 0). Each q-point has multiple modes, each describing
+a pattern of atomic motion. A mode number is not a trajectory time-frame number.
+
+17.2 Choose a q-point, mode, and frequency unit
+
+Use the phonon playback bar for q-point, mode, frequency, and unit controls.
+Point/mode numbering starts at 1. Select a mode in the dropdown or in the chart.
+For one q-point, the chart shows a vertical frequency line with a point for each
+mode. Equal frequencies can overlap; use the mode dropdown or chart keyboard
+navigation to select them individually. Several q-points produce a dispersion
+plot along the order of the supplied points.
+
+Frequency units:
+  - cm⁻¹: spectroscopic wavenumber.
+  - THz: frequency, with 1 THz = 10¹² Hz.
+  - meV: the corresponding energy unit, with 1 meV = 0.001 eV.
+Changing units updates displayed values and axes without recalculating modes
+or rewriting eigenvectors.
+Negative values denote imaginary frequencies. Their animation illustrates the
+mode shape periodically; it does not establish a stable physical oscillation
+for that unstable mode.
+
+17.3 Playback and displacement vectors
+
+Play, pause, step backward/forward, or drag the phase control after choosing a
+mode. Playback speed changes the demonstration rate; Display amplitude sets
+the maximum illustrated atomic displacement in Å. Real THz motion is not played
+in real time on the screen.
+
+Enable Displacement vectors to show instantaneous displacement from equilibrium:
+  - At equilibrium the displacement and arrow length are zero.
+  - At maximum displacement the arrows are longest.
+  - On the opposite side, the arrows reverse direction.
+They represent displacement, not velocity. For a one-dimensional left/right
+vibration, the arrow vanishes at the center, points right at the rightmost
+position, and points left at the leftmost position.
+
+The size reference is established at initialization; short arrows are not
+rescaled upward as playback crosses equilibrium. Changing amplitude from
+0.2 to 0.4 Å doubles both motion and displacement arrows. Setting only vector
+Display length to 50% shortens the arrows without changing atomic amplitude.
+Use the vector properties in chapter 12 for thickness or individual colors.
+
+Playback options also control looping, periodic display, and bond strategy.
+Wrapping places atoms in the periodic cell; continuous display shows motion
+across boundaries. 2D and 3D share the same mode, phase, and appearance settings.
+
+17.4 Save and export
+
+File → Save project preserves the phonon item and its display settings.
+File → Export structure → .facet file writes a phonon package retaining all
+q-points and modes, rather than flattening the current image to a static structure.
+The package does not require the original scf.in/scf.out/matdyn.modes/OUTCAR
+files for exchange.
+
+The September 28, 2026 phonon fix removed the independent 64 MiB limit on a
+single q-point's mode block. Standalone and project-embedded phonons use the
+same rule. Package limits of 2 GiB for the archive and 4 GiB total expanded size
+still apply, as do practical memory limits. Use a Facet version containing this
+fix for larger files from the corresponding ftkit build. Earlier 0.1.1 Alpha
+builds can report ZIP entry exceeds limit even when the format version matches.
+
+Export GIF in the playback bar writes an animation of the current mode, with
+output-size and related controls. GIF does not replace a .facet that lets you
+choose other modes. Reopen a saved project to continue selecting modes and
+adjusting their display.
+
+17.5 Mode annotation position and appearance
+
+Entry: phonon playback bar → Playback options → Mode annotation.
+Set the annotation font size and White outline. The viewport annotation identifies
+the current q-point, mode, and frequency. Left-drag it away from the structure;
+release to commit the position, or press Esc while dragging to cancel.
+The position/style belongs to that phonon item and is saved with it. Selecting
+a different mode updates the content; frequency follows the chosen unit.
+2D and 3D share the settings. GIF uses the corresponding mode annotation, so
+review its location and font size before export. Annotation changes preserve
+frequencies, eigenvectors, and atomic amplitude.
+
+17.6 Dispersion window, path labels, and export
+
+Use Phonon dispersion in the playback bar to show/hide the chart. The window
+can be moved and resized. Its menu provides Chart size, Edit path labels,
+Export chart, and Export data.
+
+Chart and point selection:
+  - One q-point shows mode-frequency points; multiple points show dispersion
+    in the supplied order.
+  - Click to select a point. With chart focus, use arrow keys to navigate
+    between q-points or modes.
+  - Set width, height, and aspect-ratio locking in Chart size. Limited window
+    space may reduce preview scale without changing the chosen export dimensions.
+
+Path labels:
+  - Edit existing names or add a name at a q-point index, for example Γ, X, or K.
+  - Names allow up to 32 Unicode characters. Leave a name empty or restore
+    automatic naming to return to its generated label.
+  - These are axis annotations. They do not move q-points, recalculate
+    frequencies, or change the order of the path.
+
+Export chart:
+  1. Select SVG or PNG, set the scale factor and DPI, and review the displayed
+     pixel/physical dimensions.
+  2. Export the complete chart on a white background using Arial. Window
+     borders and the current selection marker are omitted. SVG retains vector
+     graphics and editable text.
+
+Export data:
+  1. Select CSV or tab-separated TXT.
+  2. Export all q-points and all modes at each point, not just the selection.
+  3. Output includes path distances, reduced reciprocal coordinates, labels,
+     and frequencies in the selected unit. Negative values denote imaginary
+     frequencies, and numerical precision is preserved.
+
+Chart size, path labels, and display settings are saved with the project.
+Chart/data export and the structure animation's GIF are different controls:
+the former exports the frequency plot/data; the latter illustrates vibration
+of the current mode.
+
+
+18  STM: charge density and scanning tunneling microscopy simulation
+====================================================================
+
+18.1 Input and entry
+
+Open complete CHGCAR, CHG, PARCHG, or eligible Cube charge density, then add
+STM under Isosurface. Cube requires the correct Charge density interpretation
+and source units, with all three directions periodic. Check these under the
+dataset row's ⋯ → Volume data settings; see section 11.6. Finite molecular
+Cubes, difference/spin density, potentials, and orbital amplitudes are not
+currently STM inputs.
+Data reconstructed only for visualization cannot be used. For a bias-window
+interpretation, prepare the appropriate partial density in the electronic-
+structure calculation. Total density alone does not define an energy window.
+Facet does not replace that calculation or label an arbitrary density threshold
+as an absolute experimental tunneling current.
+
+Modes:
+  - Constant height: sample density at a specified height; color represents
+    density.
+  - Constant current: search along the chosen normal for the isodensity
+    position; color represents height.
+Height uses Å; density uses e/Å³, where e is the electron-count/charge unit.
+The constant-current input is a density threshold, not a current in amperes.
+
+18.2 Reference plane and scan range
+
+Choose AB, BC, CA, or specify Miller indices (hkl). In constant-current mode,
++n or −n chooses the vacuum-boundary side from which the search begins; n is
+the reference-plane normal. Height and search distances are measured along that
+normal. For an oblique cell, do not equate them with the length of lattice c.
+
+Start with estimated values, then adjust height or isodensity and the search
+range in Å. Re-estimate if needed. Changes update the calculation automatically,
+and a running calculation can be canceled. The interface identifies an older
+result displayed temporarily; wait for the current result before exporting.
+If some points have no intersection or an invalid vacuum boundary, check scan
+side, threshold, search interval, and input. These remain invalid regions;
+they are not converted to valid zero-height samples.
+
+18.3 Colors and display
+
+Use color controls for the colormap, color stops, and range. Coloring can use
+density/height or a solid color. Expand detailed color settings for colormap
+and numeric-range controls. In constant-current mode, Height scale exaggerates
+the displayed relief without changing exported raw heights.
+Base structure and Overlay atoms control separate entire layers; individual
+overlay atoms are not selectable. Overlay settings controls height and coverage.
+New overlays show bonds and cover 0–1 by 0–1. Lattice controls the cell frame
+independently. Hide above surface hides atoms, bonds, and density isosurfaces
+above the displayed surface on the scan side.
+
+Smoothing width is the standard deviation of a Gaussian kernel, measured in Å.
+Density smoothing acts on the three-dimensional input before STM and changes
+the calculated result. Its width is 0–1 Å; 0 disables it.
+Image smoothing acts only on the calculated display. An enabled width is
+0.01–1 Å; 0 disables it. Both are off for a new STM; existing files retain their
+saved settings. Image smoothing may lower peaks or broaden bright spots but
+does not fill regions that were invalid.
+Spatial interpolation, image smoothing, and height scaling preserve raw CSV/JSON
+results. For example, a raw 2 Å peak may appear lower after image smoothing,
+while its exported raw height remains 2 Å. Images and Hide above surface use
+the displayed surface. Density smoothing has a different effect on the input.
+
+Very small/large values use scientific notation, for example 5e-5 for 0.00005.
+Click a numeric field to inspect its full value; merely viewing it makes no
+change to scientific data.
+
+18.4 Export and save
+
+Export data offers CSV with JSON metadata, or JSON, preserving results and
+calculation settings. Export after the current calculation finishes. An older
+result left visible after cancellation/failure is not a result for new parameters.
+Use File → Export image for a figure.
+
+STM settings are saved with the project. The volume may still reference an
+external CHGCAR, CHG, PARCHG, or Cube file. Include it when sharing the project
+and relink the original resource if requested on reopening.
+
+
+19  Current interaction and file notices
+=========================================
+
+A display-range upper bound must exceed its lower bound. An invalid draft keeps
+the last valid range visible. GIF export settings can be dragged. Saving a
+preset can update the custom preset or save a copy; read save/discard prompts
+before deleting or replacing it.
+
+If a density source changes or becomes unreadable, Facet retains the checksum
+recorded at import. The current view can remain usable, but reopening needs
+the matching original file. Import a different density as a new resource.
+Some newer files support a read-only compatibility preview. The notice lists
+omitted content. Saving, structure export, and adding the preview to an editable
+project are disabled to protect the original. The desktop app disables and
+clears form input history. Automatically generated image captions use the
+active interface language. User labels and scientific values retain their
+content; structure/data exports preserve required format keywords and numeric
+syntax.
+
+Common bilingual labels:
+  配位多面体 — Coordination polyhedra
+  最近邻元素 — Nearest-neighbor element
+  原结构 — Base structure
+  叠加原子 — Overlay atoms
+  密度平滑 — Density smoothing
+  图像平滑 — Image smoothing
+  界面语言 — Display language
+
+
+20  Current bilingual terminology and file versions
+====================================================
+
+The November 6 source revision uses these labels:
+  选择同元素原子 — Select atoms of the same element
+  局域区域 1 — Local region 1
+  中心元素 — Central atom elements
+  中心原子 — Central atoms
+  1 个自由箭头 — 1 free vector
+  2 个自由箭头 — 2 free vectors
+  积分差值（与快速结果比较） — Integral difference (reference: Fast sampling)
+
+Suggested preset names include Glass (copy), Glass (copy 2), and
+Glass (imported). Revised spacing applies only to newly suggested names;
+previously saved names and user-entered names are preserved. Unit readouts and
+import-list punctuation follow the interface language.
+
+Current source formats are Project 41, structure package 30, sequence package 12,
+and phonon package 10. These are file-format versions, not the application
+version. This documentation revision does not change the formats. Do not edit
+version numbers inside saved files. Follow the notice before editing if a file
+opens in a read-only compatibility preview.

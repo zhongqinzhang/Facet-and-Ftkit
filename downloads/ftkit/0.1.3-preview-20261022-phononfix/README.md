@@ -1,63 +1,55 @@
+**English** | [简体中文](README.zh-CN.md)
+
 # ftkit 0.1.3-preview-20261022-phononfix
 
-**[下载 Linux x86_64 发行包 / Download Linux x86_64 archive · 3.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)**
+**[Download archive · 3.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)**
 
-构建 / Built: 2026-10-22 · 发布 / Published: 2026-10-23 · Preview
+Built: 2026-10-22 · First published: 2026-10-23 · Current ftkit preview
 
-[备用下载 / Repository download](ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz?raw=true) · [SHA-256](SHA256SUMS.txt) · [Release](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/tag/ftkit-v0.1.3-preview-20261022-phononfix)
+[Full user guide (Chinese)](用户手册.txt) · [SHA-256](SHA256SUMS.txt) · [Repository copy](ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz?raw=true)
 
-## 目录 / Contents
+## Contents
 
-1. [安装与首次使用 / Installation and first use](#installation)
-2. [更新内容 / What's new](#changes)
-3. [文档与验证 / Documentation and validation](#verification)
+1. [Installation and first use](#installation)
+2. [Release contents](#changes)
+3. [Documentation and verification](#verification)
 
 <a id="installation"></a>
-## 安装与首次使用 / Installation and first use
+## Installation and first use
 
-ftkit 是独立的 **Linux x86_64 命令行工具**，不需要安装 Python 或 Facet。静态链接程序不依赖动态 libc；安装与验证脚本需要 Bash 4+ 和常用命令行工具。
+ftkit is a statically linked Linux x86_64 command-line tool. Python, Facet and a dynamic libc are not required. Setup and verification scripts require Bash 4+ and standard command-line tools. Download the archive and SHA256SUMS.txt into one directory:
 
-ftkit is a standalone **Linux x86_64 command-line tool**. Python and Facet are not required. Its statically linked executable does not require a dynamic libc; the setup and verification scripts require Bash 4+ and standard command-line utilities.
-
-下载压缩包与本页 SHA256SUMS.txt，在同一目录执行 / Download the archive and SHA256SUMS.txt into the same directory, then run:
-
-~~~bash
+```bash
 sha256sum -c SHA256SUMS.txt
 tar -xzf ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz
 cd ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64
 bash verify.sh
 source "$HOME/.config/ftkit/env.sh"
 ftkit --version
-~~~
+```
 
-verify.sh 校验成功后会配置 Bash PATH。保留解压目录；移动后重新运行安装脚本。仅校验、不配置 PATH 时使用 `bash verify.sh --no-install`。
+verify.sh configures your Bash PATH after verification. Keep the extracted directory; rerun setup after moving it. Use `bash verify.sh --no-install` for verification only or `bash install.sh` to configure PATH. Run `ftkit` in your calculation directory and choose a numbered task.
 
-After successful verification, verify.sh configures your Bash PATH. Keep the extracted directory in place; rerun setup after moving it. Use `bash verify.sh --no-install` to verify without changing PATH.
-
-进入计算结果目录后运行 `ftkit`，按菜单选择任务。首次使用可按[中文手册](用户手册.txt)中的示例操作。
-
-Run `ftkit` in your calculation-output directory and choose a task from the menu. The [Chinese user guide](用户手册.txt) includes a first-conversion example.
-
+<a id="contents"></a>
 <a id="changes"></a>
-## 更新内容 / What's new
+## Release contents
 
-- 修复任务 301 将 VASP 质量修正段的双行复合标题误判为重复段的问题，并支持只含质量修正段的对应格式。Task 301 accepts compound headings in VASP mass-corrected sections, including files containing only the corrected section.
-- 晶胞和有效 POMASS 一致性检查延续到文件末尾；矛盾输入会报错并保留已有输出。Lattice and effective POMASS checks continue through the end of the file; inconsistent input is rejected without replacing existing output.
-- 保留模式顺序、质量修正规则、命令参数及文件格式；任务 101 / 103 继续使用 **Relative energy (eV)**。Mode ordering, mass-correction rules, command options and file formats are retained. Tasks 101 and 103 continue to use **Relative energy (eV)**.
+- Task 301 accepts compound headings in VASP mass-corrected sections, including the corresponding corrected-section-only format.
+- Lattice/POMASS consistency checks continue through the end of the file; contradictory input is rejected without replacing existing output.
+- Mode order, mass-correction rules, command options and formats are unchanged.
+- Tasks 101 and 103 use Relative energy (eV), relative to the minimum in each output; missing energies remain missing.
+- The application version is 0.1.3; the full distribution revision is shown in this page title.
 
 <a id="verification"></a>
-## 文档与验证 / Documentation and validation
+## Documentation and verification
 
-[中文用户手册](用户手册.txt) · [中文更新说明](更新说明.txt) · [BUILDINFO.json](BUILDINFO.json)
+The original publication checked the archive, executable and 177 internal checksums. BUILDINFO.json records 49 tests, a VASP 6.5.1 OUTCAR roundtrip and an ELF audit from the original build. No rebuild or automated tests were run for this update. Linux execution and older-kernel compatibility were not revalidated. The complete manual is currently available in Chinese.
 
-本次原样发布 2026-10-22 的归档，没有重新构建。已核对完整包、可执行文件和包内 177 项校验值。BUILDINFO.json 记录原构建的 49 项测试、真实 VASP 6.5.1 OUTCAR 回读和 ELF 审计。**本次未执行 Linux 实机验证；旧内核兼容性未确认。**
+<a id="user-guide"></a>
+[Full user guide (Chinese)](用户手册.txt) · [BUILDINFO.json](BUILDINFO.json) · [Release notes (Chinese)](更新说明.txt)
 
-The October 22 archive is published unchanged. Its archive hash, executable hash and 177 internal checksums were verified. BUILDINFO.json records 49 tests, a real VASP 6.5.1 OUTCAR roundtrip and an ELF audit from the original build. **Linux execution was not performed for this publication; compatibility with older kernels is unverified.**
-
-~~~text
+```text
 c338878c3531b64daff35f0ca27ce89ee75ba4a55979a26ae571224b91b5f666  ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz
-~~~
+```
 
-应用版本为 **0.1.3**；发行编号为 **0.1.3-preview-20261022-phononfix**。Application version: **0.1.3**; distribution revision: **0.1.3-preview-20261022-phononfix**.
-
-[返回最新下载 / Latest downloads](../../../README.md) · [所有版本 / All versions](../../../CHANGELOG.md)
+[Latest downloads](../../../README.md#downloads) · [Changelog](../../../CHANGELOG.md)

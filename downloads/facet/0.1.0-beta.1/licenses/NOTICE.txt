@@ -1,0 +1,34 @@
+Facet UI Sans — GB2312 font subset
+
+Contents
+1. Origin and license
+2. Character and weight coverage
+3. Updating the subset
+
+1. Origin and license
+This modified font is derived from Adobe Source Han Sans CN Variable 2.005.
+Copyright 2014–2025 Adobe. The upstream Reserved Font Name is “Source”.
+The modified font's primary family name is Facet UI Sans.
+It is distributed under the SIL Open Font License 1.1; see LICENSE.txt.
+The original copyright and license metadata are retained in the font.
+
+2. Character and weight coverage
+Includes all 6,763 GB2312 Han characters, supported characters in Facet's
+current Simplified Chinese and US English catalogs, and the supported
+characters in the extra Unicode ranges listed in subset-manifest.json.
+Retains the full variable weight range 250–900 and OpenType layout features.
+Characters outside this subset use Facet's existing system-font fallbacks.
+The independent scientific/PDF export fonts are not replaced by this resource.
+
+3. Updating the subset
+Regenerate when the bilingual catalogs introduce new characters.
+The source fingerprint, catalog hashes, Unicode ranges and generator command
+are recorded in subset-manifest.json. The release maintenance directory holds
+the original font backup and the reproducible generator; do not put the full
+original font back under public/, as all public assets are packaged.
+
+中文说明
+本字体由 Adobe 思源黑体简中可变字体 2.005 裁剪而来，内部名称改为 Facet UI Sans。
+保留 GB2312 的 6,763 个汉字、当前中英文词典及所列范围内原字体支持的符号，
+保留 250–900 完整可变字重。字库外字符使用既有系统备用字体。
+许可和原版权信息保留；详见 LICENSE.txt。增加新界面字符后需要同步重建子集。

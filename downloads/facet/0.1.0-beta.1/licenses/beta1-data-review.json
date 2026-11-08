@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0-beta.1",
+  "reviewDate": "2026-11-08",
+  "method": "Static data comparison with identified primary references; no application tests executed.",
+  "covalent": {
+    "sharedSource": "crates/crystal-bonding/src/covalent_radii.json",
+    "revision": "cordero2008-20261108",
+    "referenceEntries": 96,
+    "fallbackElements": 22,
+    "fallback": 1.5,
+    "paperDifferences": [],
+    "added": {
+      "Pm": 1.99,
+      "Po": 1.4,
+      "At": 1.5,
+      "Rn": 1.5,
+      "Fr": 2.6,
+      "Ra": 2.21,
+      "Ac": 2.15,
+      "Pa": 2,
+      "Np": 1.9,
+      "Pu": 1.87,
+      "Am": 1.8,
+      "Cm": 1.69
+    }
+  },
+  "colors": {
+    "entries": 84,
+    "unchanged": true
+  },
+  "vdw": {
+    "explicitEntries": 95,
+    "unchangedNumericValues": true,
+    "referenceOrEstimated": 76,
+    "compiled": 13,
+    "fallbackIncludingFormerExplicit": 29,
+    "entries": {
+      "He": {
+        "value": 1.4,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Be": {
+        "value": 1.53,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "B": {
+        "value": 1.92,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "C": {
+        "value": 1.7,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "N": {
+        "value": 1.55,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "O": {
+        "value": 1.52,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "F": {
+        "value": 1.47,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ne": {
+        "value": 1.54,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Na": {
+        "value": 2.27,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Mg": {
+        "value": 1.73,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Al": {
+        "value": 1.84,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Si": {
+        "value": 2.1,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "P": {
+        "value": 1.8,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "S": {
+        "value": 1.8,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Cl": {
+        "value": 1.75,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ar": {
+        "value": 1.88,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "K": {
+        "value": 2.75,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ca": {
+        "value": 2.31,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ga": {
+        "value": 1.87,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ge": {
+        "value": 2.11,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "As": {
+        "value": 1.85,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Se": {
+        "value": 1.9,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Kr": {
+        "value": 2.02,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Rb": {
+        "value": 3.03,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Sr": {
+        "value": 2.49,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "In": {
+        "value": 1.93,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Sn": {
+        "value": 2.17,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Sb": {
+        "value": 2.06,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Te": {
+        "value": 2.06,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "I": {
+        "value": 1.98,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Xe": {
+        "value": 2.16,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Cs": {
+        "value": 3.43,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ba": {
+        "value": 2.68,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Tl": {
+        "value": 1.96,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Pb": {
+        "value": 2.02,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Bi": {
+        "value": 2.07,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Po": {
+        "value": 1.97,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "At": {
+        "value": 2.02,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Rn": {
+        "value": 2.2,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Fr": {
+        "value": 3.48,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Ra": {
+        "value": 2.83,
+        "kind": "reference",
+        "source": "mantina2009"
+      },
+      "Sc": {
+        "value": 2.3,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Ti": {
+        "value": 2.15,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "V": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Cr": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Mn": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Co": {
+        "value": 2.0,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Y": {
+        "value": 2.4,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Zr": {
+        "value": 2.3,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Nb": {
+        "value": 2.15,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Mo": {
+        "value": 2.1,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Tc": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Ru": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Rh": {
+        "value": 2.0,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Pd": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "La": {
+        "value": 2.5,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Hf": {
+        "value": 2.25,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Ta": {
+        "value": 2.2,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "W": {
+        "value": 2.1,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Re": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Os": {
+        "value": 2.0,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Ir": {
+        "value": 2.0,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Pt": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Au": {
+        "value": 2.1,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Hg": {
+        "value": 2.05,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "Th": {
+        "value": 2.4,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "U": {
+        "value": 2.3,
+        "kind": "reference",
+        "source": "batsanov2001"
+      },
+      "H": {
+        "value": 1.2,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Li": {
+        "value": 1.82,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Br": {
+        "value": 1.85,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Ni": {
+        "value": 1.63,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Cu": {
+        "value": 1.4,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Zn": {
+        "value": 1.39,
+        "kind": "reference",
+        "source": "bondi1964"
+      },
+      "Fe": {
+        "value": 2.0,
+        "kind": "estimate",
+        "source": "batsanovEstimate"
+      },
+      "Ag": {
+        "value": 2.03,
+        "kind": "estimate",
+        "source": "hu2003"
+      },
+      "Cd": {
+        "value": 2.18,
+        "kind": "estimate",
+        "source": "hu2009"
+      },
+      "Ce": {
+        "value": 2.48,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Pr": {
+        "value": 2.47,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Nd": {
+        "value": 2.45,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Sm": {
+        "value": 2.42,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Eu": {
+        "value": 2.4,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Gd": {
+        "value": 2.38,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Tb": {
+        "value": 2.37,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Dy": {
+        "value": 2.35,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Ho": {
+        "value": 2.33,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Er": {
+        "value": 2.32,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Tm": {
+        "value": 2.3,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Yb": {
+        "value": 2.28,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Lu": {
+        "value": 2.27,
+        "kind": "compiled",
+        "source": "bodr"
+      },
+      "Ac": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      },
+      "Pa": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      },
+      "Np": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      },
+      "Pu": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      },
+      "Am": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      },
+      "Cm": {
+        "value": 2.0,
+        "kind": "fallback",
+        "source": "facetFallback"
+      }
+    }
+  },
+  "electronConfigurations": {
+    "nistCompared": 108,
+    "nistDifferences": [],
+    "predictedSource": {
+      "doi": "10.1016/j.physrep.2023.09.004",
+      "table": 2,
+      "page": 34,
+      "entries": {
+        "Mt": "5f14 6d7 7s2",
+        "Ds": "5f14 6d8 7s2",
+        "Rg": "5f14 6d9 7s2",
+        "Cn": "5f14 6d10 7s2",
+        "Nh": "5f14 6d10 7s2 7p1",
+        "Fl": "5f14 6d10 7s2 7p2",
+        "Mc": "5f14 6d10 7s2 7p3",
+        "Lv": "5f14 6d10 7s2 7p4",
+        "Ts": "5f14 6d10 7s2 7p5",
+        "Og": "5f14 6d10 7s2 7p6"
+      }
+    },
+    "changed": {
+      "Lr": {
+        "before": "7s2 5f14 6d1",
+        "after": "7s2 5f14 7p1"
+      }
+    },
+    "predictedLabels": "Rf–Og; H–Hs sources NIST, Mt–Og sources Smits 2023"
+  },
+  "compatibility": {
+    "projectSchemaChanged": false,
+    "savedRadiusMultipliersPreserved": true,
+    "affectedAppearanceMayChange": true,
+    "covalentCacheUsesDataRevision": true,
+    "manualBondsPreserved": true
+  },
+  "historicalAcquisition": "Current references do not prove the original copying route; predecessor ownership confirmed by the user.",
+  "automatedTestsRun": false
+}

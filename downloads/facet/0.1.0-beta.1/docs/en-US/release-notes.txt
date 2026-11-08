@@ -1,0 +1,264 @@
+Facet release notes
+English (United States) | Windows x64
+November 8, 2026 | Local candidate; not publicly released
+
+Contents
+Current candidate: Beta 1 scientific-data corrections
+Earlier candidate: Third-party license inventory
+Earlier candidate: About and manual update checks
+Earlier candidate: November 7 font-subset package
+Earlier candidate: November 7 UI and English copy fixes
+Previous source revision: November 6
+Historical October 23 release:
+1. Languages and installation
+2. STM and rendering
+3. Coordination polyhedra and editing
+4. Projects, recovery, and file safety
+5. ftkit companion package
+6. Verification scope
+
+November 8, 2026 — Facet 0.1.0-beta.1 (Beta 1, local candidate)
+=============================================================
+
+First beta testing version. The full version is 0.1.0-beta.1 throughout About,
+application metadata, installer naming, and this documentation. Windows MSI
+uses the numeric product version 0.1.0; the full beta identifier is retained in
+the application and release manifest.
+
+Scientific data corrections:
+- One shared Cordero table supplies frontend radii and Rust bonding constants:
+  96 reference entries, including 12 additions; 10 numerical values change.
+- Covalent auto-bond caches include the data revision. Older caches are rebuilt;
+  manual bonds, deletion overrides, coordinates, colors, and saved size
+  multipliers are preserved. Related spheres and automatic bonds may change.
+- Lr is corrected to [Rn] 5f14 7s2 7p1. NIST supplies H–Hs references; Smits et al.
+  (2023), Table 2, supplies Mt–Og theoretical configurations.
+- The status bar identifies predictions, estimates, compiled radii, and fallback
+  radii, with source details. Existing van der Waals numeric values are retained.
+- Legacy palette descriptions no longer claim an unverified exact copy of
+  official VESTA or Materials Studio defaults. Palette colors and IDs are unchanged.
+- Third-party notices now include the identified NIST, CC BY 4.0, and BODR sources.
+- New projects and exported structure packages use the build application version
+  instead of the old 0.0.0 placeholder; existing project metadata is retained.
+
+Use this as a local testing candidate. It has not been installed or publicly
+published in this task. No automated tests were run. Consult the accompanying
+release README for the checks actually completed; this note does not certify
+native installation, first launch, upgrade, or uninstallation.
+
+Historical sections below describe their original candidates. Beta 1 supersedes
+those data/provenance findings: newVESTA authorship is confirmed and the current
+reference corrections are described above. Older version numbers are historical.
+
+November 8, 2026 — third-party license inventory (earlier local candidate)
+=================================================================
+
+The full version is 0.1.1-alpha-20261108-licenses. The compact About layout is
+retained. Third-party licenses now groups component versions, sources and
+original copyright/license texts; the complete notices are also installed.
+The inventory includes frontend/Rust dependencies, PDF fonts, Matplotlib
+colormaps, Pretty Lattice reference data, the WebView2 loader, Rust standard
+library notices, and NSIS/WiX components actually included in the installer.
+The Noto license file now matches the exact upstream OFL font distribution.
+The font binaries are unchanged.
+
+Corresponding WiX source and the option-ext source package are supplied
+separately in third-party-sources. They contain no Facet-owned source code and
+are not embedded in the main installer. Include them in a public distribution.
+Scientific calculations, project formats, installation language selection and
+installer behavior are unchanged. No automated tests, installation or public
+release are performed. The provenance review records pending confirmation of
+the newVESTA predecessor and historical data sources; this local candidate
+does not represent clearance of every source.
+
+November 7, 2026 — About and manual update checks (earlier local candidate)
+=================================================================
+
+Help now contains User manual and About Facet. Update checks are available only
+inside About and run only when requested. The dialog shows the full build
+identity and distinguishes public releases from unpublished local builds.
+It opens the release page in the default browser; installation remains manual.
+Closing About cancels the check.
+
+The development credit is Ji Group, Renmin University of China, with a link to
+https://g.ruc.edu.cn/. Citation information remains hidden until specified.
+About provides access to the bundled manual, release notes, and font/framework
+license notices. No project format or installer behavior is changed.
+The full version is 0.1.1-alpha-20261107-about. It retains the preceding font
+subset. No automated tests are run, and this candidate has not been installed
+or publicly released. Build, payload, manual review and SHA-256 records are
+supplied with the candidate.
+
+November 7, 2026 — font-subset candidate
+========================================
+
+This candidate retains the preceding UI and English copy fixes. Its bundled
+UI font is reduced from 7.712 MB to 1.925 MB by retaining all 6,763 GB2312 Han
+characters, current bilingual UI text and the original font's supported common
+scientific symbols. The complete 250–900 variable weight range is retained.
+
+The modified font is named Facet UI Sans and retains the original font design.
+Custom names containing characters outside the subset use the existing system
+font fallbacks. New interface characters require regenerating the subset.
+The font license and modification notice are included in the installed licenses
+directory. The independent scientific/PDF export fonts are unchanged.
+
+The final installer size and checksums are recorded in the accompanying release
+manifest. Installation language selection and the current per-machine installer
+are unchanged. This candidate has not been installed or publicly released.
+No automated tests are run, as requested; build, payload inspection and guided
+browser observations are recorded separately.
+
+Earlier November 7 candidate: UI and English copy fixes
+==========================================================
+
+This candidate follows the November 6 preflight build and its manual acceptance.
+It contains one application core with Simplified Chinese and US English.
+
+- Use normal letter spacing for sidebar tabs so Appearance fits the standard
+  panel width while retaining the existing three-tab layout and indicator.
+- Give chart resize handles complete localized labels instead of joining
+  sentence fragments. Preserve the existing resize gestures and dimensions.
+- Use Color stop 1/2 and Energy curve for the affected accessible names.
+- Format file-import errors with an English colon and space in English and
+  the existing Chinese punctuation in Chinese.
+
+Scientific calculations, saved data, schemas, undo/recovery and the installer
+language-selection logic are unchanged by this revision. File schemas remain
+Project 41, Structure 30, Sequence 12 and Phonon 10.
+
+No automated tests are run for this candidate, as requested. Build, package
+inspection and guided UI observations are recorded separately in the accompanying
+release manifest and verification folder. The November 6 installation/workflow
+evidence applies to that earlier build and is not a new-installation result for
+this candidate. Remaining release-acceptance items are listed in the candidate
+README. This is a local candidate, not a public release.
+
+0. November 6 source update
+===========================
+Source checkpoint: 3205a156, with subsequent English copy and documentation corrections.
+This section describes the current working source. No new installer or
+ftkit archive was built or published for this copy revision. Sections 1–6
+below retain the historical October 23 release record.
+
+English copy
+------------
+Correct export-message grammar, singular local-region names, vector-count
+plurals, and the Select atoms of the same element shortcut description.
+Use central atom terminology for coordination controls. Clarify which
+sampling result an integral difference is compared with; the first-moment
+difference uses a coarser sampling reference. Normalize suggested copy and
+import names, Windows capitalization, and localized list/unit punctuation.
+Existing saved names, scientific values, and file-format tokens are preserved.
+
+OUTCAR guidance now uses ftkit -task 101 on Linux. The Chinese notice
+gives the same instructions.
+
+Manuals and compatibility
+-------------------------
+Both manuals describe the current VESTA/Cube inputs and POSCAR/STRU export
+options and provide matching Chinese-English wording examples. The source
+currently uses Project 41, structure package 30, sequence package 12, and
+phonon package 10. This copy revision introduces no schema change.
+
+Chapter-by-chapter manual alignment (same-day documentation revision)
+-------------------------------------------------------------------
+Both user manuals now have chapters 00–20 and 85 matching subsections, including
+contents, control locations, steps, examples, and limitations. Correct the manual
+bond entry, independent polyhedra panel, supercell creation that retains its
+source, and interface angle tolerance versus reported principal strain.
+Add VESTA links/restrictions, lower-dimensional periodic boundaries, Cube data
+settings and calculation eligibility, multichannel sequence plots and cross-frame
+measurements, contextual shortcut hints, and phonon annotations/chart exports.
+Explain that ftkit subtracts the minimum energy of the frames actually written;
+Facet does not offer an energy-reference selector or rewrite older files. Update
+the ftkit-to-Facet Cube workflow as well.
+Correct the historical October 23 baseline to be3f27d9. Preserve the original
+manuals in the distribution archive and explain their earlier aa74b4d5 wording
+in a bilingual README erratum; installer files and checksums are unchanged.
+
+Verification scope
+------------------
+This documentation revision checks facts, interface labels, chapter alignment,
+cross-references, and file formatting only. No tests, pnpm check, build, or
+installation checks were run. Earlier copy-revision static checks are recorded
+in docs/i18n.md and are not runtime validation of this documentation revision.
+No automated or browser tests were run for the earlier copy revision either,
+as requested.
+Validation is limited to resource consistency, static source checks, and
+review of the changed text and documentation. It does not establish runtime,
+installation, upgrade, or packaging results.
+
+Historical release: October 23, 2026
+====================================
+
+1. Languages and installation
+=============================
+One application core includes Simplified Chinese and US English.
+Based on be3f27d9, plus the installation language fix. The baseline is corrected
+from the release manifest; the archived notes previously named aa74b4d5.
+Choosing English in
+setup now starts Facet in English even when an earlier preference was Chinese
+or System default. Each installation choice is applied once. Later changes
+to Display language remain effective on subsequent launches; a new installation
+applies its new choice. This includes the baseline sidebar and theme fixes.
+This update reviews 98 new and 7 changed English entries, corrects singular
+polyhedron counts, clarifies source-file notices, and updates both manuals.
+Scientific values, custom names, and file-format tokens are preserved.
+
+Setup updates the original Facet installation. A separate Facet English
+installation and its user data are not automatically merged or removed.
+
+2. STM and rendering
+====================
+Complete CHGCAR, CHG, and PARCHG grids can be used for STM calculations.
+Values reconstructed for visualization remain ineligible. For a physical
+bias-window interpretation, prepare the appropriate partial charge density;
+a total charge density by itself does not define that energy window.
+
+Density smoothing acts on the 3D input before calculation and changes the
+result. Image smoothing acts on the calculated display without changing raw
+data exports. Both are off by default for a new STM. Base structure and
+overlay atoms have separate whole-layer visibility controls.
+New overlays show bonds and use a 0–1 by 0–1 coverage range.
+
+The update includes independent cell-frame visibility, corrected occlusion
+and dashed-line gaps, worker-based display-mesh preparation, and reuse of
+completed display results. GIF export settings can be moved by dragging
+the panel.
+
+3. Coordination polyhedra and editing
+=====================================
+Use Coordination polyhedra in the atoms-and-bonds section to create groups.
+Each group defines central atoms, ligands, and a coordination rule based on
+existing bonds or distance. Face color, edges, opacity, and highlights are
+editable. Source atom positions remain unchanged.
+Save/discard prompts and display-range input handling have been refined.
+
+4. Projects, recovery, and file safety
+======================================
+External densities retain the source information recorded when loaded.
+Changed or unavailable files produce a clear notice; keep the original
+files to reopen the project. Relinking checks their recorded identity.
+Some newer files can be opened in a read-only compatibility preview.
+The notice identifies omitted features and disabled operations.
+
+The October 23 build used Project 33, structure package 25, sequence
+package 12, and phonon package 8. These are historical format versions;
+see section 0 for the current source. That language update did not change them.
+Form input history is disabled and cleared by the desktop application.
+
+5. ftkit companion package
+==========================
+The accompanying Linux x86_64 archive is
+ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz.
+Task 301 handles compound headings in VASP mass-corrected phonon sections
+and checks for cell or mass conflicts later in the file.
+This release reuses that archive unchanged. Linux runtime and old-kernel
+compatibility remain subject to the limitations in its BUILDINFO.json.
+
+6. Verification scope
+=====================
+See the release verification record for the checks actually performed.
+Browser, binary-content, and installer-database checks do not substitute
+for installation, upgrade, and uninstallation on an isolated Windows system.

@@ -7,7 +7,7 @@
 
 | Product | Current release | Platform | Download |
 | --- | --- | --- | --- |
-| **Facet** | **0.1.0-beta.1 · Beta 1** | Windows x64 · Chinese and English | **[Download installer · 12.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.0-beta.1/Facet-Setup-0.1.0-beta.1-x64.exe)** |
+| **Facet** | **0.1.0-beta.1 · Beta 1** | Windows x64 · Chinese and English | **[Download installer · 12.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/facet-v0.1.0-beta.1/Facet-Setup-0.1.0-beta.1-x64.exe)** · [Repository copy](https://raw.githubusercontent.com/zhongqinzhang/Facet-and-Ftkit/main/downloads/facet/0.1.0-beta.1/Facet-Setup-0.1.0-beta.1-x64.exe) |
 | **ftkit** | **0.1.3-preview-20261022-phononfix** | Linux x86_64 | **[Download archive · 3.83 MB](https://github.com/zhongqinzhang/Facet-and-Ftkit/releases/download/ftkit-v0.1.3-preview-20261022-phononfix/ftkit-0.1.3-preview-20261022-phononfix-linux-x86_64.tar.gz)** |
 
 **User manuals:** [Facet user manual](downloads/facet/0.1.0-beta.1/docs/en-US/user-guide.txt) · [ftkit full user guide (Chinese)](downloads/ftkit/0.1.3-preview-20261022-phononfix/用户手册.txt)  
